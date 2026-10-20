@@ -1102,6 +1102,13 @@ def main():
                    "managers": sum(1 for m in managers if m["seasons"]), "transactions": sum(len(s["transactions"]) for s in seasons),
                    "players": len(players)},
     })
+    # cache-bust the static assets so phones and GitHub Pages never serve stale code after a deploy
+    stamp = datetime.datetime.utcnow().strftime("%Y%m%d%H%M")
+    ip = HERE.parent / "public" / "index.html"
+    html = ip.read_text(encoding="utf-8")
+    html = re.sub(r'href="styles\.css(\?v=\d+)?"', f'href="styles.css?v={stamp}"', html)
+    html = re.sub(r'src="app\.js(\?v=\d+)?"', f'src="app.js?v={stamp}"', html)
+    ip.write_text(html, encoding="utf-8")
     print("seasons", [(s["season"], s["platform"], s["status"], len(s["matchups"]), len(s["transactions"]), s["champion"]) for s in seasons])
     print("players", len(players))
 
