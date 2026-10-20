@@ -271,16 +271,25 @@
       return `<div class="card" style="margin-bottom:18px"><div class="card-head"><h3>${esc(d.label)}</h3><span class="small muted">${picks.length} picks${d.unidentified_slots ? ` · ${d.unidentified_slots} unidentified` : ''}</span></div><div class="draft-board">${header}${rows}</div></div>`;
     }).join('');
   }
+  function tradeSides(s, t) {
+    const name = f => { const tm = teamOf(s, f); return tm ? tm.team_name : f || '?'; };
+    const sides = {};
+    t.franchises.forEach(f => sides[f] = { franchise: f, name: name(f), manager: (teamOf(s, f) || {}).manager, gets: [], gives: [] });
+    const pickLabel = p => `${esc(p.season)} round ${p.round} pick${p.original && p.original !== p.from && p.original !== p.to ? ` <span class="muted small">(orig. ${esc(name(p.original))})</span>` : ''}`;
+    t.adds.forEach(a => sides[a.to] && sides[a.to].gets.push({ kind: 'player', p: a.p, html: playerLabel(a.p) }));
+    t.drops.forEach(a => sides[a.from] && sides[a.from].gives.push({ kind: 'player', p: a.p, html: playerLabel(a.p) }));
+    t.picks.forEach(p => { if (sides[p.to]) sides[p.to].gets.push({ kind: 'pick', pick: p, html: pickLabel(p) }); if (sides[p.from]) sides[p.from].gives.push({ kind: 'pick', pick: p, html: pickLabel(p) }); });
+    (t.faab || []).forEach(f => { if (sides[f.to]) sides[f.to].gets.push({ kind: 'faab', html: `$${f.amount} FAAB` }); if (sides[f.from]) sides[f.from].gives.push({ kind: 'faab', html: `$${f.amount} FAAB` }); });
+    return Object.values(sides);
+  }
+  function tradeCard(s, t, opts = {}) {
+    const sides = tradeSides(s, t);
+    const list = (items, sign) => items.length ? `<ul class="${sign === '+' ? 'gets' : 'gives'}">${items.map(i => `<li><span class="sign">${sign}</span> ${i.html}</li>`).join('')}</ul>` : '';
+    return `<div class="trade"><div class="hdr"><span>${dateFmt(t.date)}${t.week ? ` · week ${t.week}` : ''}</span><span>${s.season} ${platformPill(s.platform)} ${opts.noLink ? '' : `<a class="btn" style="padding:2px 8px;margin-left:8px" href="#/tx/${s.season}/${enc(t.id)}">Investigate →</a>`}</span></div><div class="sides">${sides.map(v => `<div class="side"><div class="who"><a href="#/manager/${enc(v.manager)}">${esc(v.name)}</a> <span class="muted small">${esc(mgrName(v.manager))}</span></div>${list(v.gets, '+')}${list(v.gives, '−')}${!v.gets.length && !v.gives.length ? '<div class="muted small">nothing recorded</div>' : ''}</div>`).join('')}</div></div>`;
+  }
   function txLine(s, t) {
     const name = f => { const tm = teamOf(s, f); return tm ? esc(tm.team_name) : f || '?'; };
-    if (t.type === 'trade') {
-      const sides = {};
-      t.franchises.forEach(f => sides[f] = { gets: [], gives: [] });
-      t.adds.forEach(a => sides[a.to] && sides[a.to].gets.push(playerLabel(a.p)));
-      t.picks.forEach(p => { if (sides[p.to]) sides[p.to].gets.push(`${esc(p.season)} round ${p.round} pick${p.original && p.original !== p.from ? ` (orig. ${name(p.original)})` : ''}`); });
-      (t.faab || []).forEach(f => sides[f.to] && sides[f.to].gets.push(`$${f.amount} FAAB`));
-      return `<div class="trade"><div class="hdr"><span>${dateFmt(t.date)}${t.week ? ` · week ${t.week}` : ''}</span><span>${s.season} ${platformPill(s.platform)}</span></div><div class="sides">${Object.entries(sides).map(([f, v]) => `<div class="side"><div class="who">${name(f)} <span class="muted small">(${esc(mgrName((teamOf(s, f) || {}).manager))}) receives</span></div><ul>${v.gets.map(g => `<li>${g}</li>`).join('') || '<li class="muted">nothing recorded</li>'}</ul></div>`).join('')}</div></div>`;
-    }
+    if (t.type === 'trade') return tradeCard(s, t);
     const who = t.franchises.map(name).join(', ');
     const adds = t.adds.map(a => `<span class="add">+ ${playerLabel(a.p)}</span>`).join(' &nbsp; ');
     const drops = t.drops.map(a => `<span class="drop">− ${playerLabel(a.p)}</span>`).join(' &nbsp; ');
@@ -487,9 +496,13 @@
       const to = e.to ? `<a href="#/manager/${enc((teamOf(sn, e.to) || {}).manager)}">${esc(frName(sn, e.to))}</a>` : null;
       const from = e.from ? `<a href="#/manager/${enc((teamOf(sn, e.from) || {}).manager)}">${esc(frName(sn, e.from))}</a>` : null;
       let what;
-      if (e.type === 'draft') what = `Drafted by ${to} — round ${e.round}, pick ${e.pick} <span class="muted small">(${esc(e.label)})</span>`;
-      else if (e.type === 'keeper') what = `Kept by ${to} <span class="muted small">(keeper slot, round ${e.round})</span>`;
-      else if (e.type === 'trade') what = `Traded from ${from || '?'} to ${to || '?'}${e.others && e.others.length ? ` <span class="muted small">— in a deal also involving ${e.others.slice(0, 4).map(playerLink).join(', ')}${e.picks && e.picks.length ? ` and ${e.picks.length} pick${e.picks.length > 1 ? 's' : ''}` : ''}</span>` : (e.picks && e.picks.length ? ` <span class="muted small">— for ${e.picks.length} draft pick${e.picks.length > 1 ? 's' : ''}</span>` : '')}`;
+      if (e.type === 'carryover' || e.type === 'keeper') return '';
+      if (e.type === 'draft') what = e.startup ? `Selected by ${to} in the ${e.season} startup draft <span class="muted small">(round ${e.round}, pick ${e.pick})</span>` : `Drafted by ${to} <span class="muted small">(round ${e.round}, pick ${e.pick})</span>`;
+      else if (e.type === 'trade') {
+        const t = sn && sn.transactions.find(x => x.id === e.id);
+        what = `Traded from ${from || '?'} to ${to || '?'}`;
+        if (t) return `<div class="tx"><div class="when"><a href="#/season/${e.season}/trades">${e.season}</a>${e.week ? ` · week ${e.week}` : ''}<br><span class="small">${dateFmt(e.date)}</span></div><div class="what"><div class="line">${what}</div>${tradeCard(sn, t)}</div></div>`;
+      }
       else if (e.type === 'waiver') what = e.to ? `Claimed off waivers by ${to}${e.bid != null ? ` <span class="muted small">($${e.bid} FAAB)</span>` : ''}` : `Dropped by ${from}`;
       else if (e.type === 'commissioner') what = e.to ? `Added to ${to} by the commissioner` : `Removed from ${from} by the commissioner`;
       else what = e.to ? `Signed as a free agent by ${to}` : `Dropped by ${from}`;
@@ -520,8 +533,44 @@
           <div class="card"><h3>Teams</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Manager</th><th class="num">Pts</th><th class="num">Starts</th><th class="num">Weeks</th><th>Seasons</th></tr></thead><tbody>${homes.map(([m, a]) => `<tr><td>${mgrLink(m)}</td><td class="num">${pts(+a.pts.toFixed(2))}</td><td class="num">${a.starts}</td><td class="num">${a.weeks}</td><td class="small muted nowrap">${yearRanges(a.seasons)}</td></tr>`).join('') || '<tr><td colspan="5" class="muted">Never on a roster during a scored week.</td></tr>'}</tbody></table></div></div>
           <div class="card" style="margin-top:18px"><h3>Season by season</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Year</th><th>Team</th><th class="num">Wks</th><th class="num">Starts</th><th class="num">Starter pts</th><th class="num">Total</th><th class="num">PPG</th><th class="num">Best</th></tr></thead><tbody>${tenRows || '<tr><td colspan="8" class="muted">—</td></tr>'}</tbody></table></div></div>
         </div>
-        <div class="card"><h3>Transaction history</h3>${d.events.length ? d.events.map(evLine).join('') : '<div class="empty">No recorded moves. ESPN did not return move logs for 2016–2017.</div>'}</div>
+        <div class="card"><h3>Transaction history</h3>${d.events.filter(e => e.type !== 'carryover' && e.type !== 'keeper').length ? d.events.map(evLine).join('') : '<div class="empty">No recorded moves. ESPN did not return move logs for 2016–2017.</div>'}${c.carryovers ? `<p class="small muted" style="margin-top:10px">Carried over between seasons ${c.carryovers} time${c.carryovers > 1 ? 's' : ''} (keeper-draft re-selections and the 2022 migration draft are not listed as moves).</p>` : ''}</div>
       </div>`;
+  }
+
+  // ---- transaction detail
+  async function pageTx(year, id) {
+    const s = await loadSeason(+year);
+    const t = s.transactions.find(x => x.id === id);
+    if (!t) { $app.innerHTML = '<div class="empty">Transaction not found.</div>'; return; }
+    await loadAllSeasons();
+    const moved = [...new Set([...t.adds.map(a => a.p), ...t.drops.map(a => a.p)])];
+    const details = await Promise.all(moved.map(p => getJSON(`data/players/${p.replace(':', '-')}.json`).catch(() => null)));
+    const after = moved.map((p, i) => {
+      const d = details[i]; const to = (t.adds.find(a => a.p === p) || {}).to; const from = (t.drops.find(a => a.p === p) || {}).from;
+      if (!d) return { p, to, from };
+      const wk = t.week || 0;
+      const sum = rows => ({ pts: rows.reduce((a, w) => a + (w.starter ? (w.pts || 0) : 0), 0), starts: rows.filter(w => w.starter).length, weeks: rows.length });
+      const before = sum(d.weekly.filter(w => w.franchise === from && (w.season < +year || (w.season === +year && w.week <= wk))));
+      const rest = sum(d.weekly.filter(w => w.franchise === to && w.season === +year && w.week > wk));
+      const later = sum(d.weekly.filter(w => w.franchise === to && w.season > +year));
+      const laterSeasons = [...new Set(d.weekly.filter(w => w.franchise === to && w.season > +year).map(w => w.season))];
+      // did the receiving team move the player on again?
+      const next = d.events.find(e => (e.season > +year || (e.season === +year && (e.date || '') > (t.date || ''))) && e.from === to && e.type !== 'carryover');
+      return { p, to, from, before, rest, later, laterSeasons, next, d };
+    });
+    const name = f => { const tm = teamOf(s, f); return tm ? tm.team_name : f; };
+    const pickRows = t.picks.map(pk => {
+      const ds = D.season[+pk.season]; let used = null;
+      if (ds) ds.drafts.forEach(d => d.picks.forEach(x => { if (x.round === pk.round && x.franchise === pk.to && x.p) (used = used || []).push(x); }));
+      return `<tr><td>${esc(pk.season)} round ${pk.round}</td><td>${esc(name(pk.from))} → ${esc(name(pk.to))}</td><td>${used ? used.map(x => `${playerLabel(x.p)} <span class="muted small">#${x.pick}</span>`).join('<br>') : (ds && ds.status === 'complete' ? '<span class="muted">not traceable</span>' : '<span class="muted">not yet used</span>')}</td></tr>`;
+    }).join('');
+    const isTrade = t.type === 'trade';
+    $app.innerHTML = `<div class="page-head"><h1>${isTrade ? 'Trade' : t.type === 'waiver' ? 'Waiver claim' : t.type === 'commissioner' ? 'Commissioner move' : 'Free-agent move'}</h1><span class="sub">${s.season}${t.week ? ` · week ${t.week}` : ''} · ${dateFmt(t.date)}</span><span class="spacer"></span><a class="btn" href="#/season/${s.season}/${isTrade ? 'trades' : 'moves'}">All ${s.season} ${isTrade ? 'trades' : 'moves'}</a></div>
+      ${isTrade ? tradeCard(s, t, { noLink: true }) : txLine(s, t)}
+      ${moved.length ? `<div class="card" style="margin-top:18px"><h3>What happened next</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Player</th><th>Went to</th><th class="num">Before, for old team</th><th class="num">Rest of ${s.season}</th><th class="num">Later seasons</th><th>Then</th></tr></thead><tbody>
+        ${after.map(a => `<tr><td>${playerLabel(a.p)}</td><td>${a.to ? `<a href="#/manager/${enc((teamOf(s, a.to) || {}).manager)}">${esc(name(a.to))}</a>` : '<span class="muted">released</span>'}</td><td class="num">${a.before ? `${pts(+a.before.pts.toFixed(2))} <span class="muted small">${a.before.starts} st / ${a.before.weeks} wk</span>` : '—'}</td><td class="num">${a.rest ? `<b>${pts(+a.rest.pts.toFixed(2))}</b> <span class="muted small">${a.rest.starts} st / ${a.rest.weeks} wk</span>` : '—'}</td><td class="num">${a.later && a.later.weeks ? `${pts(+a.later.pts.toFixed(2))} <span class="muted small">${a.later.starts} st · ${yearRanges(a.laterSeasons)}</span>` : '<span class="muted">—</span>'}</td><td class="small">${a.next ? `${a.next.type === 'trade' ? 'Traded' : 'Dropped'} ${a.next.season}${a.next.week ? ' wk ' + a.next.week : ''}${a.next.to ? ' to ' + esc(name(a.next.to)) : ''}` : (a.d && a.d.weekly.some(w => w.franchise === a.to && w.season === D.league.current_season) ? '<span class="trophy">still on roster</span>' : '')}</td></tr>`).join('')}
+      </tbody></table></div><p class="small muted" style="margin:8px 0 0">Points are what the player scored while started for that team. 2016–2017 ESPN data only records starters.</p></div>` : ''}
+      ${t.picks.length ? `<div class="card" style="margin-top:18px"><h3>Draft picks in the deal</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Pick</th><th>Moved</th><th>Became</th></tr></thead><tbody>${pickRows}</tbody></table></div><p class="small muted" style="margin:8px 0 0">"Became" lists the receiving team's selections in that round of that draft; when a team held several picks in the round all are shown.</p></div>` : ''}`;
   }
 
   // ---------------------------------------------------------------- router
@@ -536,6 +585,7 @@
     [/^\/drafts(?:\/(\d{4}))?$/, y => pageDrafts(y)],
     [/^\/trades$/, () => pageTrades()],
     [/^\/players$/, () => pagePlayers()],
+    [/^\/tx\/(\d{4})\/([^/]+)$/, (y, id) => pageTx(y, decodeURIComponent(id))],
     [/^\/player\/([^/]+)$/, id => pagePlayer(decodeURIComponent(id))],
   ];
   async function route() {
@@ -544,7 +594,7 @@
     try {
       await loadCore();
       const top = path.split('/')[1] || '';
-      document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.route === (top === 'season' ? 'seasons' : top === 'manager' ? 'managers' : top === 'player' ? 'players' : top || 'home')));
+      document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.route === (top === 'season' ? 'seasons' : top === 'manager' ? 'managers' : top === 'player' ? 'players' : top === 'tx' ? 'trades' : top || 'home')));
       document.getElementById('nav').classList.remove('open');
       for (const [re, fn] of routes) {
         const m = path.match(re);

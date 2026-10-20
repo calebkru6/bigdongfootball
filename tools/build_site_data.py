@@ -168,8 +168,9 @@ def build_espn_season(year):
     nrounds = max((p["round"] for p in picks), default=0)
     dlabel = (f"Startup draft ({nrounds} rounds, {(ds.get('type') or '').lower()})" if not keepers
               else f"Keeper draft ({nrounds} rounds, {keepers} picks flagged as keepers)")
+    ddate = datetime.datetime.utcfromtimestamp(ds["date"] / 1000).strftime("%Y-%m-%dT%H:%M:%SZ") if ds.get("date") else None
     drafts = [{"label": dlabel, "type": (ds.get("type") or "").lower(), "order": (ds.get("orderType") or "").lower(),
-               "rounds": nrounds, "picks": picks, "keepers": keepers,
+               "rounds": nrounds, "picks": picks, "keepers": keepers, "date": ddate,
                "unidentified_slots": cov.get("unidentified_draft_slots", 0)}] if picks else []
 
     # transactions: executed adds/drops/waivers + executed trades
@@ -471,8 +472,10 @@ def build_sleeper_season(year):
                           "p": ensure_sleeper_player(p["player_id"], md) if p.get("player_id") else None,
                           "keeper": bool(p.get("is_keeper")), "bid": (md.get("amount") if dr["type"] == "auction" else None)})
         label = ("Startup draft" if rounds and rounds >= 10 else "Rookie draft") + f" ({rounds} rounds, {dr['type']})"
+        dts = dr.get("start_time") or dr.get("last_picked") or dr.get("created")
         drafts.append({"label": label, "type": dr["type"], "order": dr["type"], "rounds": rounds, "picks": picks,
-                       "draft_id": did, "status": dr.get("status")})
+                       "draft_id": did, "status": dr.get("status"),
+                       "date": datetime.datetime.utcfromtimestamp(dts / 1000).strftime("%Y-%m-%dT%H:%M:%SZ") if dts else None})
 
     # transactions
     events = []
@@ -820,13 +823,38 @@ def build_player_pages(seasons):
                         process(sn, m, side, int(wk), lu)
                 elif side.get("lineup"):
                     process(sn, m, side, m["week"], side["lineup"])
+    # who ended each season on each franchise (final roster + last scored week), to tell carryovers from real picks
+    end_roster = collections.defaultdict(set)
+    for sn in seasons:
+        for fr, lst in (sn.get("rosters") or {}).get("final", {}).items():
+            end_roster[(sn["season"], fr)] |= {e["p"] for e in lst if e.get("p")}
+        last = {}
+        for m in sn["matchups"]:
+            if not m["played"]:
+                continue
+            for side in (m["home"], m["away"]):
+                wk = m["weeks"][-1]
+                if wk >= last.get(side["franchise"], (0, None))[0]:
+                    lu = (side.get("lineups_by_week") or {}).get(str(wk)) or side.get("lineup") or []
+                    last[side["franchise"]] = (wk, lu)
+        for fr, (wk, lu) in last.items():
+            end_roster[(sn["season"], fr)] |= {e["p"] for e in lu if e.get("p")}
     events = collections.defaultdict(list)
     for sn in seasons:
         for d in sn["drafts"]:
+            prior = any(k[0] == sn["season"] - 1 for k in end_roster)
+            keeper_draft = (sn["platform"] == "espn" and d.get("keepers", 0) > 0) or (d["label"].startswith("Startup") and prior)
+            acquired = collections.defaultdict(set)
+            for t in sn["transactions"]:
+                if d.get("date") and t["date"] and t["date"] < d["date"]:
+                    for a in t["adds"]:
+                        acquired[a["to"]].add(a["p"])
             for pk in d["picks"]:
                 if pk.get("p"):
-                    events[pk["p"]].append({"season": sn["season"], "date": None, "week": 0, "type": "keeper" if pk["keeper"] else "draft",
-                                            "to": pk["franchise"], "from": None, "round": pk["round"], "pick": pk["pick"], "label": d["label"], "id": None})
+                    carried = pk["keeper"] or (keeper_draft and (pk["p"] in end_roster[(sn["season"] - 1, pk["franchise"])] or pk["p"] in acquired[pk["franchise"]]))
+                    events[pk["p"]].append({"season": sn["season"], "date": d.get("date"), "week": 0, "type": "carryover" if carried else "draft",
+                                            "to": pk["franchise"], "from": None, "round": pk["round"], "pick": pk["pick"], "label": d["label"], "id": None,
+                                            "startup": d["label"].startswith("Startup")})
         for t in sn["transactions"]:
             drops = {e["p"]: e["from"] for e in t["drops"]}
             adds = {e["p"]: e["to"] for e in t["adds"]}
@@ -859,7 +887,8 @@ def build_player_pages(seasons):
                   "seasons": sorted({r["season"] for r in rows} | {e["season"] for e in ev}),
                   "franchises": sorted({r["franchise"] for r in rows} | {e["to"] for e in ev if e.get("to")}),
                   "managers": sorted({r["manager"] for r in rows if r["manager"]}),
-                  "trades": sum(1 for e in ev if e["type"] == "trade"), "drafted": [e for e in ev if e["type"] == "draft"][:1]}
+                  "trades": sum(1 for e in ev if e["type"] == "trade"), "drafted": [e for e in ev if e["type"] == "draft"][:1],
+                  "carryovers": sum(1 for e in ev if e["type"] == "carryover")}
         fid = pid.replace(":", "-")
         detail = {"id": pid, "name": info["name"], "pos": info.get("pos"), "team": info.get("team"), "espn_ids": info.get("espn_ids"),
                   "career": career, "tenures": rows, "events": ev, "best_weeks": wk[:10], "weekly": sorted(weekly.get(pid, []), key=lambda w: (w["season"], w["week"]))}

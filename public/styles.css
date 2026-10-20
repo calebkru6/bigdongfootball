@@ -280,3 +280,11 @@ select.sel, input.inp { background: var(--bg-3); border: 1px solid var(--line); 
 .spark { display: flex; align-items: flex-end; gap: 2px; height: 42px; }
 .spark i { display: block; width: 7px; background: var(--accent); border-radius: 2px 2px 0 0; opacity: .85; }
 .spark i:hover { opacity: 1; background: #fff; }
+
+/* trades +/- */
+.trade .side ul { list-style: none; padding: 0; margin: 0 0 4px; }
+.trade .side li .sign { display: inline-block; width: 14px; font-family: var(--mono); font-weight: 700; }
+.trade .side ul.gets li .sign { color: var(--win); }
+.trade .side ul.gives li .sign { color: var(--loss); }
+.trade .side ul.gives li { color: var(--muted); }
+.tx .what .trade { margin: 6px 0 0; }
