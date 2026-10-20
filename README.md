@@ -77,6 +77,14 @@ Managers are labelled by their Sleeper usernames (already public on Sleeper) or,
 2016-only owners, by neutral labels. Real names, ESPN member ids and account aliases stay in
 `../private/` and never enter `public/`. Historic team names and NFL player names are shown.
 
+## Standings rule
+
+Final placement is the league's own rule, applied to both eras: champion and runner-up from the title game,
+then the other playoff teams by the round they lost in (regular-season order within a round), then non-playoff
+teams in regular-season order (record, then points for). The third-place game and the consolation bracket
+never affect placement, and consolation games are excluded from records, rivalries, streaks and player totals.
+ESPN's and Sleeper's own placements are kept as `espn_final_rank` / `sleeper_final_rank` for reference.
+
 ## Data notes surfaced on the site
 
 - ESPN no longer serves itemized transaction logs for 2016–2017 (only 2018 onward). `espn/transaction-counters.json`

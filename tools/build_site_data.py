@@ -42,6 +42,45 @@ def team_logo(season, franchise):
     e = _LOGO_INDEX.get(f"{season}:{franchise}")
     return f"img/logos/{e['file']}" if e and e.get("file") else None
 
+# ----------------------------------------------------------------------------- PLACEMENT RULE
+def apply_final_ranks(teams, matchups, complete=True):
+    """League rule: champion and runner-up from the title game; other playoff teams by the round they were
+    eliminated in, ordered by regular-season standing within a round; non-playoff teams by regular-season
+    standing. Third-place and consolation games never affect placement."""
+    teams.sort(key=lambda t: (-t["wins"], t["losses"], -(t["pf"] or 0)))
+    for i, t in enumerate(teams, 1):
+        t["standing"] = i
+    if not complete:
+        for t in teams:
+            t["final_rank"] = None; t["champion"] = False
+        return
+    po = [m for m in matchups if m["phase"] == "playoff" and m["played"]]
+    final = next((m for m in po if m["round"] == "Championship"), None)
+    rank = {}
+    if final and final["winner"] in ("home", "away"):
+        w = final[final["winner"]]["franchise"]; l = final["away" if final["winner"] == "home" else "home"]["franchise"]
+        rank[w] = 1; rank[l] = 2
+    # eliminated playoff teams: later rounds place higher; within a round, regular-season standing
+    elim = []
+    for m in po:
+        if m["round"] in ("Championship", "3rd Place Game") or m["winner"] not in ("home", "away"):
+            continue
+        loser = m["away" if m["winner"] == "home" else "home"]["franchise"]
+        elim.append((m["week"], loser))
+    by_fr = {t["franchise"]: t for t in teams}
+    elim.sort(key=lambda x: (-x[0], by_fr[x[1]]["standing"]))
+    nxt = 3
+    for _, fr in elim:
+        if fr not in rank:
+            rank[fr] = nxt; nxt += 1
+    for t in teams:
+        if t["franchise"] not in rank:
+            rank[t["franchise"]] = nxt; nxt += 1
+    for t in teams:
+        t["final_rank"] = rank[t["franchise"]]
+        t["champion"] = t["final_rank"] == 1
+    teams.sort(key=lambda t: t["final_rank"])
+
 # ----------------------------------------------------------------------------- ESPN
 def espn_player_key(pid):
     return "e:" + pid.replace("player-", "")
@@ -113,6 +152,7 @@ def build_espn_season(year):
             "pf": r2(rs["pointsFor"]), "pa": r2(rs["pointsAgainst"]),
             "playoff_seed": s["playoff_seed"],
             "final_rank": s["final_rank"],
+            "espn_final_rank": s["final_rank"],
             "champion": s["final_rank"] == 1,
         })
     name_by_team = {s["team_id"]: s["name"] for s in standings}
@@ -164,6 +204,8 @@ def build_espn_season(year):
         winner = {"HOME": "home", "AWAY": "away", "TIE": "tie"}.get(m["winner"])
         ms.append({"id": m["id"], "week": wk, "weeks": weeks, "phase": phase, "round": label,
                    "home": home, "away": away, "winner": winner, "played": True})
+
+    apply_final_ranks(teams, ms, complete=True)
 
     # draft
     picks = []
@@ -387,11 +429,11 @@ def build_sleeper_season(year):
             "final_rank": place.get(r["roster_id"]) if not in_season else None,
             "champion": place.get(r["roster_id"]) == 1 and not in_season,
         })
-    # regular-season rank by record then points (used for in-season ordering and as seed fallback)
+    for t in teams:
+        t["sleeper_final_rank"] = t["final_rank"]
     teams.sort(key=lambda t: (-t["wins"], t["losses"], -(t["pf"] or 0)))
     for i, t in enumerate(teams, 1):
         t["standing"] = i
-    teams.sort(key=lambda t: (t["final_rank"] or 99, t["standing"]))
     by_roster = {t["roster_id"]: t for t in teams}
 
     # starters slot labels
@@ -506,6 +548,7 @@ def build_sleeper_season(year):
         return out
     ms += bracket_games(wb, "playoff")
     ms += bracket_games(lb, "consolation")
+    apply_final_ranks(teams, ms, complete=not in_season)
 
     # drafts
     drafts = []
@@ -620,8 +663,8 @@ def build_aggregates(seasons):
             if t["franchise"] not in mg["franchises"]:
                 mg["franchises"].append(t["franchise"])
         for m in s["matchups"]:
-            if not m["played"]:
-                continue
+            if not m["played"] or m["phase"] == "consolation":
+                continue  # consolation bracket games count for nothing
             a, b = manager_of(s, m["home"]["franchise"]), manager_of(s, m["away"]["franchise"])
             games.append((s, m, a, b))
 
@@ -865,6 +908,7 @@ def build_player_pages(seasons):
     weekly = collections.defaultdict(list)
     def process(sn, m, side, wk, lu):
         fr = side["franchise"]; mg = manager_of(sn, fr)
+        counted = m["phase"] != "consolation"
         other = m["away"] if side is m["home"] else m["home"]
         opp_fr = other["franchise"]
         my_pts = (side.get("points_by_week") or {}).get(str(wk), side.get("points"))
@@ -876,6 +920,10 @@ def build_player_pages(seasons):
                 continue
             starter = e.get("starter") is not False
             pts = e.get("pts") or 0.0
+            if not counted:
+                weekly[pid].append({"season": sn["season"], "week": wk, "franchise": fr, "slot": e.get("slot"), "pts": r2(pts), "starter": starter, "round": m.get("round"),
+                                    "opp": opp_fr, "team_pts": r2(my_pts) if my_pts is not None else None, "opp_pts": r2(opp_pts) if opp_pts is not None else None, "won": won, "game": m["id"], "counted": False})
+                continue
             t = ten[(pid, sn["season"], fr)]
             t["weeks"] += 1
             t["manager"] = mg; t["team_name"] = side["team_name"]; t["platform"] = sn["platform"]
