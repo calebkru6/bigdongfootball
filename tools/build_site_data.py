@@ -574,11 +574,14 @@ def build_sleeper_season(year):
                     slot_fix[slot] = best
             if slot_fix:
                 print(f"  {year} {dr['type']} draft: remapped slots {slot_fix} using week-1 rosters")
+        user_roster = {r["owner_id"]: r["roster_id"] for r in rosters}
+        slot_owner = {int(slot): user_roster.get(uid) for uid, slot in (dr.get("draft_order") or {}).items()}
         for p in sorted(picks_raw, key=lambda p: p["pick_no"]):
             md = p.get("metadata") or {}
             rid = slot_fix.get(p["draft_slot"], p.get("roster_id") or slot_to_roster.get(p["draft_slot"]))
+            orig_rid = slot_to_roster.get(p["draft_slot"]) or slot_owner.get(p["draft_slot"])
             picks.append({"pick": p["pick_no"], "round": p["round"], "slot": p["draft_slot"],
-                          "franchise": FR_BY_ROSTER.get(rid),
+                          "franchise": FR_BY_ROSTER.get(rid), "orig": FR_BY_ROSTER.get(orig_rid),
                           "p": ensure_sleeper_player(p["player_id"], md) if p.get("player_id") else None,
                           "keeper": bool(p.get("is_keeper")), "bid": (md.get("amount") if dr["type"] == "auction" else None)})
         label = ("Startup draft" if rounds and rounds >= 10 else "Rookie draft") + f" ({rounds} rounds, {dr['type']})"
@@ -1056,6 +1059,24 @@ def main():
     seasons += [build_sleeper_season(y) for y in sleeper_years]
     seasons.sort(key=lambda s: s["season"])
     print("unified espn->sleeper players:", unify_players(seasons))
+    by_year = {sn["season"]: sn for sn in seasons}
+    resolved = 0
+    for sn in seasons:
+        for t in sn["transactions"]:
+            for pk in t.get("picks") or []:
+                target = by_year.get(int(pk["season"]))
+                pk["became"] = None
+                if not target:
+                    continue
+                for d in target["drafts"]:
+                    hit = next((x for x in d["picks"] if x["round"] == pk["round"] and x.get("orig") == pk.get("original") and x.get("p")), None)
+                    if hit:
+                        pk["became"] = {"p": hit["p"], "pick": hit["pick"], "by": hit["franchise"]}
+                        resolved += 1
+                        break
+                if pk["became"] is None and target["status"] == "complete" and target["drafts"]:
+                    pk["became"] = {"p": None, "unresolved": True}
+    print("traded picks resolved:", resolved)
     managers, franchises, h2h, records = build_aggregates(seasons)
     hof_fr, hof_mg = build_player_pages(seasons)
     for f in franchises:

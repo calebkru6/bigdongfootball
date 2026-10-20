@@ -350,7 +350,7 @@
     const name = f => { const tm = teamOf(s, f); return tm ? tm.team_name : f || '?'; };
     const sides = {};
     t.franchises.forEach(f => sides[f] = { franchise: f, name: name(f), manager: (teamOf(s, f) || {}).manager, gets: [], gives: [] });
-    const pickLabel = p => `${esc(p.season)} round ${p.round} pick${p.original && p.original !== p.from && p.original !== p.to ? ` <span class="muted small">(orig. ${esc(name(p.original))})</span>` : ''}`;
+    const pickLabel = p => `${esc(p.season)} round ${p.round} pick${p.original && p.original !== p.from && p.original !== p.to ? ` <span class="muted small">(orig. ${esc(name(p.original))})</span>` : ''}${p.became && p.became.p ? ` <span class="small">(became ${playerLink(p.became.p)}${p.became.pick ? `, #${p.became.pick}` : ''})</span>` : p.became && p.became.unresolved ? ' <span class="muted small">(selection not traceable)</span>' : +p.season > (D.league.current_season || 0) || !p.became ? ' <span class="muted small">(not yet used)</span>' : ''}`;
     t.adds.forEach(a => sides[a.to] && sides[a.to].gets.push({ kind: 'player', p: a.p, html: playerLabel(a.p) }));
     t.drops.forEach(a => sides[a.from] && sides[a.from].gives.push({ kind: 'player', p: a.p, html: playerLabel(a.p) }));
     t.picks.forEach(p => { if (sides[p.to]) sides[p.to].gets.push({ kind: 'pick', pick: p, html: pickLabel(p) }); if (sides[p.from]) sides[p.from].gives.push({ kind: 'pick', pick: p, html: pickLabel(p) }); });
@@ -668,9 +668,9 @@
     });
     const name = f => { const tm = teamOf(s, f); return tm ? tm.team_name : f; };
     const pickRows = t.picks.map(pk => {
-      const ds = D.season[+pk.season]; let used = null;
-      if (ds) ds.drafts.forEach(d => d.picks.forEach(x => { if (x.round === pk.round && x.franchise === pk.to && x.p) (used = used || []).push(x); }));
-      return `<tr><td>${esc(pk.season)} round ${pk.round}</td><td>${esc(name(pk.from))} → ${esc(name(pk.to))}</td><td>${used ? used.map(x => `${playerLabel(x.p)} <span class="muted small">#${x.pick}</span>`).join('<br>') : (ds && ds.status === 'complete' ? '<span class="muted">not traceable</span>' : '<span class="muted">not yet used</span>')}</td></tr>`;
+      const ds = D.season[+pk.season];
+      const b = pk.became;
+      return `<tr><td>${esc(pk.season)} round ${pk.round}${pk.original && pk.original !== pk.from ? ` <span class="muted small">(orig. ${esc(name(pk.original))})</span>` : ''}</td><td>${esc(name(pk.from))} → ${esc(name(pk.to))}</td><td>${b && b.p ? `${playerLabel(b.p)} <span class="muted small">#${b.pick} by ${esc(name(b.by))}</span>` : (ds && ds.status === 'complete' ? '<span class="muted">not traceable</span>' : '<span class="muted">not yet used</span>')}</td></tr>`;
     }).join('');
     const isTrade = t.type === 'trade';
     $app.innerHTML = `<div class="page-head"><h1>${isTrade ? 'Trade' : t.type === 'waiver' ? 'Waiver claim' : t.type === 'commissioner' ? 'Commissioner move' : 'Free-agent move'}</h1><span class="sub">${s.season}${t.week ? ` · week ${t.week}` : ''} · ${dateFmt(t.date)}</span><span class="spacer"></span><a class="btn" href="#/season/${s.season}/${isTrade ? 'trades' : 'moves'}">All ${s.season} ${isTrade ? 'trades' : 'moves'}</a></div>
@@ -679,7 +679,7 @@
         ${after.map(a => `<tr><td>${playerLabel(a.p)}</td><td>${a.to ? `<a href="#/manager/${enc((teamOf(s, a.to) || {}).manager)}">${esc(name(a.to))}</a>` : '<span class="muted">released</span>'}</td><td class="num">${a.before ? `${pts(+a.before.pts.toFixed(2))} <span class="muted small">${a.before.starts} st / ${a.before.weeks} wk</span>` : '—'}</td><td class="num">${a.rest ? `<b>${pts(+a.rest.pts.toFixed(2))}</b> <span class="muted small">${a.rest.starts} st / ${a.rest.weeks} wk</span>` : '—'}</td><td class="num">${a.later && a.later.weeks ? `${pts(+a.later.pts.toFixed(2))} <span class="muted small">${a.later.starts} st · ${yearRanges(a.laterSeasons)}</span>` : '<span class="muted">—</span>'}</td><td class="small">${a.next ? `${a.next.type === 'trade' ? 'Traded' : 'Dropped'} ${a.next.season}${a.next.week ? ' wk ' + a.next.week : ''}${a.next.to ? ' to ' + esc(name(a.next.to)) : ''}` : (a.d && a.d.weekly.some(w => w.franchise === a.to && w.season === D.league.current_season) ? '<span class="trophy">still on roster</span>' : '')}</td></tr>`).join('')}
       </tbody></table></div><p class="small muted" style="margin:8px 0 0">Points are what the player scored while started for that team. 2016–2017 ESPN data only records starters.</p></div>` : ''}
       ${t.inferred ? `<div class="notes">This move is reconstructed from the draft, weekly starters and end-of-season rosters; ESPN no longer serves the itemized ${s.season} log. The week is approximate${t.week_range && t.week_range[0] !== t.week_range[1] ? ` (between weeks ${t.week_range[0]} and ${t.week_range[1]})` : ''}${t.confidence === 'low' ? ', and this pairing is low confidence' : ''}.</div>` : ''}
-      ${t.picks.length ? `<div class="card" style="margin-top:18px"><h3>Draft picks in the deal</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Pick</th><th>Moved</th><th>Became</th></tr></thead><tbody>${pickRows}</tbody></table></div><p class="small muted" style="margin:8px 0 0">"Became" lists the receiving team's selections in that round of that draft; when a team held several picks in the round all are shown.</p></div>` : ''}`;
+      ${t.picks.length ? `<div class="card" style="margin-top:18px"><h3>Draft picks in the deal</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Pick</th><th>Moved</th><th>Became</th></tr></thead><tbody>${pickRows}</tbody></table></div><p class="small muted" style="margin:8px 0 0">"Became" is the player taken with that exact slot in that year's rookie draft.</p></div>` : ''}`;
   }
 
   // ---------------------------------------------------------------- router
