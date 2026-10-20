@@ -283,6 +283,8 @@ def build_sleeper_season(year):
             place[b["w"]] = st["playoff_teams"] + b["p"]; place[b["l"]] = st["playoff_teams"] + b["p"] + 1
     seeds = {}
     r1 = sorted([b for b in wb if b["r"] == 1], key=lambda b: b["m"])
+    if in_season:
+        r1 = []  # Sleeper pre-fills the bracket from current standings; seeds are not real until the regular season ends
     if len(r1) == 2:
         seeds[r1[0]["t1"]] = 1; seeds[r1[0]["t2"]] = 4; seeds[r1[1]["t1"]] = 2; seeds[r1[1]["t2"]] = 3
     elif len(r1) == 1:
