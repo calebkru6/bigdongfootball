@@ -1,0 +1,1498 @@
+{
+ "season": 2016,
+ "inferred": true,
+ "method": "Reconstructed from draft picks, weekly starters, end-of-season rosters and ESPN's official per-team transaction counters. ESPN no longer serves the itemized log for this season.",
+ "summary": {
+  "teams": {
+   "1": {
+    "official_acquisitions": 17,
+    "official_drops": 17,
+    "official_trades": 0,
+    "inferred_adds": 9,
+    "inferred_drops": 9,
+    "inferred_trades": 0
+   },
+   "2": {
+    "official_acquisitions": 7,
+    "official_drops": 7,
+    "official_trades": 0,
+    "inferred_adds": 5,
+    "inferred_drops": 5,
+    "inferred_trades": 0
+   },
+   "3": {
+    "official_acquisitions": 19,
+    "official_drops": 19,
+    "official_trades": 1,
+    "inferred_adds": 9,
+    "inferred_drops": 9,
+    "inferred_trades": 1
+   },
+   "4": {
+    "official_acquisitions": 9,
+    "official_drops": 9,
+    "official_trades": 0,
+    "inferred_adds": 7,
+    "inferred_drops": 8,
+    "inferred_trades": 0
+   },
+   "5": {
+    "official_acquisitions": 1,
+    "official_drops": 2,
+    "official_trades": 2,
+    "inferred_adds": 2,
+    "inferred_drops": 2,
+    "inferred_trades": 2
+   },
+   "6": {
+    "official_acquisitions": 37,
+    "official_drops": 37,
+    "official_trades": 0,
+    "inferred_adds": 15,
+    "inferred_drops": 15,
+    "inferred_trades": 0
+   },
+   "7": {
+    "official_acquisitions": 49,
+    "official_drops": 48,
+    "official_trades": 3,
+    "inferred_adds": 11,
+    "inferred_drops": 11,
+    "inferred_trades": 3
+   },
+   "8": {
+    "official_acquisitions": 10,
+    "official_drops": 10,
+    "official_trades": 0,
+    "inferred_adds": 5,
+    "inferred_drops": 5,
+    "inferred_trades": 0
+   }
+  },
+  "events": {
+   "add": 63,
+   "drop": 64,
+   "trade": 3
+  }
+ },
+ "events": [
+  {
+   "type": "add",
+   "player": "16763",
+   "team": 3,
+   "week_min": 1,
+   "week_max": 2,
+   "basis": "first seen starting for team 3 in week 2",
+   "week": 1,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "-16033",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 2,
+   "basis": "first seen starting for team 6 in week 2",
+   "week": 1,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "2976516",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 1 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "3051889",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 1 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "13587",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 1 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "14163",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 1 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "14904",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 13,
+   "basis": "last seen for team 1 in week 0, next seen for team 3 in week 13",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "2576336",
+   "team": 3,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 3 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "2977609",
+   "team": 3,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 3 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "14129",
+   "team": 4,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 4 in week 0, next seen for team 3 in week 15",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "13271",
+   "team": 5,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 5 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "8479",
+   "team": 5,
+   "week_min": 1,
+   "week_max": 3,
+   "basis": "last seen for team 5 in week 0, next seen for team 7 in week 3",
+   "week": 1,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "3043078",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "15705",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "-16013",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 1, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "16804",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 6,
+   "basis": "last seen for team 6 in week 0, next seen for team 8 in week 6",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "13204",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 5,
+   "basis": "last seen for team 6 in week 0, next seen for team 1 in week 5",
+   "week": 1,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "2577417",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 5,
+   "basis": "last seen for team 6 in week 0, next seen for team 1 in week 5",
+   "week": 1,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "11307",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 7 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "12497",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 7 in week 0, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "14880",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 4,
+   "basis": "last seen for team 7 in week 0, next seen for team 6 in week 4",
+   "week": 1,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "15818",
+   "team": 8,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 8 in week 1, not on its final roster",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "2573300",
+   "team": 8,
+   "week_min": 1,
+   "week_max": 9,
+   "basis": "last seen for team 8 in week 0, next seen for team 1 in week 9",
+   "week": 1,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "11295",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 5,
+   "basis": "first seen starting for team 1 in week 5",
+   "week": 2,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "15965",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 5,
+   "basis": "first seen starting for team 1 in week 5",
+   "week": 2,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "11122",
+   "team": 3,
+   "week_min": 1,
+   "week_max": 11,
+   "basis": "first seen starting for team 3 in week 11",
+   "week": 2,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "11237",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 3,
+   "basis": "first seen starting for team 6 in week 3",
+   "week": 2,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "14900",
+   "team": 6,
+   "week_min": 2,
+   "week_max": 3,
+   "basis": "last seen for team 4 in week 2, next seen for team 6 in week 3",
+   "week": 2,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "8479",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 3,
+   "basis": "last seen for team 5 in week 0, next seen for team 7 in week 3",
+   "week": 2,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "11788",
+   "team": 2,
+   "week_min": 2,
+   "week_max": 15,
+   "basis": "last seen for team 2 in week 2, not on its final roster",
+   "week": 2,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "14900",
+   "team": 4,
+   "week_min": 2,
+   "week_max": 3,
+   "basis": "last seen for team 4 in week 2, next seen for team 6 in week 3",
+   "week": 2,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "4459",
+   "team": 6,
+   "week_min": 2,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 2, not on its final roster",
+   "week": 2,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "10452",
+   "team": 7,
+   "week_min": 2,
+   "week_max": 15,
+   "basis": "last seen for team 7 in week 2, not on its final roster",
+   "week": 2,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "13213",
+   "team": 7,
+   "week_min": 2,
+   "week_max": 4,
+   "basis": "last seen for team 7 in week 2, next seen for team 5 in week 4",
+   "week": 2,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "13204",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 5,
+   "basis": "last seen for team 6 in week 0, next seen for team 1 in week 5",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "17133",
+   "team": 2,
+   "week_min": 1,
+   "week_max": 3,
+   "basis": "first seen starting for team 2 in week 3",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "-16017",
+   "team": 4,
+   "week_min": 1,
+   "week_max": 5,
+   "basis": "first seen starting for team 4 in week 5",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "5362",
+   "team": 4,
+   "week_min": 1,
+   "week_max": 7,
+   "basis": "first seen starting for team 4 in week 7",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2587819",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 4,
+   "basis": "first seen starting for team 6 in week 4",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "-16016",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 4,
+   "basis": "first seen starting for team 6 in week 4",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "16782",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 4,
+   "basis": "first seen starting for team 7 in week 4",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "12483",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 4,
+   "basis": "first seen starting for team 7 in week 4",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "4333",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 6,
+   "basis": "first seen starting for team 7 in week 6",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2979477",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 7,
+   "basis": "first seen starting for team 7 in week 7",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2575408",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 11,
+   "basis": "first seen starting for team 7 in week 11",
+   "week": 3,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "-16033",
+   "team": 6,
+   "week_min": 3,
+   "week_max": 7,
+   "basis": "last seen for team 6 in week 3, next seen for team 3 in week 7",
+   "week": 3,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "8479",
+   "team": 7,
+   "week_min": 3,
+   "week_max": 5,
+   "basis": "last seen for team 7 in week 3, next seen for team 3 in week 5",
+   "week": 3,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "-16009",
+   "team": 8,
+   "week_min": 3,
+   "week_max": 7,
+   "basis": "last seen for team 8 in week 3, next seen for team 2 in week 7",
+   "week": 3,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "2577417",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 5,
+   "basis": "last seen for team 6 in week 0, next seen for team 1 in week 5",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "8479",
+   "team": 3,
+   "week_min": 3,
+   "week_max": 5,
+   "basis": "last seen for team 7 in week 3, next seen for team 3 in week 5",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "13213",
+   "team": 5,
+   "week_min": 2,
+   "week_max": 4,
+   "basis": "last seen for team 7 in week 2, next seen for team 5 in week 4",
+   "week": 4,
+   "week_from_counter": false,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "3060022",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 5,
+   "basis": "first seen starting for team 6 in week 5",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "12699",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 7,
+   "basis": "first seen starting for team 6 in week 7",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2576716",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 13,
+   "basis": "first seen starting for team 6 in week 13",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "14054",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 13,
+   "basis": "first seen starting for team 6 in week 13",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2578553",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 14,
+   "basis": "first seen starting for team 6 in week 14",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2980148",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "first seen on the final roster for team 6 in week 16",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "14880",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 4,
+   "basis": "last seen for team 7 in week 0, next seen for team 6 in week 4",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "2976316",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 13,
+   "basis": "first seen starting for team 7 in week 13",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "17437",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "first seen starting for team 7 in week 15",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2520698",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "first seen on the final roster for team 7 in week 16",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "3116406",
+   "team": 7,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "first seen on the final roster for team 7 in week 16",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "16783",
+   "team": 8,
+   "week_min": 1,
+   "week_max": 5,
+   "basis": "first seen starting for team 8 in week 5",
+   "week": 4,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "15058",
+   "team": 1,
+   "week_min": 4,
+   "week_max": 8,
+   "basis": "last seen for team 1 in week 4, next seen for team 4 in week 8",
+   "week": 4,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "14032",
+   "team": 3,
+   "week_min": 4,
+   "week_max": 15,
+   "basis": "last seen for team 3 in week 4, not on its final roster",
+   "week": 4,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "-16012",
+   "team": 4,
+   "week_min": 4,
+   "week_max": 9,
+   "basis": "last seen for team 4 in week 4, next seen for team 1 in week 9",
+   "week": 4,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "14900",
+   "team": 6,
+   "week_min": 4,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 4, not on its final roster",
+   "week": 4,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "2587819",
+   "team": 6,
+   "week_min": 4,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 4, next seen for team 1 in week 15",
+   "week": 4,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "16782",
+   "team": 7,
+   "week_min": 4,
+   "week_max": 15,
+   "basis": "last seen for team 7 in week 4, next seen for team 3 in week 15",
+   "week": 4,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "3042435",
+   "team": 8,
+   "week_min": 4,
+   "week_max": 15,
+   "basis": "last seen for team 8 in week 4, not on its final roster",
+   "week": 4,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "17453",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 14,
+   "basis": "first seen starting for team 1 in week 14",
+   "week": 5,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2573300",
+   "team": 1,
+   "week_min": 1,
+   "week_max": 9,
+   "basis": "last seen for team 8 in week 0, next seen for team 1 in week 9",
+   "week": 5,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "-16012",
+   "team": 1,
+   "week_min": 4,
+   "week_max": 9,
+   "basis": "last seen for team 4 in week 4, next seen for team 1 in week 9",
+   "week": 5,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2587819",
+   "team": 1,
+   "week_min": 4,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 4, next seen for team 1 in week 15",
+   "week": 5,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "15058",
+   "team": 4,
+   "week_min": 4,
+   "week_max": 8,
+   "basis": "last seen for team 1 in week 4, next seen for team 4 in week 8",
+   "week": 5,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "16460",
+   "team": 6,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "first seen on the final roster for team 6 in week 16",
+   "week": 5,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "14193",
+   "team": 8,
+   "week_min": 1,
+   "week_max": 8,
+   "basis": "first seen starting for team 8 in week 8",
+   "week": 5,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "16800",
+   "team": 8,
+   "week_min": 1,
+   "week_max": 9,
+   "basis": "first seen starting for team 8 in week 9",
+   "week": 5,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "16804",
+   "team": 8,
+   "week_min": 1,
+   "week_max": 6,
+   "basis": "last seen for team 6 in week 0, next seen for team 8 in week 6",
+   "week": 5,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "15848",
+   "team": 2,
+   "week_min": 5,
+   "week_max": 15,
+   "basis": "last seen for team 2 in week 5, not on its final roster",
+   "week": 5,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "9704",
+   "team": 7,
+   "week_min": 5,
+   "week_max": 10,
+   "basis": "last seen for team 7 in week 5, next seen for team 2 in week 10",
+   "week": 5,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "-16033",
+   "team": 3,
+   "week_min": 3,
+   "week_max": 7,
+   "basis": "last seen for team 6 in week 3, next seen for team 3 in week 7",
+   "week": 6,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "8544",
+   "team": 5,
+   "week_min": 1,
+   "week_max": 9,
+   "basis": "first seen starting for team 5 in week 9",
+   "week": 6,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "-16029",
+   "team": 2,
+   "week_min": 6,
+   "week_max": 15,
+   "basis": "last seen for team 2 in week 6, not on its final roster",
+   "week": 6,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "-16034",
+   "team": 3,
+   "week_min": 6,
+   "week_max": 15,
+   "basis": "last seen for team 3 in week 6, not on its final roster",
+   "week": 6,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "17372",
+   "team": 3,
+   "week_min": 6,
+   "week_max": 15,
+   "basis": "last seen for team 3 in week 6, not on its final roster",
+   "week": 6,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "14881",
+   "team": 6,
+   "week_min": 6,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 6, not on its final roster",
+   "week": 6,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "16804",
+   "team": 8,
+   "week_min": 6,
+   "week_max": 15,
+   "basis": "last seen for team 8 in week 6, not on its final roster",
+   "week": 6,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "15683",
+   "team": 1,
+   "week_min": 7,
+   "week_max": 9,
+   "basis": "last seen for team 4 in week 7, next seen for team 1 in week 9",
+   "week": 7,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "-16009",
+   "team": 2,
+   "week_min": 3,
+   "week_max": 7,
+   "basis": "last seen for team 8 in week 3, next seen for team 2 in week 7",
+   "week": 7,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "14904",
+   "team": 3,
+   "week_min": 1,
+   "week_max": 13,
+   "basis": "last seen for team 1 in week 0, next seen for team 3 in week 13",
+   "week": 7,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "16782",
+   "team": 3,
+   "week_min": 4,
+   "week_max": 15,
+   "basis": "last seen for team 7 in week 4, next seen for team 3 in week 15",
+   "week": 7,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "12503",
+   "team": 6,
+   "week_min": 7,
+   "week_max": 12,
+   "basis": "last seen for team 4 in week 7, next seen for team 6 in week 12",
+   "week": 7,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "16040",
+   "team": 3,
+   "week_min": 7,
+   "week_max": 15,
+   "basis": "last seen for team 3 in week 7, not on its final roster",
+   "week": 7,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "2976592",
+   "team": 4,
+   "week_min": 7,
+   "week_max": 15,
+   "basis": "last seen for team 4 in week 7, not on its final roster",
+   "week": 7,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "12503",
+   "team": 4,
+   "week_min": 7,
+   "week_max": 12,
+   "basis": "last seen for team 4 in week 7, next seen for team 6 in week 12",
+   "week": 7,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "15683",
+   "team": 4,
+   "week_min": 7,
+   "week_max": 9,
+   "basis": "last seen for team 4 in week 7, next seen for team 1 in week 9",
+   "week": 7,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "12699",
+   "team": 6,
+   "week_min": 7,
+   "week_max": 11,
+   "basis": "last seen for team 6 in week 7, next seen for team 4 in week 11",
+   "week": 7,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "2576623",
+   "team": 3,
+   "week_min": 1,
+   "week_max": 14,
+   "basis": "first seen starting for team 3 in week 14",
+   "week": 8,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "14360",
+   "team": 4,
+   "week_min": 1,
+   "week_max": 8,
+   "basis": "first seen starting for team 4 in week 8",
+   "week": 8,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "11923",
+   "team": 4,
+   "week_min": 8,
+   "week_max": 11,
+   "basis": "last seen for team 6 in week 8, next seen for team 4 in week 11",
+   "week": 8,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "12699",
+   "team": 4,
+   "week_min": 7,
+   "week_max": 11,
+   "basis": "last seen for team 6 in week 7, next seen for team 4 in week 11",
+   "week": 8,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "-16009",
+   "team": 8,
+   "week_min": 8,
+   "week_max": 12,
+   "basis": "last seen for team 2 in week 8, next seen for team 8 in week 12",
+   "week": 8,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "draft_unidentified",
+   "player": "2971433",
+   "team": 4,
+   "week_min": 1,
+   "week_max": 8,
+   "basis": "first seen starting for team 4 in week 8",
+   "week": 8,
+   "week_from_counter": false,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "-16009",
+   "team": 2,
+   "week_min": 8,
+   "week_max": 12,
+   "basis": "last seen for team 2 in week 8, next seen for team 8 in week 12",
+   "week": 8,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "-16017",
+   "team": 4,
+   "week_min": 8,
+   "week_max": 14,
+   "basis": "last seen for team 4 in week 8, next seen for team 2 in week 14",
+   "week": 8,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "11923",
+   "team": 6,
+   "week_min": 8,
+   "week_max": 11,
+   "basis": "last seen for team 6 in week 8, next seen for team 4 in week 11",
+   "week": 8,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "15072",
+   "team": 7,
+   "week_min": 8,
+   "week_max": 15,
+   "basis": "last seen for team 7 in week 8, not on its final roster",
+   "week": 8,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "9704",
+   "team": 2,
+   "week_min": 5,
+   "week_max": 10,
+   "basis": "last seen for team 7 in week 5, next seen for team 2 in week 10",
+   "week": 9,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "2577327",
+   "team": 3,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "first seen on the final roster for team 3 in week 16",
+   "week": 9,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "-16019",
+   "team": 4,
+   "week_min": 1,
+   "week_max": 9,
+   "basis": "first seen starting for team 4 in week 9",
+   "week": 9,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "-16012",
+   "team": 7,
+   "week_min": 9,
+   "week_max": 10,
+   "basis": "last seen for team 1 in week 9, next seen for team 7 in week 10",
+   "week": 9,
+   "week_from_counter": true,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "16732",
+   "team": 1,
+   "week_min": 9,
+   "week_max": 15,
+   "basis": "last seen for team 1 in week 9, not on its final roster",
+   "week": 9,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "-16012",
+   "team": 1,
+   "week_min": 9,
+   "week_max": 10,
+   "basis": "last seen for team 1 in week 9, next seen for team 7 in week 10",
+   "week": 9,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "1097",
+   "team": 2,
+   "week_min": 9,
+   "week_max": 15,
+   "basis": "last seen for team 2 in week 9, not on its final roster",
+   "week": 9,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "11364",
+   "team": 3,
+   "week_min": 9,
+   "week_max": 15,
+   "basis": "last seen for team 3 in week 9, not on its final roster",
+   "week": 9,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "-16017",
+   "team": 2,
+   "week_min": 8,
+   "week_max": 14,
+   "basis": "last seen for team 4 in week 8, next seen for team 2 in week 14",
+   "week": 10,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "15683",
+   "team": 1,
+   "week_min": 10,
+   "week_max": 15,
+   "basis": "last seen for team 1 in week 10, next seen for team 6 in week 15",
+   "week": 10,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "14053",
+   "team": 3,
+   "week_min": 10,
+   "week_max": 15,
+   "basis": "last seen for team 3 in week 10, not on its final roster",
+   "week": 10,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "15826",
+   "team": 3,
+   "week_min": 10,
+   "week_max": 15,
+   "basis": "last seen for team 3 in week 10, not on its final roster",
+   "week": 10,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "15058",
+   "team": 4,
+   "week_min": 10,
+   "week_max": 15,
+   "basis": "last seen for team 4 in week 10, not on its final roster",
+   "week": 10,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "-16012",
+   "team": 7,
+   "week_min": 10,
+   "week_max": 15,
+   "basis": "last seen for team 7 in week 10, not on its final roster",
+   "week": 10,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "14129",
+   "team": 3,
+   "week_min": 1,
+   "week_max": 15,
+   "basis": "last seen for team 4 in week 0, next seen for team 3 in week 15",
+   "week": 11,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "add",
+   "player": "15683",
+   "team": 6,
+   "week_min": 10,
+   "week_max": 15,
+   "basis": "last seen for team 1 in week 10, next seen for team 6 in week 15",
+   "week": 11,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "2976212",
+   "team": 7,
+   "week_min": 11,
+   "week_max": 15,
+   "basis": "last seen for team 7 in week 11, not on its final roster",
+   "week": 11,
+   "confidence": "medium"
+  },
+  {
+   "type": "add",
+   "player": "11383",
+   "team": 2,
+   "week_min": 1,
+   "week_max": 13,
+   "basis": "first seen starting for team 2 in week 13",
+   "week": 12,
+   "week_from_counter": true,
+   "confidence": "low"
+  },
+  {
+   "type": "drop",
+   "player": "12503",
+   "team": 6,
+   "week_min": 12,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 12, not on its final roster",
+   "week": 12,
+   "confidence": "medium"
+  },
+  {
+   "type": "drop",
+   "player": "3122866",
+   "team": 6,
+   "week_min": 13,
+   "week_max": 15,
+   "basis": "last seen for team 6 in week 13, not on its final roster",
+   "week": 13,
+   "confidence": "medium"
+  }
+ ],
+ "trades": [
+  {
+   "type": "trade",
+   "teams": [
+    5,
+    7
+   ],
+   "week_min": 3,
+   "week_max": 7,
+   "confidence": "medium",
+   "moves": [
+    {
+     "player": "16944",
+     "from": 5,
+     "to": 7
+    },
+    {
+     "player": "14221",
+     "from": 7,
+     "to": 5
+    }
+   ],
+   "basis": "players crossed between the two teams in overlapping windows; both teams have official trade counts",
+   "week": 3
+  },
+  {
+   "type": "trade",
+   "teams": [
+    5,
+    7
+   ],
+   "week_min": 1,
+   "week_max": 3,
+   "confidence": "medium",
+   "moves": [
+    {
+     "player": "11278",
+     "from": 5,
+     "to": 7
+    },
+    {
+     "player": "17177",
+     "from": 7,
+     "to": 5
+    }
+   ],
+   "basis": "players crossed between the two teams in overlapping windows; both teams have official trade counts",
+   "week": 1
+  },
+  {
+   "type": "trade",
+   "teams": [
+    3,
+    7
+   ],
+   "week_min": 4,
+   "week_max": 5,
+   "confidence": "medium",
+   "moves": [
+    {
+     "player": "16777",
+     "from": 3,
+     "to": 7
+    },
+    {
+     "player": "13216",
+     "from": 7,
+     "to": 3
+    }
+   ],
+   "basis": "players crossed between the two teams in overlapping windows; both teams have official trade counts",
+   "week": 4
+  }
+ ]
+}

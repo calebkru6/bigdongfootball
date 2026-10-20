@@ -71,7 +71,12 @@ Managers are labelled by their Sleeper usernames (already public on Sleeper) or,
 
 ## Data notes surfaced on the site
 
-- ESPN never returned transaction logs for 2016–2017; those seasons show "n/a" moves, not zero.
+- ESPN no longer serves itemized transaction logs for 2016–2017 (only 2018 onward). `espn/transaction-counters.json`
+  holds the official per-team counters (pickups per week, drops, trades) pulled from a signed-in session, and
+  `tools/infer_espn_moves.py` reconstructs the moves from the draft, weekly starters and end-of-season rosters into
+  `espn/inferred-moves/`. The site marks every such move "reconstructed" with an approximate week.
+- Sleeper's 2022 startup-draft record had slots 1 and 8 swapped; the build validates startup picks against week-1
+  rosters and remaps them.
 - ESPN weekly rosters with real slots exist for 2018–2021 (from the raw weekly box-score captures). For 2016–2017 ESPN kept only the nine starters per week, without slots, plus an end-of-season roster.
 - The league began in 2016. Two of the eight franchises changed owners after that first season.
 - 2022 and 2023 exist on ESPN only as unused auto-renewed shells; the site uses the Sleeper seasons.

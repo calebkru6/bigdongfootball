@@ -171,7 +171,7 @@
     <div class="table-wrap"><table class="tbl"><thead><tr><th>Season</th><th>Platform</th><th>Champion</th><th>Runner-up</th><th>#1 seed</th><th>Points leader</th><th class="num">Games</th><th class="num">Moves</th><th class="num">Trades</th><th>Scoring</th></tr></thead><tbody>
     ${D.seasons.slice().reverse().map(s => `<tr><td><a href="#/season/${s.season}"><b>${s.season}</b></a>${s.status !== 'complete' ? ` <span class="pill pill-live">Week ${esc(s.current_week)}</span>` : ''}</td><td>${platformPill(s.platform)}</td><td>${s.champion ? `<b>${esc(s.champion_team)}</b><br><span class="small muted">${mgrLink(s.champion)}</span>` : '<span class="muted">TBD</span>'}</td><td>${s.runner_up ? mgrLink(s.runner_up) : '—'}</td><td>${s.top_seed ? mgrLink(s.top_seed) : '—'}</td><td>${mgrLink(s.points_leader)}</td><td class="num">${s.games}</td><td class="num">${s.transactions || '<span class="muted">n/a</span>'}</td><td class="num">${s.trades || (s.transactions ? 0 : '<span class="muted">n/a</span>')}</td><td class="small">${esc(s.scoring_type || '')}</td></tr>`).join('')}
     </tbody></table></div>
-    <div class="notes">BigDongFootball has always been a dynasty league. On ESPN (2016–2021) that was done through yearly keeper drafts where managers re-selected their carried-over rosters; the move to Sleeper in 2022 made it a native dynasty league. The league began in 2016. ESPN did not return move logs for 2016 and 2017; "n/a" means the log was not recoverable, not that the league made no moves. 2022 and 2023 exist on ESPN only as unused auto-renewed shells; the real seasons were played on Sleeper and are shown from there.</div>`;
+    <div class="notes">BigDongFootball has always been a dynasty league. On ESPN (2016–2021) that was done through yearly keeper drafts where managers re-selected their carried-over rosters; the move to Sleeper in 2022 made it a native dynasty league. The league began in 2016. ESPN no longer serves itemized move logs for 2016 and 2017; those seasons show official per-team counters plus moves reconstructed from lineups and rosters, marked "reconstructed". 2022 and 2023 exist on ESPN only as unused auto-renewed shells; the real seasons were played on Sleeper and are shown from there.</div>`;
   }
 
   async function pageSeason(year, tab = 'standings', arg) {
@@ -285,7 +285,7 @@
   function tradeCard(s, t, opts = {}) {
     const sides = tradeSides(s, t);
     const list = (items, sign) => items.length ? `<ul class="${sign === '+' ? 'gets' : 'gives'}">${items.map(i => `<li><span class="sign">${sign}</span> ${i.html}</li>`).join('')}</ul>` : '';
-    return `<div class="trade"><div class="hdr"><span>${dateFmt(t.date)}${t.week ? ` · week ${t.week}` : ''}</span><span>${s.season} ${platformPill(s.platform)} ${opts.noLink ? '' : `<a class="btn" style="padding:2px 8px;margin-left:8px" href="#/tx/${s.season}/${enc(t.id)}">Investigate →</a>`}</span></div><div class="sides">${sides.map(v => `<div class="side"><div class="who"><a href="#/manager/${enc(v.manager)}">${esc(v.name)}</a> <span class="muted small">${esc(mgrName(v.manager))}</span></div>${list(v.gets, '+')}${list(v.gives, '−')}${!v.gets.length && !v.gives.length ? '<div class="muted small">nothing recorded</div>' : ''}</div>`).join('')}</div></div>`;
+    return `<div class="trade"><div class="hdr"><span>${t.inferred ? `<span class="pill pill-inferred" title="Reconstructed from lineups; ESPN no longer serves this log">reconstructed${t.confidence === 'low' ? ' · low confidence' : ''}</span> around week ${t.week}${t.week_range && t.week_range[0] !== t.week_range[1] ? ` <span class="muted">(weeks ${t.week_range[0]}–${t.week_range[1]})</span>` : ''}` : `${dateFmt(t.date)}${t.week ? ` · week ${t.week}` : ''}`}</span><span>${s.season} ${platformPill(s.platform)} ${opts.noLink ? '' : `<a class="btn" style="padding:2px 8px;margin-left:8px" href="#/tx/${s.season}/${enc(t.id)}">Investigate →</a>`}</span></div><div class="sides">${sides.map(v => `<div class="side"><div class="who"><a href="#/manager/${enc(v.manager)}">${esc(v.name)}</a> <span class="muted small">${esc(mgrName(v.manager))}</span></div>${list(v.gets, '+')}${list(v.gives, '−')}${!v.gets.length && !v.gives.length ? '<div class="muted small">nothing recorded</div>' : ''}</div>`).join('')}</div></div>`;
   }
   function txLine(s, t) {
     const name = f => { const tm = teamOf(s, f); return tm ? esc(tm.team_name) : f || '?'; };
@@ -293,8 +293,14 @@
     const who = t.franchises.map(name).join(', ');
     const adds = t.adds.map(a => `<span class="add">+ ${playerLabel(a.p)}</span>`).join(' &nbsp; ');
     const drops = t.drops.map(a => `<span class="drop">− ${playerLabel(a.p)}</span>`).join(' &nbsp; ');
-    const kind = t.type === 'waiver' ? `Waiver${t.bid != null ? ` ($${t.bid})` : ''}` : t.type === 'commissioner' ? 'Commissioner move' : 'Free agent';
+    const kind = t.type === 'waiver' ? `Waiver${t.bid != null ? ` ($${t.bid})` : ''}` : t.type === 'commissioner' ? 'Commissioner move' : t.inferred ? 'Pickup / drop' : 'Free agent';
+    if (t.inferred) return `<div class="tx"><div class="when"><span class="pill pill-inferred">reconstructed</span><br><span class="small">≈ week ${t.week}${t.week_range && t.week_range[0] !== t.week_range[1] ? ` (${t.week_range[0]}–${t.week_range[1]})` : ''} · ${kind}</span></div><div class="what"><div class="who">${who}</div><div class="line">${adds}${adds && drops ? '<br>' : ''}${drops}</div></div></div>`;
     return `<div class="tx"><div class="when">${dateFmt(t.date)}<br><span class="small">${t.week ? `Week ${t.week} · ` : ''}${kind}</span></div><div class="what"><div class="who">${who}</div><div class="line">${adds}${adds && drops ? '<br>' : ''}${drops}</div></div></div>`;
+  }
+  function countersTable(s) {
+    if (!s.transaction_counters) return '';
+    const rows = s.teams.map(t => ({ t, c: s.transaction_counters[t.franchise] || {} }));
+    return `<div class="card" style="margin-bottom:18px"><div class="card-head"><h3>Official transaction counter</h3><span class="small muted">from ESPN's league records</span></div><div class="table-wrap"><table class="tbl"><thead><tr><th>Team</th><th class="num">Pickups</th><th class="num">Drops</th><th class="num">Trades</th><th>Pickups by week</th></tr></thead><tbody>${rows.map(({ t, c }) => `<tr><td>${teamCell(t, { link: true })}</td><td class="num">${c.acquisitions ?? '—'}</td><td class="num">${c.drops ?? '—'}</td><td class="num">${c.trades ?? '—'}</td><td class="mono small muted">${c.by_week ? Object.entries(c.by_week).map(([w, n]) => n ? `<span title="week ${w}">${w}:${n}</span>` : '').filter(Boolean).join(' ') : ''}</td></tr>`).join('')}</tbody></table></div>${s.reconstructed ? `<p class="small muted" style="margin:8px 0 0">${esc(s.reconstructed.method)} Reconstructed: ${s.reconstructed.events.add} pickups, ${s.reconstructed.events.drop} drops, ${s.reconstructed.events.trade} trades. Weeks are approximate; a pickup that never started is invisible.</p>` : ''}</div>`;
   }
   function seasonMoves(s, tradesOnly) {
     const list = s.transactions.filter(t => tradesOnly ? t.type === 'trade' : t.type !== 'trade');
@@ -302,11 +308,11 @@
     const counts = {};
     s.transactions.forEach(t => counts[t.type] = (counts[t.type] || 0) + 1);
     const summary = Object.entries(counts).map(([k, v]) => `${v} ${k.replace('_', ' ')}${v > 1 && k === 'trade' ? 's' : ''}`).join(' · ');
-    if (tradesOnly) return `<p class="muted small">${summary}</p>${list.slice().reverse().map(t => txLine(s, t)).join('')}`;
+    if (tradesOnly) return `${countersTable(s)}<p class="muted small">${summary}</p>${list.slice().reverse().map(t => txLine(s, t)).join('')}`;
     const byTeam = {};
     list.forEach(t => t.franchises.forEach(f => byTeam[f] = (byTeam[f] || 0) + 1));
     const busiest = Object.entries(byTeam).sort((a, b) => b[1] - a[1]).map(([f, n]) => `${esc((teamOf(s, f) || {}).team_name)} (${n})`).slice(0, 3).join(', ');
-    return `<p class="muted small">${summary}. Most active: ${busiest}.</p><div>${list.slice().reverse().map(t => txLine(s, t)).join('')}</div>`;
+    return `${countersTable(s)}<p class="muted small">${summary}. Most active: ${busiest}.</p><div>${(s.reconstructed ? list : list.slice().reverse()).map(t => txLine(s, t)).join('')}</div>`;
   }
   function seasonRules(s) {
     const st = s.settings;
@@ -497,17 +503,21 @@
       const from = e.from ? `<a href="#/manager/${enc((teamOf(sn, e.from) || {}).manager)}">${esc(frName(sn, e.from))}</a>` : null;
       let what;
       if (e.type === 'carryover' || e.type === 'keeper') return '';
-      if (e.type === 'draft') what = e.startup ? `Selected by ${to} in the ${e.season} startup draft <span class="muted small">(round ${e.round}, pick ${e.pick})</span>` : `Drafted by ${to} <span class="muted small">(round ${e.round}, pick ${e.pick})</span>`;
+      if (e.type === 'draft') {
+        const prev = e.prev_team ? ` <span class="muted small">— ended ${e.season - 1} on <a href="#/manager/${enc((teamOf(seasonOf(e.season - 1), e.prev_team) || {}).manager)}">${esc(frName(seasonOf(e.season - 1), e.prev_team))}</a>; ${e.startup ? `the ${e.season} startup draft on Sleeper re-selected rosters after the move from ESPN` : `the ${e.season} ESPN keeper draft was entered by hand, so an offseason trade or pickup shows up here`}</span>` : '';
+        what = e.startup ? `Selected by ${to} in the ${e.season} startup draft <span class="muted small">(round ${e.round}, pick ${e.pick})</span>${prev}` : e.keeper_draft ? `Entered for ${to} in the ${e.season} keeper draft <span class="muted small">(round ${e.round}, pick ${e.pick})</span>${prev}` : `Drafted by ${to} <span class="muted small">(round ${e.round}, pick ${e.pick})</span>`;
+      }
       else if (e.type === 'trade') {
         const t = sn && sn.transactions.find(x => x.id === e.id);
         what = `Traded from ${from || '?'} to ${to || '?'}`;
         if (t) return `<div class="tx"><div class="when"><a href="#/season/${e.season}/trades">${e.season}</a>${e.week ? ` · week ${e.week}` : ''}<br><span class="small">${dateFmt(e.date)}</span></div><div class="what"><div class="line">${what}</div>${tradeCard(sn, t)}</div></div>`;
       }
+      else if (e.inferred) what = `${e.to ? `Picked up by ${to}` : `Dropped by ${from}`} <span class="pill pill-inferred">reconstructed</span> <span class="muted small">around week ${e.week}${e.week_range && e.week_range[0] !== e.week_range[1] ? ` (${e.week_range[0]}–${e.week_range[1]})` : ''}</span>`;
       else if (e.type === 'waiver') what = e.to ? `Claimed off waivers by ${to}${e.bid != null ? ` <span class="muted small">($${e.bid} FAAB)</span>` : ''}` : `Dropped by ${from}`;
       else if (e.type === 'commissioner') what = e.to ? `Added to ${to} by the commissioner` : `Removed from ${from} by the commissioner`;
       else what = e.to ? `Signed as a free agent by ${to}` : `Dropped by ${from}`;
       if (e.to && e.from && e.type !== 'trade') what = `Moved from ${from} to ${to}`;
-      return `<div class="tx"><div class="when"><a href="#/season/${e.season}/${e.type === 'draft' || e.type === 'keeper' ? 'draft' : e.type === 'trade' ? 'trades' : 'moves'}">${e.season}</a>${e.week ? ` · week ${e.week}` : ''}<br><span class="small">${dateFmt(e.date)}</span></div><div class="what"><div class="line">${what}</div></div></div>`;
+      return `<div class="tx"><div class="when"><a href="#/season/${e.season}/${e.type === 'draft' || e.type === 'keeper' ? 'draft' : e.type === 'trade' ? 'trades' : 'moves'}">${e.season}</a>${e.week ? ` · ${e.inferred ? '≈ ' : ''}week ${e.week}` : ''}<br><span class="small">${dateFmt(e.date)}</span></div><div class="what"><div class="line">${what}</div></div></div>`;
     };
     const tenRows = d.tenures.slice().reverse().map(t => `<tr><td><a href="#/season/${t.season}/rosters">${t.season}</a> ${platformPill(t.platform)}</td><td><a href="#/manager/${enc(t.manager)}">${esc(t.team_name)}</a><div class="small muted">${esc(mgrName(t.manager))}</div></td><td class="num">${t.weeks}</td><td class="num">${t.starts}</td><td class="num">${pts(t.starter_pts)}</td><td class="num">${pts(t.total_pts)}</td><td class="num">${pts(t.ppg)}</td><td class="num">${t.best ? `${pts(t.best.pts)} <span class="muted small">wk ${t.best.week}</span>` : ''}</td></tr>`).join('');
     const byFr = {};
@@ -533,7 +543,7 @@
           <div class="card"><h3>Teams</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Manager</th><th class="num">Pts</th><th class="num">Starts</th><th class="num">Weeks</th><th>Seasons</th></tr></thead><tbody>${homes.map(([m, a]) => `<tr><td>${mgrLink(m)}</td><td class="num">${pts(+a.pts.toFixed(2))}</td><td class="num">${a.starts}</td><td class="num">${a.weeks}</td><td class="small muted nowrap">${yearRanges(a.seasons)}</td></tr>`).join('') || '<tr><td colspan="5" class="muted">Never on a roster during a scored week.</td></tr>'}</tbody></table></div></div>
           <div class="card" style="margin-top:18px"><h3>Season by season</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Year</th><th>Team</th><th class="num">Wks</th><th class="num">Starts</th><th class="num">Starter pts</th><th class="num">Total</th><th class="num">PPG</th><th class="num">Best</th></tr></thead><tbody>${tenRows || '<tr><td colspan="8" class="muted">—</td></tr>'}</tbody></table></div></div>
         </div>
-        <div class="card"><h3>Transaction history</h3>${d.events.filter(e => e.type !== 'carryover' && e.type !== 'keeper').length ? d.events.map(evLine).join('') : '<div class="empty">No recorded moves. ESPN did not return move logs for 2016–2017.</div>'}${c.carryovers ? `<p class="small muted" style="margin-top:10px">Carried over between seasons ${c.carryovers} time${c.carryovers > 1 ? 's' : ''} (keeper-draft re-selections and the 2022 migration draft are not listed as moves).</p>` : ''}</div>
+        <div class="card"><h3>Transaction history</h3>${d.events.filter(e => e.type !== 'carryover' && e.type !== 'keeper').length ? d.events.map(evLine).join('') : '<div class="empty">No recorded moves.</div>'}${c.carryovers ? `<p class="small muted" style="margin-top:10px">Carried over between seasons ${c.carryovers} time${c.carryovers > 1 ? 's' : ''} (keeper-draft re-selections and the 2022 migration draft are not listed as moves).</p>` : ''}</div>
       </div>`;
   }
 
@@ -570,6 +580,7 @@
       ${moved.length ? `<div class="card" style="margin-top:18px"><h3>What happened next</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Player</th><th>Went to</th><th class="num">Before, for old team</th><th class="num">Rest of ${s.season}</th><th class="num">Later seasons</th><th>Then</th></tr></thead><tbody>
         ${after.map(a => `<tr><td>${playerLabel(a.p)}</td><td>${a.to ? `<a href="#/manager/${enc((teamOf(s, a.to) || {}).manager)}">${esc(name(a.to))}</a>` : '<span class="muted">released</span>'}</td><td class="num">${a.before ? `${pts(+a.before.pts.toFixed(2))} <span class="muted small">${a.before.starts} st / ${a.before.weeks} wk</span>` : '—'}</td><td class="num">${a.rest ? `<b>${pts(+a.rest.pts.toFixed(2))}</b> <span class="muted small">${a.rest.starts} st / ${a.rest.weeks} wk</span>` : '—'}</td><td class="num">${a.later && a.later.weeks ? `${pts(+a.later.pts.toFixed(2))} <span class="muted small">${a.later.starts} st · ${yearRanges(a.laterSeasons)}</span>` : '<span class="muted">—</span>'}</td><td class="small">${a.next ? `${a.next.type === 'trade' ? 'Traded' : 'Dropped'} ${a.next.season}${a.next.week ? ' wk ' + a.next.week : ''}${a.next.to ? ' to ' + esc(name(a.next.to)) : ''}` : (a.d && a.d.weekly.some(w => w.franchise === a.to && w.season === D.league.current_season) ? '<span class="trophy">still on roster</span>' : '')}</td></tr>`).join('')}
       </tbody></table></div><p class="small muted" style="margin:8px 0 0">Points are what the player scored while started for that team. 2016–2017 ESPN data only records starters.</p></div>` : ''}
+      ${t.inferred ? `<div class="notes">This move is reconstructed from the draft, weekly starters and end-of-season rosters; ESPN no longer serves the itemized ${s.season} log. The week is approximate${t.week_range && t.week_range[0] !== t.week_range[1] ? ` (between weeks ${t.week_range[0]} and ${t.week_range[1]})` : ''}${t.confidence === 'low' ? ', and this pairing is low confidence' : ''}.</div>` : ''}
       ${t.picks.length ? `<div class="card" style="margin-top:18px"><h3>Draft picks in the deal</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Pick</th><th>Moved</th><th>Became</th></tr></thead><tbody>${pickRows}</tbody></table></div><p class="small muted" style="margin:8px 0 0">"Became" lists the receiving team's selections in that round of that draft; when a team held several picks in the round all are shown.</p></div>` : ''}`;
   }
 

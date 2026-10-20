@@ -288,3 +288,5 @@ select.sel, input.inp { background: var(--bg-3); border: 1px solid var(--line); 
 .trade .side ul.gives li .sign { color: var(--loss); }
 .trade .side ul.gives li { color: var(--muted); }
 .tx .what .trade { margin: 6px 0 0; }
+
+.pill-inferred { background: rgba(180,140,240,.15); color: #c9a8ff; border-color: rgba(180,140,240,.45); }

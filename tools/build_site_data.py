@@ -215,6 +215,39 @@ def build_espn_season(year):
                        "type": "trade", "franchises": frs, "adds": adds, "drops": drops, "picks": [], "bid": None})
     events.sort(key=lambda e: (e["date"] or "", e["id"]))
 
+    # reconstructed moves for seasons whose itemized log ESPN no longer serves
+    counters_all = load(ESPN / "transaction-counters.json") if (ESPN / "transaction-counters.json").exists() else {}
+    counters = counters_all.get(str(year))
+    inf_file = ESPN / "inferred-moves" / f"{year}.json"
+    reconstructed = None
+    if not events and inf_file.exists():
+        inf = load(inf_file)
+        fr_of = lambda tid: FR_BY_ESPN.get(f"team-{tid}")
+        n = 0
+        for t in inf["trades"]:
+            n += 1
+            events.append({"id": f"{year}-inf-{n}", "week": t["week"], "date": None, "type": "trade", "inferred": True,
+                           "week_range": [t["week_min"], t["week_max"]], "confidence": t.get("confidence", "medium"),
+                           "franchises": sorted({fr_of(x) for x in t["teams"]}),
+                           "adds": [{"p": "e:" + m["player"], "to": fr_of(m["to"])} for m in t["moves"]],
+                           "drops": [{"p": "e:" + m["player"], "from": fr_of(m["from"])} for m in t["moves"]], "picks": [], "bid": None})
+        for e in inf["events"]:
+            if e["type"] not in ("add", "drop"):
+                continue
+            n += 1
+            events.append({"id": f"{year}-inf-{n}", "week": e["week"], "date": None, "type": "free_agent", "inferred": True,
+                           "week_range": [e["week_min"], e["week_max"]], "confidence": e.get("confidence", "medium"),
+                           "franchises": [fr_of(e["team"])],
+                           "adds": [{"p": "e:" + e["player"], "to": fr_of(e["team"])}] if e["type"] == "add" else [],
+                           "drops": [{"p": "e:" + e["player"], "from": fr_of(e["team"])}] if e["type"] == "drop" else [], "picks": [], "bid": None})
+        events.sort(key=lambda e: (e["week"] or 0, e["type"] != "trade", e["id"]))
+        reconstructed = {"method": inf["method"], "events": inf["summary"]["events"]}
+    counters_out = None
+    if counters:
+        counters_out = {fr_of(int(tid)) if 'fr_of' in dir() else FR_BY_ESPN.get(f"team-{tid}"): {
+            "acquisitions": c["acquisitions"], "drops": c["drops"], "trades": c["trades"], "lineup_moves": c.get("lineup_moves"),
+            "by_week": c["by_week"]} for tid, c in counters["teams"].items()}
+
     # settings summary
     scoring = rules.get("scoringSettings", {})
     lsc = rules.get("rosterSettings", {}).get("lineupSlotCounts", {})
@@ -237,7 +270,13 @@ def build_espn_season(year):
     }
     notes = []
     if cov.get("transaction_state") == "not_returned":
-        notes.append("ESPN did not return this season's transaction log. The empty moves list is a data gap, not evidence the league made no moves.")
+        if reconstructed:
+            tot_add = sum(c["acquisitions"] for c in counters["teams"].values()); tot_tr = sum(c["trades"] for c in counters["teams"].values()) // 2
+            notes.append(f"ESPN no longer serves the itemized {year} transaction log. Its official counters record {tot_add} pickups and {tot_tr} trades. "
+                         f"The moves listed are reconstructed from the draft, weekly starters and end-of-season rosters ({reconstructed['events']['add']} pickups, "
+                         f"{reconstructed['events']['drop']} drops, {reconstructed['events']['trade']} trades found); weeks are approximate and pickups that never started are not visible.")
+        else:
+            notes.append("ESPN did not return this season's transaction log. The empty moves list is a data gap, not evidence the league made no moves.")
     if not rost["weeks"]:
         notes.append("ESPN returned no weekly roster snapshots for this season: box scores show the nine starters without slot labels, and the Rosters tab only has the end-of-season roster.")
     if cov.get("lineup_point_mismatches"):
@@ -252,6 +291,7 @@ def build_espn_season(year):
         "champion": next((t["manager"] for t in teams if t["champion"]), None),
         "teams": teams, "matchups": ms, "bracket": None, "drafts": drafts, "transactions": events,
         "settings": settings, "notes": notes, "rosters": rosters,
+        "transaction_counters": counters_out, "reconstructed": reconstructed,
     }
 
 # ----------------------------------------------------------------------------- SLEEPER
@@ -465,10 +505,27 @@ def build_sleeper_season(year):
         rounds = dr["settings"].get("rounds")
         slot_to_roster = {int(v): int(k) for k, v in (dr.get("slot_to_roster_id") or {}).items()}
         picks = []
+        # Sleeper's draft record can carry stale slot->roster assignments (2022 startup has slots 1 and 8 swapped).
+        # For startup drafts, validate each slot against the week-1 rosters and remap when the evidence is clear.
+        slot_fix = {}
+        if rounds and rounds >= 10 and weekly.get(1):
+            wk1 = {m["roster_id"]: set(m.get("players") or []) for m in weekly[1]}
+            by_slot = collections.defaultdict(set)
+            for p in picks_raw:
+                if p.get("player_id"):
+                    by_slot[p["draft_slot"]].add(p["player_id"])
+            for slot, ps in by_slot.items():
+                rec = next((p.get("roster_id") for p in picks_raw if p["draft_slot"] == slot), None)
+                best = max(wk1, key=lambda r: len(ps & wk1[r]))
+                if rec is not None and best != rec and len(ps & wk1[best]) >= len(ps & wk1.get(rec, set())) + 5:
+                    slot_fix[slot] = best
+            if slot_fix:
+                print(f"  {year} {dr['type']} draft: remapped slots {slot_fix} using week-1 rosters")
         for p in sorted(picks_raw, key=lambda p: p["pick_no"]):
             md = p.get("metadata") or {}
+            rid = slot_fix.get(p["draft_slot"], p.get("roster_id") or slot_to_roster.get(p["draft_slot"]))
             picks.append({"pick": p["pick_no"], "round": p["round"], "slot": p["draft_slot"],
-                          "franchise": FR_BY_ROSTER.get(p.get("roster_id") or slot_to_roster.get(p["draft_slot"])),
+                          "franchise": FR_BY_ROSTER.get(rid),
                           "p": ensure_sleeper_player(p["player_id"], md) if p.get("player_id") else None,
                           "keeper": bool(p.get("is_keeper")), "bid": (md.get("amount") if dr["type"] == "auction" else None)})
         label = ("Startup draft" if rounds and rounds >= 10 else "Rookie draft") + f" ({rounds} rounds, {dr['type']})"
@@ -852,7 +909,8 @@ def build_player_pages(seasons):
             for pk in d["picks"]:
                 if pk.get("p"):
                     carried = pk["keeper"] or (keeper_draft and (pk["p"] in end_roster[(sn["season"] - 1, pk["franchise"])] or pk["p"] in acquired[pk["franchise"]]))
-                    events[pk["p"]].append({"season": sn["season"], "date": d.get("date"), "week": 0, "type": "carryover" if carried else "draft",
+                    prev_team = next((fr for (yr, fr), ps in end_roster.items() if yr == sn["season"] - 1 and pk["p"] in ps and fr != pk["franchise"]), None) if keeper_draft and not carried else None
+                    events[pk["p"]].append({"season": sn["season"], "date": d.get("date"), "week": 0, "type": "carryover" if carried else "draft", "prev_team": prev_team, "keeper_draft": keeper_draft,
                                             "to": pk["franchise"], "from": None, "round": pk["round"], "pick": pk["pick"], "label": d["label"], "id": None,
                                             "startup": d["label"].startswith("Startup")})
         for t in sn["transactions"]:
@@ -861,6 +919,7 @@ def build_player_pages(seasons):
             for pid in set(adds) | set(drops):
                 events[pid].append({"season": sn["season"], "date": t["date"], "week": t["week"], "type": t["type"], "id": t["id"],
                                     "to": adds.get(pid), "from": drops.get(pid), "bid": t.get("bid"),
+                                    "inferred": t.get("inferred"), "week_range": t.get("week_range"), "confidence": t.get("confidence"),
                                     "picks": [{"season": x["season"], "round": x["round"], "from": x["from"], "to": x["to"]} for x in t.get("picks") or []] if t["type"] == "trade" else None,
                                     "others": [e["p"] for e in t["adds"] if e["p"] != pid] if t["type"] == "trade" else None})
     pids = set(ten_key[0] for ten_key in ten) | set(events)
@@ -880,7 +939,7 @@ def build_player_pages(seasons):
                          "ppg": r2(t["starter_pts"] / t["starts"]) if t["starts"] else None, "best": t["best"],
                          "slots": dict(t["slots"].most_common(3))})
         rows.sort(key=lambda r: (r["season"], r["franchise"]))
-        ev = sorted(events.get(pid, []), key=lambda e: (e["season"], e["date"] or "", e["week"] or 0))
+        ev = sorted(events.get(pid, []), key=lambda e: (e["season"], (e["date"] or f"{e['season']}-09-01T00:00:00Z-w{(e['week'] or 0):02d}"), e["week"] or 0))
         wk = sorted(weekly.get(pid, []), key=lambda w: -(w["pts"] or 0))
         career = {"weeks": sum(r["weeks"] for r in rows), "starts": sum(r["starts"] for r in rows),
                   "starter_pts": r2(sum(r["starter_pts"] for r in rows)), "total_pts": r2(sum(r["total_pts"] for r in rows)),
