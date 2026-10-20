@@ -619,7 +619,7 @@
           <div class="card"><h3>Teams</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Manager</th><th class="num">Pts</th><th class="num">Starts</th><th class="num">Weeks</th><th>Seasons</th></tr></thead><tbody>${homes.map(([m, a]) => `<tr><td>${mgrLink(m)}</td><td class="num">${pts(+a.pts.toFixed(2))}</td><td class="num">${a.starts}</td><td class="num">${a.weeks}</td><td class="small muted nowrap">${yearRanges(a.seasons)}</td></tr>`).join('') || '<tr><td colspan="5" class="muted">Never on a roster during a scored week.</td></tr>'}</tbody></table></div></div>
           <div class="card" style="margin-top:18px"><h3>Season by season</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Year</th><th>Team</th><th class="num">Wks</th><th class="num">Starts</th><th class="num">Starter pts</th><th class="num">Total</th><th class="num">PPG</th><th class="num">Best</th></tr></thead><tbody>${tenRows || '<tr><td colspan="8" class="muted">—</td></tr>'}</tbody></table></div></div>
         </div>
-        <div class="card"><h3>Transaction history</h3>${d.events.filter(e => e.type !== 'carryover' && e.type !== 'keeper').length ? d.events.slice().reverse().map(evLine).join('') : '<div class="empty">No recorded moves.</div>'}${c.carryovers ? `<p class="small muted" style="margin-top:10px">Carried over between seasons ${c.carryovers} time${c.carryovers > 1 ? 's' : ''} (keeper-draft re-selections and the 2022 migration draft are not listed as moves).</p>` : ''}</div>
+        <div class="card"><h3>Transaction history</h3>${d.events.filter(e => e.type !== 'carryover' && e.type !== 'keeper').length ? d.events.slice().reverse().map(evLine).join('') : '<div class="empty">No recorded moves.</div>'}</div>
       </div>`;
   }
 
