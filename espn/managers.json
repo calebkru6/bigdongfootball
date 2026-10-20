@@ -1,0 +1,423 @@
+[
+  {
+    "id": "manager-568cd68f93a9",
+    "display_name": "Manager 01",
+    "team_seasons": [
+      {
+        "season": 2016,
+        "team_id": "team-8",
+        "played": true
+      },
+      {
+        "season": 2017,
+        "team_id": "team-8",
+        "played": true
+      },
+      {
+        "season": 2018,
+        "team_id": "team-8",
+        "played": true
+      },
+      {
+        "season": 2019,
+        "team_id": "team-8",
+        "played": true
+      },
+      {
+        "season": 2020,
+        "team_id": "team-8",
+        "played": true
+      },
+      {
+        "season": 2021,
+        "team_id": "team-8",
+        "played": true
+      },
+      {
+        "season": 2022,
+        "team_id": "team-8",
+        "played": false
+      },
+      {
+        "season": 2023,
+        "team_id": "team-8",
+        "played": false
+      }
+    ],
+    "regular_season_wins": 40,
+    "regular_season_losses": 39,
+    "regular_season_ties": 0,
+    "championship_seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "manager-a70279f72efe",
+    "display_name": "Manager 02",
+    "team_seasons": [
+      {
+        "season": 2016,
+        "team_id": "team-3",
+        "played": true
+      },
+      {
+        "season": 2017,
+        "team_id": "team-3",
+        "played": true
+      },
+      {
+        "season": 2018,
+        "team_id": "team-3",
+        "played": true
+      },
+      {
+        "season": 2019,
+        "team_id": "team-3",
+        "played": true
+      },
+      {
+        "season": 2020,
+        "team_id": "team-3",
+        "played": true
+      },
+      {
+        "season": 2021,
+        "team_id": "team-3",
+        "played": true
+      },
+      {
+        "season": 2022,
+        "team_id": "team-3",
+        "played": false
+      },
+      {
+        "season": 2023,
+        "team_id": "team-3",
+        "played": false
+      }
+    ],
+    "regular_season_wins": 49,
+    "regular_season_losses": 30,
+    "regular_season_ties": 0,
+    "championship_seasons": [
+      2016,
+      2019
+    ]
+  },
+  {
+    "id": "manager-662dc4d6af44",
+    "display_name": "Manager 03",
+    "team_seasons": [
+      {
+        "season": 2016,
+        "team_id": "team-1",
+        "played": true
+      },
+      {
+        "season": 2017,
+        "team_id": "team-1",
+        "played": true
+      },
+      {
+        "season": 2018,
+        "team_id": "team-1",
+        "played": true
+      },
+      {
+        "season": 2019,
+        "team_id": "team-1",
+        "played": true
+      },
+      {
+        "season": 2020,
+        "team_id": "team-1",
+        "played": true
+      },
+      {
+        "season": 2021,
+        "team_id": "team-1",
+        "played": true
+      },
+      {
+        "season": 2022,
+        "team_id": "team-1",
+        "played": false
+      },
+      {
+        "season": 2023,
+        "team_id": "team-1",
+        "played": false
+      }
+    ],
+    "regular_season_wins": 41,
+    "regular_season_losses": 38,
+    "regular_season_ties": 0,
+    "championship_seasons": []
+  },
+  {
+    "id": "manager-c615bbb19631",
+    "display_name": "Manager 04",
+    "team_seasons": [
+      {
+        "season": 2016,
+        "team_id": "team-2",
+        "played": true
+      },
+      {
+        "season": 2017,
+        "team_id": "team-2",
+        "played": true
+      },
+      {
+        "season": 2018,
+        "team_id": "team-2",
+        "played": true
+      },
+      {
+        "season": 2019,
+        "team_id": "team-2",
+        "played": true
+      },
+      {
+        "season": 2020,
+        "team_id": "team-2",
+        "played": true
+      },
+      {
+        "season": 2021,
+        "team_id": "team-2",
+        "played": true
+      },
+      {
+        "season": 2022,
+        "team_id": "team-2",
+        "played": false
+      },
+      {
+        "season": 2023,
+        "team_id": "team-2",
+        "played": false
+      }
+    ],
+    "regular_season_wins": 27,
+    "regular_season_losses": 52,
+    "regular_season_ties": 0,
+    "championship_seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "manager-e0dc69a96669",
+    "display_name": "Manager 05",
+    "team_seasons": [
+      {
+        "season": 2016,
+        "team_id": "team-4",
+        "played": true
+      }
+    ],
+    "regular_season_wins": 4,
+    "regular_season_losses": 9,
+    "regular_season_ties": 0,
+    "championship_seasons": []
+  },
+  {
+    "id": "manager-6235cab835cf",
+    "display_name": "Manager 06",
+    "team_seasons": [
+      {
+        "season": 2016,
+        "team_id": "team-5",
+        "played": true
+      }
+    ],
+    "regular_season_wins": 5,
+    "regular_season_losses": 8,
+    "regular_season_ties": 0,
+    "championship_seasons": []
+  },
+  {
+    "id": "manager-73727dabffa3",
+    "display_name": "Manager 07",
+    "team_seasons": [
+      {
+        "season": 2016,
+        "team_id": "team-7",
+        "played": true
+      },
+      {
+        "season": 2017,
+        "team_id": "team-7",
+        "played": true
+      },
+      {
+        "season": 2018,
+        "team_id": "team-7",
+        "played": true
+      },
+      {
+        "season": 2019,
+        "team_id": "team-7",
+        "played": true
+      },
+      {
+        "season": 2020,
+        "team_id": "team-7",
+        "played": true
+      },
+      {
+        "season": 2021,
+        "team_id": "team-7",
+        "played": true
+      },
+      {
+        "season": 2022,
+        "team_id": "team-7",
+        "played": false
+      },
+      {
+        "season": 2023,
+        "team_id": "team-7",
+        "played": false
+      }
+    ],
+    "regular_season_wins": 39,
+    "regular_season_losses": 40,
+    "regular_season_ties": 0,
+    "championship_seasons": []
+  },
+  {
+    "id": "manager-7783ef2ca401",
+    "display_name": "Manager 08",
+    "team_seasons": [
+      {
+        "season": 2016,
+        "team_id": "team-6",
+        "played": true
+      },
+      {
+        "season": 2017,
+        "team_id": "team-6",
+        "played": true
+      },
+      {
+        "season": 2018,
+        "team_id": "team-6",
+        "played": true
+      },
+      {
+        "season": 2019,
+        "team_id": "team-6",
+        "played": true
+      },
+      {
+        "season": 2020,
+        "team_id": "team-6",
+        "played": true
+      },
+      {
+        "season": 2021,
+        "team_id": "team-6",
+        "played": true
+      },
+      {
+        "season": 2022,
+        "team_id": "team-6",
+        "played": false
+      },
+      {
+        "season": 2023,
+        "team_id": "team-6",
+        "played": false
+      }
+    ],
+    "regular_season_wins": 50,
+    "regular_season_losses": 29,
+    "regular_season_ties": 0,
+    "championship_seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "manager-60db4d2afcd8",
+    "display_name": "Manager 09",
+    "team_seasons": [
+      {
+        "season": 2017,
+        "team_id": "team-4",
+        "played": true
+      },
+      {
+        "season": 2018,
+        "team_id": "team-4",
+        "played": true
+      },
+      {
+        "season": 2019,
+        "team_id": "team-4",
+        "played": true
+      },
+      {
+        "season": 2020,
+        "team_id": "team-4",
+        "played": true
+      },
+      {
+        "season": 2021,
+        "team_id": "team-4",
+        "played": true
+      }
+    ],
+    "regular_season_wins": 28,
+    "regular_season_losses": 38,
+    "regular_season_ties": 0,
+    "championship_seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "manager-f8d62c41f309",
+    "display_name": "Manager 10",
+    "team_seasons": [
+      {
+        "season": 2017,
+        "team_id": "team-5",
+        "played": true
+      },
+      {
+        "season": 2018,
+        "team_id": "team-5",
+        "played": true
+      },
+      {
+        "season": 2019,
+        "team_id": "team-5",
+        "played": true
+      },
+      {
+        "season": 2020,
+        "team_id": "team-5",
+        "played": true
+      },
+      {
+        "season": 2021,
+        "team_id": "team-5",
+        "played": true
+      },
+      {
+        "season": 2022,
+        "team_id": "team-5",
+        "played": false
+      },
+      {
+        "season": 2023,
+        "team_id": "team-5",
+        "played": false
+      }
+    ],
+    "regular_season_wins": 33,
+    "regular_season_losses": 33,
+    "regular_season_ties": 0,
+    "championship_seasons": []
+  }
+]

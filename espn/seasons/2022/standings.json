@@ -1,0 +1,176 @@
+[
+  {
+    "id": "2022-team-1",
+    "season": 2022,
+    "team_id": "team-1",
+    "name": "Los Angeles Girthquakes",
+    "manager_ids": [
+      "manager-662dc4d6af44"
+    ],
+    "final_rank": null,
+    "playoff_seed": null,
+    "regular_season": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2022-season.json",
+      "team_id": 1
+    }
+  },
+  {
+    "id": "2022-team-2",
+    "season": 2022,
+    "team_id": "team-2",
+    "name": "Bacon 76ers",
+    "manager_ids": [
+      "manager-c615bbb19631"
+    ],
+    "final_rank": null,
+    "playoff_seed": null,
+    "regular_season": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2022-season.json",
+      "team_id": 2
+    }
+  },
+  {
+    "id": "2022-team-3",
+    "season": 2022,
+    "team_id": "team-3",
+    "name": "Chung Turtleneckers",
+    "manager_ids": [
+      "manager-a70279f72efe"
+    ],
+    "final_rank": null,
+    "playoff_seed": null,
+    "regular_season": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2022-season.json",
+      "team_id": 3
+    }
+  },
+  {
+    "id": "2022-team-4",
+    "season": 2022,
+    "team_id": "team-4",
+    "name": "Team 4",
+    "manager_ids": [],
+    "final_rank": null,
+    "playoff_seed": null,
+    "regular_season": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2022-season.json",
+      "team_id": 4
+    }
+  },
+  {
+    "id": "2022-team-5",
+    "season": 2022,
+    "team_id": "team-5",
+    "name": "Dunder Mifflin Dwight Schrutes",
+    "manager_ids": [
+      "manager-f8d62c41f309"
+    ],
+    "final_rank": null,
+    "playoff_seed": null,
+    "regular_season": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2022-season.json",
+      "team_id": 5
+    }
+  },
+  {
+    "id": "2022-team-6",
+    "season": 2022,
+    "team_id": "team-6",
+    "name": "Naturday Saints",
+    "manager_ids": [
+      "manager-7783ef2ca401"
+    ],
+    "final_rank": null,
+    "playoff_seed": null,
+    "regular_season": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2022-season.json",
+      "team_id": 6
+    }
+  },
+  {
+    "id": "2022-team-7",
+    "season": 2022,
+    "team_id": "team-7",
+    "name": "Gang Green",
+    "manager_ids": [
+      "manager-73727dabffa3"
+    ],
+    "final_rank": null,
+    "playoff_seed": null,
+    "regular_season": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2022-season.json",
+      "team_id": 7
+    }
+  },
+  {
+    "id": "2022-team-8",
+    "season": 2022,
+    "team_id": "team-8",
+    "name": "Team Red",
+    "manager_ids": [
+      "manager-568cd68f93a9"
+    ],
+    "final_rank": null,
+    "playoff_seed": null,
+    "regular_season": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 0,
+      "pointsFor": 0.0,
+      "pointsAgainst": 0.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2022-season.json",
+      "team_id": 8
+    }
+  }
+]

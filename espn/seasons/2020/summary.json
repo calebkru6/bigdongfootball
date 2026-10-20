@@ -1,0 +1,14 @@
+{
+  "id": 2020,
+  "state": "played",
+  "league_name": "BigDongFootball",
+  "team_count": 8,
+  "champion_team_id": "team-6",
+  "champion_manager_ids": [
+    "manager-7783ef2ca401"
+  ],
+  "matchup_count": 60,
+  "transaction_count": 293,
+  "drafted": true,
+  "coverage": "coverage.json#season=2020"
+}

@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "2020-matchup-0",
+    "season": 2020,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 0
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 104.0,
+      "points_by_week": {
+        "1": 104.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 106.0,
+      "points_by_week": {
+        "1": 106.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-1",
+    "season": 2020,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 1
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 115.0,
+      "points_by_week": {
+        "1": 115.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 63.0,
+      "points_by_week": {
+        "1": 63.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-2",
+    "season": 2020,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 2
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 124.0,
+      "points_by_week": {
+        "1": 124.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 128.0,
+      "points_by_week": {
+        "1": 128.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-3",
+    "season": 2020,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 3
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 154.0,
+      "points_by_week": {
+        "1": 154.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 103.0,
+      "points_by_week": {
+        "1": 103.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-4",
+    "season": 2020,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 4
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 151.0,
+      "points_by_week": {
+        "2": 151.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 84.0,
+      "points_by_week": {
+        "2": 84.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-5",
+    "season": 2020,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 5
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 139.0,
+      "points_by_week": {
+        "2": 139.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 65.0,
+      "points_by_week": {
+        "2": 65.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-6",
+    "season": 2020,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 6
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 108.0,
+      "points_by_week": {
+        "2": 108.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 69.0,
+      "points_by_week": {
+        "2": 69.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-7",
+    "season": 2020,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 7
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 138.0,
+      "points_by_week": {
+        "2": 138.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 119.0,
+      "points_by_week": {
+        "2": 119.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-8",
+    "season": 2020,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 8
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 136.0,
+      "points_by_week": {
+        "3": 136.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 155.0,
+      "points_by_week": {
+        "3": 155.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-9",
+    "season": 2020,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 9
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 126.0,
+      "points_by_week": {
+        "3": 126.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 133.0,
+      "points_by_week": {
+        "3": 133.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-10",
+    "season": 2020,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 10
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 106.0,
+      "points_by_week": {
+        "3": 106.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 122.0,
+      "points_by_week": {
+        "3": 122.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-11",
+    "season": 2020,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 11
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 120.0,
+      "points_by_week": {
+        "3": 120.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 112.0,
+      "points_by_week": {
+        "3": 112.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-12",
+    "season": 2020,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 12
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 108.0,
+      "points_by_week": {
+        "4": 108.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 114.0,
+      "points_by_week": {
+        "4": 114.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-13",
+    "season": 2020,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 13
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 105.0,
+      "points_by_week": {
+        "4": 105.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 144.0,
+      "points_by_week": {
+        "4": 144.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-14",
+    "season": 2020,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 14
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 93.0,
+      "points_by_week": {
+        "4": 93.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 106.0,
+      "points_by_week": {
+        "4": 106.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-15",
+    "season": 2020,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 15
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 117.0,
+      "points_by_week": {
+        "4": 117.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 92.0,
+      "points_by_week": {
+        "4": 92.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-16",
+    "season": 2020,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 16
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 114.0,
+      "points_by_week": {
+        "5": 114.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 94.0,
+      "points_by_week": {
+        "5": 94.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-17",
+    "season": 2020,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 17
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 98.0,
+      "points_by_week": {
+        "5": 98.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 94.0,
+      "points_by_week": {
+        "5": 94.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-18",
+    "season": 2020,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 18
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 72.0,
+      "points_by_week": {
+        "5": 72.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 82.0,
+      "points_by_week": {
+        "5": 82.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-19",
+    "season": 2020,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 19
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 119.0,
+      "points_by_week": {
+        "5": 119.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 110.0,
+      "points_by_week": {
+        "5": 110.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-20",
+    "season": 2020,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 20
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 58.0,
+      "points_by_week": {
+        "6": 58.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 152.0,
+      "points_by_week": {
+        "6": 152.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-21",
+    "season": 2020,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 21
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 104.0,
+      "points_by_week": {
+        "6": 104.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 93.0,
+      "points_by_week": {
+        "6": 93.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-22",
+    "season": 2020,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 22
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 108.0,
+      "points_by_week": {
+        "6": 108.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 59.0,
+      "points_by_week": {
+        "6": 59.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-23",
+    "season": 2020,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 23
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 101.0,
+      "points_by_week": {
+        "6": 101.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 79.0,
+      "points_by_week": {
+        "6": 79.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-24",
+    "season": 2020,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 24
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 95.0,
+      "points_by_week": {
+        "7": 95.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 86.0,
+      "points_by_week": {
+        "7": 86.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-25",
+    "season": 2020,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 25
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 97.0,
+      "points_by_week": {
+        "7": 97.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 145.0,
+      "points_by_week": {
+        "7": 145.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-26",
+    "season": 2020,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 26
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 99.0,
+      "points_by_week": {
+        "7": 99.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 86.0,
+      "points_by_week": {
+        "7": 86.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-27",
+    "season": 2020,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 27
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 160.0,
+      "points_by_week": {
+        "7": 160.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 94.0,
+      "points_by_week": {
+        "7": 94.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-28",
+    "season": 2020,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 28
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 83.0,
+      "points_by_week": {
+        "8": 83.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 106.0,
+      "points_by_week": {
+        "8": 106.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-29",
+    "season": 2020,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 29
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 102.0,
+      "points_by_week": {
+        "8": 102.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 128.0,
+      "points_by_week": {
+        "8": 128.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-30",
+    "season": 2020,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 30
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 89.0,
+      "points_by_week": {
+        "8": 89.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 78.0,
+      "points_by_week": {
+        "8": 78.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-31",
+    "season": 2020,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 31
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 97.0,
+      "points_by_week": {
+        "8": 97.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 99.0,
+      "points_by_week": {
+        "8": 99.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-32",
+    "season": 2020,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 32
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 75.0,
+      "points_by_week": {
+        "9": 75.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 111.0,
+      "points_by_week": {
+        "9": 111.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-33",
+    "season": 2020,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 33
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 106.0,
+      "points_by_week": {
+        "9": 106.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 121.0,
+      "points_by_week": {
+        "9": 121.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-34",
+    "season": 2020,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 34
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 92.0,
+      "points_by_week": {
+        "9": 92.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 89.0,
+      "points_by_week": {
+        "9": 89.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-35",
+    "season": 2020,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 35
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 96.0,
+      "points_by_week": {
+        "9": 96.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 113.0,
+      "points_by_week": {
+        "9": 113.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-36",
+    "season": 2020,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 36
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 155.0,
+      "points_by_week": {
+        "10": 155.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 106.0,
+      "points_by_week": {
+        "10": 106.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-37",
+    "season": 2020,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 37
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 70.0,
+      "points_by_week": {
+        "10": 70.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 70.0,
+      "points_by_week": {
+        "10": 70.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-38",
+    "season": 2020,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 38
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 54.0,
+      "points_by_week": {
+        "10": 54.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 86.0,
+      "points_by_week": {
+        "10": 86.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-39",
+    "season": 2020,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 39
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 119.0,
+      "points_by_week": {
+        "10": 119.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 85.0,
+      "points_by_week": {
+        "10": 85.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-40",
+    "season": 2020,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 40
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 84.0,
+      "points_by_week": {
+        "11": 84.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 111.0,
+      "points_by_week": {
+        "11": 111.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-41",
+    "season": 2020,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 41
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 96.0,
+      "points_by_week": {
+        "11": 96.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 110.0,
+      "points_by_week": {
+        "11": 110.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-42",
+    "season": 2020,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 42
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 115.0,
+      "points_by_week": {
+        "11": 115.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 67.0,
+      "points_by_week": {
+        "11": 67.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-43",
+    "season": 2020,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 43
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 114.0,
+      "points_by_week": {
+        "11": 114.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 117.0,
+      "points_by_week": {
+        "11": 117.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-44",
+    "season": 2020,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 44
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 115.0,
+      "points_by_week": {
+        "12": 115.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 94.0,
+      "points_by_week": {
+        "12": 94.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-45",
+    "season": 2020,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 45
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 131.0,
+      "points_by_week": {
+        "12": 131.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 142.0,
+      "points_by_week": {
+        "12": 142.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-46",
+    "season": 2020,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 46
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 130.0,
+      "points_by_week": {
+        "12": 130.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 87.0,
+      "points_by_week": {
+        "12": 87.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-47",
+    "season": 2020,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 47
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 125.0,
+      "points_by_week": {
+        "12": 125.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 59.0,
+      "points_by_week": {
+        "12": 59.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-48",
+    "season": 2020,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 48
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 79.0,
+      "points_by_week": {
+        "13": 79.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 101.0,
+      "points_by_week": {
+        "13": 101.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-49",
+    "season": 2020,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 49
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 113.0,
+      "points_by_week": {
+        "13": 113.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 146.0,
+      "points_by_week": {
+        "13": 146.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-50",
+    "season": 2020,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 50
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 96.0,
+      "points_by_week": {
+        "13": 96.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 60.0,
+      "points_by_week": {
+        "13": 60.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-51",
+    "season": 2020,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 51
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 70.0,
+      "points_by_week": {
+        "13": 70.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 166.0,
+      "points_by_week": {
+        "13": 166.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-52",
+    "season": 2020,
+    "matchup_period": 14,
+    "phase": "championship_playoffs",
+    "playoff_tier": "WINNERS_BRACKET",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 52
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 90.0,
+      "points_by_week": {
+        "14": 90.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 86.0,
+      "points_by_week": {
+        "14": 86.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-53",
+    "season": 2020,
+    "matchup_period": 14,
+    "phase": "championship_playoffs",
+    "playoff_tier": "WINNERS_BRACKET",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 53
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 112.0,
+      "points_by_week": {
+        "14": 112.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 160.0,
+      "points_by_week": {
+        "14": 160.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-54",
+    "season": 2020,
+    "matchup_period": 14,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 54
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 158.0,
+      "points_by_week": {
+        "14": 158.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 74.0,
+      "points_by_week": {
+        "14": 74.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-55",
+    "season": 2020,
+    "matchup_period": 14,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 55
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 106.0,
+      "points_by_week": {
+        "14": 106.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 69.0,
+      "points_by_week": {
+        "14": 69.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-56",
+    "season": 2020,
+    "matchup_period": 15,
+    "phase": "championship_playoffs",
+    "playoff_tier": "WINNERS_BRACKET",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 56
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 142.0,
+      "points_by_week": {
+        "15": 142.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 109.0,
+      "points_by_week": {
+        "15": 109.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-57",
+    "season": 2020,
+    "matchup_period": 15,
+    "phase": "consolation",
+    "playoff_tier": "WINNERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 57
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 136.0,
+      "points_by_week": {
+        "15": 136.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 117.0,
+      "points_by_week": {
+        "15": 117.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-58",
+    "season": 2020,
+    "matchup_period": 15,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 58
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 162.0,
+      "points_by_week": {
+        "15": 162.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 64.0,
+      "points_by_week": {
+        "15": 64.0
+      }
+    }
+  },
+  {
+    "id": "2020-matchup-59",
+    "season": 2020,
+    "matchup_period": 15,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "matchup_id": 59
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 82.0,
+      "points_by_week": {
+        "15": 82.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 72.0,
+      "points_by_week": {
+        "15": 72.0
+      }
+    }
+  }
+]

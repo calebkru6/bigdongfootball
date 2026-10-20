@@ -1,0 +1,12 @@
+{
+  "id": 2022,
+  "state": "unplayed",
+  "league_name": "BigDongFootball",
+  "team_count": 8,
+  "champion_team_id": null,
+  "champion_manager_ids": [],
+  "matchup_count": 0,
+  "transaction_count": 0,
+  "drafted": false,
+  "coverage": "coverage.json#season=2022"
+}

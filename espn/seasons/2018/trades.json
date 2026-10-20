@@ -1,0 +1,1397 @@
+[
+  {
+    "id": "01ffd472-9104-338d-b4cd-f246deb440c6",
+    "season": 2018,
+    "event_ids": [
+      "01ffd472-9104-338d-b4cd-f246deb440c6"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "024b0d23-142b-37f2-a30d-ce96d02480a0",
+    "season": 2018,
+    "event_ids": [
+      "024b0d23-142b-37f2-a30d-ce96d02480a0"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "04ef1286-bee2-3244-84ab-2968c58ce644",
+    "season": 2018,
+    "event_ids": [
+      "04ef1286-bee2-3244-84ab-2968c58ce644"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "07893189-6864-36e9-924d-c8b00fc86129",
+    "season": 2018,
+    "event_ids": [
+      "07893189-6864-36e9-924d-c8b00fc86129"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "090c5f8c-7327-3610-9774-f20d1720bbd7",
+    "season": 2018,
+    "event_ids": [
+      "090c5f8c-7327-3610-9774-f20d1720bbd7"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "0b853a8e-7f57-3273-a73f-fdfc718ea867",
+    "season": 2018,
+    "event_ids": [
+      "0b853a8e-7f57-3273-a73f-fdfc718ea867"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "0febfd1d-806a-305f-ad3e-41c68650ec40",
+    "season": 2018,
+    "event_ids": [
+      "0febfd1d-806a-305f-ad3e-41c68650ec40"
+    ],
+    "execution_recorded": true,
+    "execution_event_ids": [
+      "0febfd1d-806a-305f-ad3e-41c68650ec40"
+    ],
+    "recorded_player_movements": [
+      {
+        "player_id": "player-8439",
+        "from_team_id": "team-7",
+        "to_team_id": "team-8",
+        "source_event_ids": [
+          "0febfd1d-806a-305f-ad3e-41c68650ec40"
+        ]
+      },
+      {
+        "player_id": "player-15072",
+        "from_team_id": "team-7",
+        "to_team_id": "team-8",
+        "source_event_ids": [
+          "0febfd1d-806a-305f-ad3e-41c68650ec40"
+        ]
+      },
+      {
+        "player_id": "player-2977187",
+        "from_team_id": "team-8",
+        "to_team_id": "team-7",
+        "source_event_ids": [
+          "0febfd1d-806a-305f-ad3e-41c68650ec40"
+        ]
+      },
+      {
+        "player_id": "player-15825",
+        "from_team_id": "team-8",
+        "to_team_id": "team-7",
+        "source_event_ids": [
+          "0febfd1d-806a-305f-ad3e-41c68650ec40"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "0ffbb9a5-a65c-3d24-9c52-07e98f5f46eb",
+    "season": 2018,
+    "event_ids": [
+      "0ffbb9a5-a65c-3d24-9c52-07e98f5f46eb"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "10e0adda-bb49-3879-81bd-94d3a2080c0a",
+    "season": 2018,
+    "event_ids": [
+      "10e0adda-bb49-3879-81bd-94d3a2080c0a"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "13f3746f-ea29-3a68-83c9-72164b8025c0",
+    "season": 2018,
+    "event_ids": [
+      "13f3746f-ea29-3a68-83c9-72164b8025c0"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "15ff70bc-bd22-39d5-b700-9246a3210f9f",
+    "season": 2018,
+    "event_ids": [
+      "15ff70bc-bd22-39d5-b700-9246a3210f9f"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "163dc470-1608-3f4c-8583-ea6428ca53c5",
+    "season": 2018,
+    "event_ids": [
+      "163dc470-1608-3f4c-8583-ea6428ca53c5"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "1c12a3b4-bf5b-3b84-a1a5-2fbef7d2eee1",
+    "season": 2018,
+    "event_ids": [
+      "1c12a3b4-bf5b-3b84-a1a5-2fbef7d2eee1"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "1c569861-084b-324c-b2f6-0ab2315e1d15",
+    "season": 2018,
+    "event_ids": [
+      "1c569861-084b-324c-b2f6-0ab2315e1d15"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "1d95f772-ee2b-34c8-8086-45a27270f11f",
+    "season": 2018,
+    "event_ids": [
+      "1d95f772-ee2b-34c8-8086-45a27270f11f"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "237c6a83-d7ad-3ed8-b1bf-c9cd3ef956fa",
+    "season": 2018,
+    "event_ids": [
+      "237c6a83-d7ad-3ed8-b1bf-c9cd3ef956fa"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "2445aa79-faed-3047-b93b-3c11305eacef",
+    "season": 2018,
+    "event_ids": [
+      "2445aa79-faed-3047-b93b-3c11305eacef"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "24e72d15-1e58-31f8-9a81-d7c35866b488",
+    "season": 2018,
+    "event_ids": [
+      "24e72d15-1e58-31f8-9a81-d7c35866b488"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "25b95c48-a35a-3ed3-a59c-2a1ea28dc818",
+    "season": 2018,
+    "event_ids": [
+      "25b95c48-a35a-3ed3-a59c-2a1ea28dc818"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "29d2e3d3-de19-3122-9f68-bd9fde2de322",
+    "season": 2018,
+    "event_ids": [
+      "29d2e3d3-de19-3122-9f68-bd9fde2de322"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "2a767591-fddb-3e3b-9ca6-79f45df27693",
+    "season": 2018,
+    "event_ids": [
+      "2a767591-fddb-3e3b-9ca6-79f45df27693"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "3496a0af-58fe-3bbe-8545-79b0445d7ced",
+    "season": 2018,
+    "event_ids": [
+      "3496a0af-58fe-3bbe-8545-79b0445d7ced"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "351870ab-65a1-3bcd-8c72-c312b66c742d",
+    "season": 2018,
+    "event_ids": [
+      "351870ab-65a1-3bcd-8c72-c312b66c742d"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "37900c89-70a0-3fea-b215-0806d09538c9",
+    "season": 2018,
+    "event_ids": [
+      "37900c89-70a0-3fea-b215-0806d09538c9"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "3c678450-40a6-3b28-baec-4e55c559da9a",
+    "season": 2018,
+    "event_ids": [
+      "3c678450-40a6-3b28-baec-4e55c559da9a"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "3cfe45e5-7d04-3fe2-985b-c212f1cf5a22",
+    "season": 2018,
+    "event_ids": [
+      "3cfe45e5-7d04-3fe2-985b-c212f1cf5a22"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "4251c53f-6ed7-35af-9d60-c1129092f332",
+    "season": 2018,
+    "event_ids": [
+      "4251c53f-6ed7-35af-9d60-c1129092f332"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "46242c28-aa24-3876-8ef5-7e48dcaf23f5",
+    "season": 2018,
+    "event_ids": [
+      "46242c28-aa24-3876-8ef5-7e48dcaf23f5"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "4771735e-3647-3b81-affd-845f17d7a33a",
+    "season": 2018,
+    "event_ids": [
+      "4771735e-3647-3b81-affd-845f17d7a33a"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "4ade087b-8cd2-3249-a1af-cbcc2b9711fa",
+    "season": 2018,
+    "event_ids": [
+      "4ade087b-8cd2-3249-a1af-cbcc2b9711fa"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "4da60884-34a6-3525-806d-a317e8ff6d4e",
+    "season": 2018,
+    "event_ids": [
+      "4da60884-34a6-3525-806d-a317e8ff6d4e"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "4ddf4097-885a-375e-8742-34d8ddbc7373",
+    "season": 2018,
+    "event_ids": [
+      "4ddf4097-885a-375e-8742-34d8ddbc7373"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "4f9ed23c-8fdd-30c6-8310-aa0862261eee",
+    "season": 2018,
+    "event_ids": [
+      "4f9ed23c-8fdd-30c6-8310-aa0862261eee"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "5067a628-6ed6-3131-b705-adf4466d1d3a",
+    "season": 2018,
+    "event_ids": [
+      "5067a628-6ed6-3131-b705-adf4466d1d3a"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "51781b5c-7a87-3597-8e39-89349232b223",
+    "season": 2018,
+    "event_ids": [
+      "51781b5c-7a87-3597-8e39-89349232b223"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "5393ec43-0374-36b9-b56a-119612f7d7e9",
+    "season": 2018,
+    "event_ids": [
+      "5393ec43-0374-36b9-b56a-119612f7d7e9"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "53c457d7-e8b8-3d9e-a925-b4d81fcb68e7",
+    "season": 2018,
+    "event_ids": [
+      "53c457d7-e8b8-3d9e-a925-b4d81fcb68e7"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "54c15e09-c83e-34bc-bd8f-ed60149a3c8f",
+    "season": 2018,
+    "event_ids": [
+      "54c15e09-c83e-34bc-bd8f-ed60149a3c8f"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "55cf3e48-c505-3ebd-94a3-149c35efb796",
+    "season": 2018,
+    "event_ids": [
+      "55cf3e48-c505-3ebd-94a3-149c35efb796"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "58da0c55-97ca-3588-bc3c-b011083fde6f",
+    "season": 2018,
+    "event_ids": [
+      "58da0c55-97ca-3588-bc3c-b011083fde6f"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "5cc1ccb3-0604-3c23-8082-7d8aef5a6e4f",
+    "season": 2018,
+    "event_ids": [
+      "5cc1ccb3-0604-3c23-8082-7d8aef5a6e4f"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "5e7b5e13-73ec-3dd8-89dd-4cae07557c75",
+    "season": 2018,
+    "event_ids": [
+      "5e7b5e13-73ec-3dd8-89dd-4cae07557c75"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "5e8f7a94-2f13-3791-9956-ac4bdf3afd84",
+    "season": 2018,
+    "event_ids": [
+      "5e8f7a94-2f13-3791-9956-ac4bdf3afd84"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "5f21e8f3-22bb-3b89-943e-f570f762b422",
+    "season": 2018,
+    "event_ids": [
+      "5f21e8f3-22bb-3b89-943e-f570f762b422"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "61ad8d56-8d53-3446-8448-870328c9f007",
+    "season": 2018,
+    "event_ids": [
+      "61ad8d56-8d53-3446-8448-870328c9f007"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "62f53a05-57a7-36d9-b392-c228a7aa2118",
+    "season": 2018,
+    "event_ids": [
+      "62f53a05-57a7-36d9-b392-c228a7aa2118"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "650daf9a-1b08-31ec-9961-43db8e01fc9c",
+    "season": 2018,
+    "event_ids": [
+      "650daf9a-1b08-31ec-9961-43db8e01fc9c"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "6533c7aa-3a92-3d6e-b3d6-916bcdee38c7",
+    "season": 2018,
+    "event_ids": [
+      "6533c7aa-3a92-3d6e-b3d6-916bcdee38c7"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "65522352-d496-33b2-a86a-9fc137865f00",
+    "season": 2018,
+    "event_ids": [
+      "65522352-d496-33b2-a86a-9fc137865f00"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "6751cbc2-5338-314d-878d-9e896cf0608b",
+    "season": 2018,
+    "event_ids": [
+      "6751cbc2-5338-314d-878d-9e896cf0608b"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "6797081f-5ca9-3dd4-9e77-ab84b371471d",
+    "season": 2018,
+    "event_ids": [
+      "6797081f-5ca9-3dd4-9e77-ab84b371471d"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "6957e448-f9c7-3cb6-b08c-b4352b39ec0f",
+    "season": 2018,
+    "event_ids": [
+      "6957e448-f9c7-3cb6-b08c-b4352b39ec0f"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "6cbc6878-4974-3f39-8aba-3330f4a3795a",
+    "season": 2018,
+    "event_ids": [
+      "6cbc6878-4974-3f39-8aba-3330f4a3795a"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "715f7c71-8be6-347e-af4a-c3052f1802f3",
+    "season": 2018,
+    "event_ids": [
+      "715f7c71-8be6-347e-af4a-c3052f1802f3"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "735f0877-ee61-3eff-afa5-3ba22382090c",
+    "season": 2018,
+    "event_ids": [
+      "735f0877-ee61-3eff-afa5-3ba22382090c"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "7574809b-db01-3039-bacf-b0ab92d2f234",
+    "season": 2018,
+    "event_ids": [
+      "7574809b-db01-3039-bacf-b0ab92d2f234"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "765c1688-a287-3ff0-abc9-304c9d598ecc",
+    "season": 2018,
+    "event_ids": [
+      "765c1688-a287-3ff0-abc9-304c9d598ecc"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "775c7839-682d-3a4b-858c-0db12ca2c208",
+    "season": 2018,
+    "event_ids": [
+      "775c7839-682d-3a4b-858c-0db12ca2c208"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "7ad75c2e-d063-3452-900f-e7f6844e8fd7",
+    "season": 2018,
+    "event_ids": [
+      "7ad75c2e-d063-3452-900f-e7f6844e8fd7"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "7e09cdce-59b4-3242-9dab-9bb3ebee28a5",
+    "season": 2018,
+    "event_ids": [
+      "7e09cdce-59b4-3242-9dab-9bb3ebee28a5"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "7ede711e-6f26-3059-bf40-e47fad44b991",
+    "season": 2018,
+    "event_ids": [
+      "7ede711e-6f26-3059-bf40-e47fad44b991"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "81531827-d2ba-35f9-a1b1-e2a5c67fe497",
+    "season": 2018,
+    "event_ids": [
+      "81531827-d2ba-35f9-a1b1-e2a5c67fe497"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "84787c28-c92c-3e14-a935-6bc70c8721f4",
+    "season": 2018,
+    "event_ids": [
+      "84787c28-c92c-3e14-a935-6bc70c8721f4"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "86d8556d-9d4e-3165-bdd0-97d0efd4fdf8",
+    "season": 2018,
+    "event_ids": [
+      "86d8556d-9d4e-3165-bdd0-97d0efd4fdf8"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "88645f1b-8ee2-3b27-9264-0bdd642b62c9",
+    "season": 2018,
+    "event_ids": [
+      "88645f1b-8ee2-3b27-9264-0bdd642b62c9"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "8a41c2cd-abde-3f03-9c05-3a28d5f00e7b",
+    "season": 2018,
+    "event_ids": [
+      "8a41c2cd-abde-3f03-9c05-3a28d5f00e7b"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "8ca8afed-c361-3426-8a9f-5e6ad3eab7d8",
+    "season": 2018,
+    "event_ids": [
+      "8ca8afed-c361-3426-8a9f-5e6ad3eab7d8"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "8d49f3fd-26d5-3853-a4b7-bd2e06edf4fe",
+    "season": 2018,
+    "event_ids": [
+      "8d49f3fd-26d5-3853-a4b7-bd2e06edf4fe"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "8ed992bd-16f0-333b-9cc1-2d64ff48c1ca",
+    "season": 2018,
+    "event_ids": [
+      "8ed992bd-16f0-333b-9cc1-2d64ff48c1ca"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "8f179458-2766-3b7b-bfa7-2d662fb34bd5",
+    "season": 2018,
+    "event_ids": [
+      "8f179458-2766-3b7b-bfa7-2d662fb34bd5"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "91072c41-afdd-335e-b158-6ede7dfe3381",
+    "season": 2018,
+    "event_ids": [
+      "91072c41-afdd-335e-b158-6ede7dfe3381"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "924a8755-4594-3641-bc08-5fe2a7a3509e",
+    "season": 2018,
+    "event_ids": [
+      "924a8755-4594-3641-bc08-5fe2a7a3509e"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "98362774-5ba5-3d40-80ab-798987e1c53e",
+    "season": 2018,
+    "event_ids": [
+      "98362774-5ba5-3d40-80ab-798987e1c53e"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "99480fd1-6c34-3a9c-865f-2c2813873bde",
+    "season": 2018,
+    "event_ids": [
+      "99480fd1-6c34-3a9c-865f-2c2813873bde"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "99ba293b-82b5-38c0-b58d-0464f1dcf842",
+    "season": 2018,
+    "event_ids": [
+      "99ba293b-82b5-38c0-b58d-0464f1dcf842"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "99cbcc97-4a4c-3ce6-b83a-7daa84f7e729",
+    "season": 2018,
+    "event_ids": [
+      "99cbcc97-4a4c-3ce6-b83a-7daa84f7e729"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "9e641ca0-d91f-3ccc-900b-fed7174b7639",
+    "season": 2018,
+    "event_ids": [
+      "9e641ca0-d91f-3ccc-900b-fed7174b7639"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "a1ad11fc-d0eb-37aa-b0cd-3446b40f683d",
+    "season": 2018,
+    "event_ids": [
+      "a1ad11fc-d0eb-37aa-b0cd-3446b40f683d"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "a25ea91a-0fdc-3da0-8ff6-dc6a25b9bb37",
+    "season": 2018,
+    "event_ids": [
+      "a25ea91a-0fdc-3da0-8ff6-dc6a25b9bb37"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "a57e350b-5803-365b-92bf-78029473d924",
+    "season": 2018,
+    "event_ids": [
+      "a57e350b-5803-365b-92bf-78029473d924"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "a5a6e280-0348-3f21-8652-d62ba99f54bc",
+    "season": 2018,
+    "event_ids": [
+      "a5a6e280-0348-3f21-8652-d62ba99f54bc"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "a79cec89-4640-3d60-9187-23e574dc0d75",
+    "season": 2018,
+    "event_ids": [
+      "a79cec89-4640-3d60-9187-23e574dc0d75"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "a95334fa-c3cd-3aa2-8457-8bbdd94212d8",
+    "season": 2018,
+    "event_ids": [
+      "a95334fa-c3cd-3aa2-8457-8bbdd94212d8"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "a96823bd-97d4-3a37-ad65-29aadd7e187c",
+    "season": 2018,
+    "event_ids": [
+      "a96823bd-97d4-3a37-ad65-29aadd7e187c"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "aa946687-a8ae-3799-afa8-a44e98fe25bb",
+    "season": 2018,
+    "event_ids": [
+      "aa946687-a8ae-3799-afa8-a44e98fe25bb"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "ab88c22e-4a74-3ea2-aa02-220a0fdc6d9f",
+    "season": 2018,
+    "event_ids": [
+      "ab88c22e-4a74-3ea2-aa02-220a0fdc6d9f"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "ad19195f-b5e6-3569-8084-f0b323a31040",
+    "season": 2018,
+    "event_ids": [
+      "ad19195f-b5e6-3569-8084-f0b323a31040"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "af4f5d5f-933a-322f-922e-d4e1ec52e78c",
+    "season": 2018,
+    "event_ids": [
+      "af4f5d5f-933a-322f-922e-d4e1ec52e78c"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "b0dd1fd0-cde0-3577-964e-a68dfb7d9cf2",
+    "season": 2018,
+    "event_ids": [
+      "b0dd1fd0-cde0-3577-964e-a68dfb7d9cf2"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "b159d487-d1a2-3758-bfb6-7dadf8ce2d4f",
+    "season": 2018,
+    "event_ids": [
+      "b159d487-d1a2-3758-bfb6-7dadf8ce2d4f"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "b345d164-352e-37b9-ac20-6187861f0507",
+    "season": 2018,
+    "event_ids": [
+      "b345d164-352e-37b9-ac20-6187861f0507"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "b57eaf33-46c3-3c3c-847d-8c79d152a497",
+    "season": 2018,
+    "event_ids": [
+      "b57eaf33-46c3-3c3c-847d-8c79d152a497"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "b5fed14b-0102-38d8-a0e0-3f300bbc0b97",
+    "season": 2018,
+    "event_ids": [
+      "b5fed14b-0102-38d8-a0e0-3f300bbc0b97"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "bd9a89b8-88da-3509-9274-c9b001bb8190",
+    "season": 2018,
+    "event_ids": [
+      "bd9a89b8-88da-3509-9274-c9b001bb8190"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "bd9e8f5f-84b6-32a3-9f73-0e215aed208e",
+    "season": 2018,
+    "event_ids": [
+      "bd9e8f5f-84b6-32a3-9f73-0e215aed208e"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "be4eab29-62b3-3002-915c-60187fb8ce71",
+    "season": 2018,
+    "event_ids": [
+      "be4eab29-62b3-3002-915c-60187fb8ce71"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "c0ff48c1-68d4-3cd8-82f8-9126aa8f97b7",
+    "season": 2018,
+    "event_ids": [
+      "c0ff48c1-68d4-3cd8-82f8-9126aa8f97b7"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "c11e0b45-97da-3197-829f-c3f1aa1d7e5d",
+    "season": 2018,
+    "event_ids": [
+      "c11e0b45-97da-3197-829f-c3f1aa1d7e5d"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "c61a26f2-5cc3-3cf3-b869-c49be166aae8",
+    "season": 2018,
+    "event_ids": [
+      "c61a26f2-5cc3-3cf3-b869-c49be166aae8"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "c7e3dbf7-8a27-3bb7-8753-b646a2a37266",
+    "season": 2018,
+    "event_ids": [
+      "c7e3dbf7-8a27-3bb7-8753-b646a2a37266"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "ca15195c-6850-3bf1-b431-6c628ac48836",
+    "season": 2018,
+    "event_ids": [
+      "ca15195c-6850-3bf1-b431-6c628ac48836"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "cd35d4ef-8f41-35fe-b15b-7d65e527dce0",
+    "season": 2018,
+    "event_ids": [
+      "cd35d4ef-8f41-35fe-b15b-7d65e527dce0"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "cd6eb8f8-722a-3315-b920-3ac8eaa5d7a8",
+    "season": 2018,
+    "event_ids": [
+      "cd6eb8f8-722a-3315-b920-3ac8eaa5d7a8"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "cdc6e5bb-60ff-3d52-a1f6-cda12918a8d6",
+    "season": 2018,
+    "event_ids": [
+      "cdc6e5bb-60ff-3d52-a1f6-cda12918a8d6"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "ce7ad7ae-dcf8-3593-8d40-bca877e11d14",
+    "season": 2018,
+    "event_ids": [
+      "ce7ad7ae-dcf8-3593-8d40-bca877e11d14"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "cf309f50-0287-3a1b-8425-c31b5e82517c",
+    "season": 2018,
+    "event_ids": [
+      "cf309f50-0287-3a1b-8425-c31b5e82517c"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "cf9060b7-e9a6-3d0e-b3a2-56afcda94b52",
+    "season": 2018,
+    "event_ids": [
+      "cf9060b7-e9a6-3d0e-b3a2-56afcda94b52"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "d2e7d6d8-a0e5-3f4e-b2a9-49525d8ff7fc",
+    "season": 2018,
+    "event_ids": [
+      "d2e7d6d8-a0e5-3f4e-b2a9-49525d8ff7fc"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "d4e3540f-9bbd-3293-9600-a4e767f91c9b",
+    "season": 2018,
+    "event_ids": [
+      "d4e3540f-9bbd-3293-9600-a4e767f91c9b"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "d6cc2a56-2939-3c6b-937d-f013d1c08b66",
+    "season": 2018,
+    "event_ids": [
+      "d6cc2a56-2939-3c6b-937d-f013d1c08b66"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "d9eacf24-47b9-3674-ac2e-e48e3ac85600",
+    "season": 2018,
+    "event_ids": [
+      "d9eacf24-47b9-3674-ac2e-e48e3ac85600"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "dc057c13-bfc7-32b4-88f2-492cfca96c5c",
+    "season": 2018,
+    "event_ids": [
+      "dc057c13-bfc7-32b4-88f2-492cfca96c5c"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "ddf5e5e6-6a85-3bf2-8940-c0ee36fd32e4",
+    "season": 2018,
+    "event_ids": [
+      "ddf5e5e6-6a85-3bf2-8940-c0ee36fd32e4"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "df4974ef-b9de-309a-879f-1caf135c3da6",
+    "season": 2018,
+    "event_ids": [
+      "df4974ef-b9de-309a-879f-1caf135c3da6"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "df8e47e9-452d-3801-b796-8d7f78c47000",
+    "season": 2018,
+    "event_ids": [
+      "df8e47e9-452d-3801-b796-8d7f78c47000"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "e168f383-18a9-3b7f-9141-7d06ffdf0d26",
+    "season": 2018,
+    "event_ids": [
+      "e168f383-18a9-3b7f-9141-7d06ffdf0d26"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "e1a8d633-5451-30e7-85e9-5656630bae02",
+    "season": 2018,
+    "event_ids": [
+      "e1a8d633-5451-30e7-85e9-5656630bae02"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "e206a753-993b-3cc4-a5cd-048f0dd4d62d",
+    "season": 2018,
+    "event_ids": [
+      "e206a753-993b-3cc4-a5cd-048f0dd4d62d"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "e58f3a97-70a4-397d-9938-fec35ad74e1c",
+    "season": 2018,
+    "event_ids": [
+      "e58f3a97-70a4-397d-9938-fec35ad74e1c"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "e70cefce-a64d-3ba0-8f9e-2f73b63d5ddf",
+    "season": 2018,
+    "event_ids": [
+      "e70cefce-a64d-3ba0-8f9e-2f73b63d5ddf"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "e922fe5e-fc72-3536-ab86-6fe8a3af94b1",
+    "season": 2018,
+    "event_ids": [
+      "e922fe5e-fc72-3536-ab86-6fe8a3af94b1"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "e9499b56-9e7c-3a71-abcb-aa62ba21481b",
+    "season": 2018,
+    "event_ids": [
+      "e9499b56-9e7c-3a71-abcb-aa62ba21481b"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "eb041829-47d0-39dd-afd6-f2219eeab5c9",
+    "season": 2018,
+    "event_ids": [
+      "eb041829-47d0-39dd-afd6-f2219eeab5c9"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "eba91661-f638-331c-ba12-9b36def9c926",
+    "season": 2018,
+    "event_ids": [
+      "eba91661-f638-331c-ba12-9b36def9c926"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "ee078dbc-bc2d-379e-9d72-8a6efdaf1971",
+    "season": 2018,
+    "event_ids": [
+      "ee078dbc-bc2d-379e-9d72-8a6efdaf1971"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "ee5db2f6-1554-3b86-bc9d-83223dbed552",
+    "season": 2018,
+    "event_ids": [
+      "ee5db2f6-1554-3b86-bc9d-83223dbed552"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "eed193a1-974a-3cc6-b582-a9b22cb8bb1e",
+    "season": 2018,
+    "event_ids": [
+      "eed193a1-974a-3cc6-b582-a9b22cb8bb1e"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "ef6287ca-9136-321c-9dee-d59447ab1c97",
+    "season": 2018,
+    "event_ids": [
+      "ef6287ca-9136-321c-9dee-d59447ab1c97"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "effd2ae6-ad7c-3610-bd89-92c097aa5df4",
+    "season": 2018,
+    "event_ids": [
+      "effd2ae6-ad7c-3610-bd89-92c097aa5df4"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "f33f7818-b701-3860-952c-c942702ba41f",
+    "season": 2018,
+    "event_ids": [
+      "f33f7818-b701-3860-952c-c942702ba41f"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "f39bfd97-d957-3770-84ef-40bf5463cf30",
+    "season": 2018,
+    "event_ids": [
+      "f39bfd97-d957-3770-84ef-40bf5463cf30"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "f5dc66bf-bfce-3cd4-a635-a9c60e024c49",
+    "season": 2018,
+    "event_ids": [
+      "f5dc66bf-bfce-3cd4-a635-a9c60e024c49"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "f7df81fc-9c02-340b-b445-ee4fa24ed086",
+    "season": 2018,
+    "event_ids": [
+      "f7df81fc-9c02-340b-b445-ee4fa24ed086"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "fba31556-626c-33aa-81cd-9fd915b5b9e5",
+    "season": 2018,
+    "event_ids": [
+      "fba31556-626c-33aa-81cd-9fd915b5b9e5"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "fe370832-e98d-3274-a045-4542ca168284",
+    "season": 2018,
+    "event_ids": [
+      "fe370832-e98d-3274-a045-4542ca168284"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  },
+  {
+    "id": "fe867a82-4422-35cd-aec1-c8e0700edaae",
+    "season": 2018,
+    "event_ids": [
+      "fe867a82-4422-35cd-aec1-c8e0700edaae"
+    ],
+    "execution_recorded": false,
+    "execution_event_ids": [],
+    "recorded_player_movements": []
+  }
+]

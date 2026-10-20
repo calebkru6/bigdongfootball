@@ -1,0 +1,1290 @@
+[
+  {
+    "id": "2023-matchup-1",
+    "season": 2023,
+    "matchup_period": 1,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 1
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-2",
+    "season": 2023,
+    "matchup_period": 1,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 2
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-3",
+    "season": 2023,
+    "matchup_period": 1,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 3
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-4",
+    "season": 2023,
+    "matchup_period": 1,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 4
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-5",
+    "season": 2023,
+    "matchup_period": 2,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 5
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-6",
+    "season": 2023,
+    "matchup_period": 2,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 6
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-7",
+    "season": 2023,
+    "matchup_period": 2,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 7
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-8",
+    "season": 2023,
+    "matchup_period": 2,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 8
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-9",
+    "season": 2023,
+    "matchup_period": 3,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 9
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-10",
+    "season": 2023,
+    "matchup_period": 3,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 10
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-11",
+    "season": 2023,
+    "matchup_period": 3,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 11
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-12",
+    "season": 2023,
+    "matchup_period": 3,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 12
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-13",
+    "season": 2023,
+    "matchup_period": 4,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 13
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-14",
+    "season": 2023,
+    "matchup_period": 4,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 14
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-15",
+    "season": 2023,
+    "matchup_period": 4,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 15
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-16",
+    "season": 2023,
+    "matchup_period": 4,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 16
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-17",
+    "season": 2023,
+    "matchup_period": 5,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 17
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-18",
+    "season": 2023,
+    "matchup_period": 5,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 18
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-19",
+    "season": 2023,
+    "matchup_period": 5,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 19
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-20",
+    "season": 2023,
+    "matchup_period": 5,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 20
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-21",
+    "season": 2023,
+    "matchup_period": 6,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 21
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-22",
+    "season": 2023,
+    "matchup_period": 6,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 22
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-23",
+    "season": 2023,
+    "matchup_period": 6,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 23
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-24",
+    "season": 2023,
+    "matchup_period": 6,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 24
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-25",
+    "season": 2023,
+    "matchup_period": 7,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 25
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-26",
+    "season": 2023,
+    "matchup_period": 7,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 26
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-27",
+    "season": 2023,
+    "matchup_period": 7,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 27
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-28",
+    "season": 2023,
+    "matchup_period": 7,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 28
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-29",
+    "season": 2023,
+    "matchup_period": 8,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 29
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-30",
+    "season": 2023,
+    "matchup_period": 8,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 30
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-31",
+    "season": 2023,
+    "matchup_period": 8,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 31
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-32",
+    "season": 2023,
+    "matchup_period": 8,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 32
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-33",
+    "season": 2023,
+    "matchup_period": 9,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 33
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-34",
+    "season": 2023,
+    "matchup_period": 9,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 34
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-35",
+    "season": 2023,
+    "matchup_period": 9,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 35
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-36",
+    "season": 2023,
+    "matchup_period": 9,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 36
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-37",
+    "season": 2023,
+    "matchup_period": 10,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 37
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-38",
+    "season": 2023,
+    "matchup_period": 10,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 38
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-39",
+    "season": 2023,
+    "matchup_period": 10,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 39
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-40",
+    "season": 2023,
+    "matchup_period": 10,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 40
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-41",
+    "season": 2023,
+    "matchup_period": 11,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 41
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-42",
+    "season": 2023,
+    "matchup_period": 11,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 42
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-43",
+    "season": 2023,
+    "matchup_period": 11,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 43
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-44",
+    "season": 2023,
+    "matchup_period": 11,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 44
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-45",
+    "season": 2023,
+    "matchup_period": 12,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 45
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-46",
+    "season": 2023,
+    "matchup_period": 12,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 46
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-47",
+    "season": 2023,
+    "matchup_period": 12,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 47
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-48",
+    "season": 2023,
+    "matchup_period": 12,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 48
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-49",
+    "season": 2023,
+    "matchup_period": 13,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 49
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-50",
+    "season": 2023,
+    "matchup_period": 13,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 50
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-51",
+    "season": 2023,
+    "matchup_period": 13,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 51
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-52",
+    "season": 2023,
+    "matchup_period": 13,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 52
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-53",
+    "season": 2023,
+    "matchup_period": 14,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 53
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-54",
+    "season": 2023,
+    "matchup_period": 14,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 54
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-55",
+    "season": 2023,
+    "matchup_period": 14,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 55
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  },
+  {
+    "id": "2023-matchup-56",
+    "season": 2023,
+    "matchup_period": 14,
+    "phase": "unknown",
+    "playoff_tier": null,
+    "winner": "UNDECIDED",
+    "played": false,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2023-season.json",
+      "matchup_id": 56
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 0.0,
+      "points_by_week": {}
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 0.0,
+      "points_by_week": {}
+    }
+  }
+]

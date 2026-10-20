@@ -1,0 +1,20 @@
+{
+  "id": 1923288,
+  "name": "BigDongFootball",
+  "schema_version": 1,
+  "played_seasons": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "unplayed_seasons": [
+    2022,
+    2023
+  ],
+  "manager_name_policy": "anonymous_by_default; names retained only in the local private archive",
+  "team_identity_note": "Team IDs track league franchise slots. Ownership may change; manager careers use season-specific owners.",
+  "season_team_name_note": "Names are recorded season snapshots; midseason renames may differ in emails or memories."
+}

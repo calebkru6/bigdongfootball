@@ -1,0 +1,5588 @@
+[
+  {
+    "id": "player--16034",
+    "espn_player_id": -16034,
+    "name": "Texans D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2021
+    ]
+  },
+  {
+    "id": "player--16033",
+    "espn_player_id": -16033,
+    "name": "Ravens D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player--16029",
+    "espn_player_id": -16029,
+    "name": "Panthers D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player--16026",
+    "espn_player_id": -16026,
+    "name": "Seahawks D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16022",
+    "espn_player_id": -16022,
+    "name": "Cardinals D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16019",
+    "espn_player_id": -16019,
+    "name": "Giants D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player--16017",
+    "espn_player_id": -16017,
+    "name": "Patriots D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16016",
+    "espn_player_id": -16016,
+    "name": "Vikings D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16013",
+    "espn_player_id": -16013,
+    "name": "Raiders D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16012",
+    "espn_player_id": -16012,
+    "name": "Chiefs D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player--16009",
+    "espn_player_id": -16009,
+    "name": "Packers D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16007",
+    "espn_player_id": -16007,
+    "name": "Broncos D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2021
+    ]
+  },
+  {
+    "id": "player--16004",
+    "espn_player_id": -16004,
+    "name": "Bengals D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2021
+    ]
+  },
+  {
+    "id": "player-1097",
+    "espn_player_id": 1097,
+    "name": "Adam Vinatieri",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-2330",
+    "espn_player_id": 2330,
+    "name": "Tom Brady",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2580",
+    "espn_player_id": 2580,
+    "name": "Drew Brees",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-4333",
+    "espn_player_id": 4333,
+    "name": "Matt Bryant",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-4459",
+    "espn_player_id": 4459,
+    "name": "Carson Palmer",
+    "default_position_id": 1,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-5362",
+    "espn_player_id": 5362,
+    "name": "Antonio Gates",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-5526",
+    "espn_player_id": 5526,
+    "name": "Eli Manning",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-5528",
+    "espn_player_id": 5528,
+    "name": "Larry Fitzgerald",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-5529",
+    "espn_player_id": 5529,
+    "name": "Philip Rivers",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-5536",
+    "espn_player_id": 5536,
+    "name": "Ben Roethlisberger",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-8439",
+    "espn_player_id": 8439,
+    "name": "Aaron Rodgers",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-8479",
+    "espn_player_id": 8479,
+    "name": "Frank Gore",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-8544",
+    "espn_player_id": 8544,
+    "name": "Darren Sproles",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-9704",
+    "espn_player_id": 9704,
+    "name": "Stephen Gostkowski",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-9705",
+    "espn_player_id": 9705,
+    "name": "Brandon Marshall",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-9761",
+    "espn_player_id": 9761,
+    "name": "Delanie Walker",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-10452",
+    "espn_player_id": 10452,
+    "name": "Adrian Peterson",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2021
+    ]
+  },
+  {
+    "id": "player-10475",
+    "espn_player_id": 10475,
+    "name": "Greg Olsen",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-10636",
+    "espn_player_id": 10636,
+    "name": "Mason Crosby",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-11122",
+    "espn_player_id": 11122,
+    "name": "Matt Prater",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-11237",
+    "espn_player_id": 11237,
+    "name": "Matt Ryan",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-11247",
+    "espn_player_id": 11247,
+    "name": "Jonathan Stewart",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-11270",
+    "espn_player_id": 11270,
+    "name": "Jordy Nelson",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-11278",
+    "espn_player_id": 11278,
+    "name": "Matt Forte",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-11295",
+    "espn_player_id": 11295,
+    "name": "Martellus Bennett",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-11307",
+    "espn_player_id": 11307,
+    "name": "Jamaal Charles",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-11364",
+    "espn_player_id": 11364,
+    "name": "Gary Barnidge",
+    "default_position_id": 4,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-11383",
+    "espn_player_id": 11383,
+    "name": "Tim Hightower",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-11788",
+    "espn_player_id": 11788,
+    "name": "Danny Woodhead",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-11923",
+    "espn_player_id": 11923,
+    "name": "Steven Hauschka",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-12483",
+    "espn_player_id": 12483,
+    "name": "Matthew Stafford",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-12497",
+    "espn_player_id": 12497,
+    "name": "Arian Foster",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-12503",
+    "espn_player_id": 12503,
+    "name": "Rashad Jennings",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-12514",
+    "espn_player_id": 12514,
+    "name": "LeSean McCoy",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-12563",
+    "espn_player_id": 12563,
+    "name": "Michael Crabtree",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-12579",
+    "espn_player_id": 12579,
+    "name": "Jeremy Maclin",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-12649",
+    "espn_player_id": 12649,
+    "name": "Julian Edelman",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-12699",
+    "espn_player_id": 12699,
+    "name": "Zach Miller",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-13204",
+    "espn_player_id": 13204,
+    "name": "Ryan Mathews",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-13213",
+    "espn_player_id": 13213,
+    "name": "LeGarrette Blount",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-13215",
+    "espn_player_id": 13215,
+    "name": "Dez Bryant",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-13216",
+    "espn_player_id": 13216,
+    "name": "Demaryius Thomas",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-13217",
+    "espn_player_id": 13217,
+    "name": "Golden Tate",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-13229",
+    "espn_player_id": 13229,
+    "name": "Rob Gronkowski",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-13232",
+    "espn_player_id": 13232,
+    "name": "Jimmy Graham",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-13271",
+    "espn_player_id": 13271,
+    "name": "Eric Decker",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-13295",
+    "espn_player_id": 13295,
+    "name": "Emmanuel Sanders",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-13587",
+    "espn_player_id": 13587,
+    "name": "Chris Ivory",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-13934",
+    "espn_player_id": 13934,
+    "name": "Antonio Brown",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-13981",
+    "espn_player_id": 13981,
+    "name": "Mark Ingram",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-13982",
+    "espn_player_id": 13982,
+    "name": "Julio Jones",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-13983",
+    "espn_player_id": 13983,
+    "name": "A.J. Green",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-13994",
+    "espn_player_id": 13994,
+    "name": "Cam Newton",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-14005",
+    "espn_player_id": 14005,
+    "name": "DeMarco Murray",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-14032",
+    "espn_player_id": 14032,
+    "name": "Torrey Smith",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-14053",
+    "espn_player_id": 14053,
+    "name": "Randall Cobb",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-14054",
+    "espn_player_id": 14054,
+    "name": "Kyle Rudolph",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-14129",
+    "espn_player_id": 14129,
+    "name": "Bilal Powell",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-14163",
+    "espn_player_id": 14163,
+    "name": "Tyrod Taylor",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-14193",
+    "espn_player_id": 14193,
+    "name": "Jacquizz Rodgers",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-14204",
+    "espn_player_id": 14204,
+    "name": "Julius Thomas",
+    "default_position_id": 4,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-14221",
+    "espn_player_id": 14221,
+    "name": "Doug Baldwin",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-14322",
+    "espn_player_id": 14322,
+    "name": "Dan Bailey",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-14360",
+    "espn_player_id": 14360,
+    "name": "Matt Asiata",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-14874",
+    "espn_player_id": 14874,
+    "name": "Andrew Luck",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-14880",
+    "espn_player_id": 14880,
+    "name": "Kirk Cousins",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-14881",
+    "espn_player_id": 14881,
+    "name": "Russell Wilson",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-14885",
+    "espn_player_id": 14885,
+    "name": "Doug Martin",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-14886",
+    "espn_player_id": 14886,
+    "name": "Lamar Miller",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-14900",
+    "espn_player_id": 14900,
+    "name": "Coby Fleener",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-14904",
+    "espn_player_id": 14904,
+    "name": "Ladarius Green",
+    "default_position_id": 4,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-14908",
+    "espn_player_id": 14908,
+    "name": "Michael Floyd",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-14912",
+    "espn_player_id": 14912,
+    "name": "Alshon Jeffery",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-14924",
+    "espn_player_id": 14924,
+    "name": "T.Y. Hilton",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-15058",
+    "espn_player_id": 15058,
+    "name": "Blair Walsh",
+    "default_position_id": 5,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-15072",
+    "espn_player_id": 15072,
+    "name": "Marvin Jones",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15683",
+    "espn_player_id": 15683,
+    "name": "Justin Tucker",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15705",
+    "espn_player_id": 15705,
+    "name": "Josh Gordon",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-15786",
+    "espn_player_id": 15786,
+    "name": "Tavon Austin",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-15788",
+    "espn_player_id": 15788,
+    "name": "Tyler Eifert",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-15795",
+    "espn_player_id": 15795,
+    "name": "DeAndre Hopkins",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15818",
+    "espn_player_id": 15818,
+    "name": "Keenan Allen",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15825",
+    "espn_player_id": 15825,
+    "name": "Le'Veon Bell",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-15826",
+    "espn_player_id": 15826,
+    "name": "Giovani Bernard",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-15835",
+    "espn_player_id": 15835,
+    "name": "Zach Ertz",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15847",
+    "espn_player_id": 15847,
+    "name": "Travis Kelce",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15848",
+    "espn_player_id": 15848,
+    "name": "Eddie Lacy",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-15860",
+    "espn_player_id": 15860,
+    "name": "Jordan Reed",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-15920",
+    "espn_player_id": 15920,
+    "name": "Latavius Murray",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2021
+    ]
+  },
+  {
+    "id": "player-15965",
+    "espn_player_id": 15965,
+    "name": "Dustin Hopkins",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-16020",
+    "espn_player_id": 16020,
+    "name": "Spencer Ware",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-16040",
+    "espn_player_id": 16040,
+    "name": "C.J. Anderson",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-16460",
+    "espn_player_id": 16460,
+    "name": "Adam Thielen",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-16724",
+    "espn_player_id": 16724,
+    "name": "Blake Bortles",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-16725",
+    "espn_player_id": 16725,
+    "name": "Sammy Watkins",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-16730",
+    "espn_player_id": 16730,
+    "name": "Kelvin Benjamin",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-16731",
+    "espn_player_id": 16731,
+    "name": "Brandin Cooks",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-16732",
+    "espn_player_id": 16732,
+    "name": "Eric Ebron",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-16733",
+    "espn_player_id": 16733,
+    "name": "Odell Beckham Jr.",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-16737",
+    "espn_player_id": 16737,
+    "name": "Mike Evans",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-16757",
+    "espn_player_id": 16757,
+    "name": "Derek Carr",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2021
+    ]
+  },
+  {
+    "id": "player-16763",
+    "espn_player_id": 16763,
+    "name": "Jordan Matthews",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-16777",
+    "espn_player_id": 16777,
+    "name": "Carlos Hyde",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-16782",
+    "espn_player_id": 16782,
+    "name": "Jerick McKinnon",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-16783",
+    "espn_player_id": 16783,
+    "name": "Terrance West",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-16790",
+    "espn_player_id": 16790,
+    "name": "Jarvis Landry",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-16791",
+    "espn_player_id": 16791,
+    "name": "Donte Moncrief",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2019
+    ]
+  },
+  {
+    "id": "player-16799",
+    "espn_player_id": 16799,
+    "name": "Allen Robinson",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-16800",
+    "espn_player_id": 16800,
+    "name": "Davante Adams",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-16803",
+    "espn_player_id": 16803,
+    "name": "Jeremy Hill",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-16804",
+    "espn_player_id": 16804,
+    "name": "John Brown",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-16944",
+    "espn_player_id": 16944,
+    "name": "Devonta Freeman",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-17133",
+    "espn_player_id": 17133,
+    "name": "Isaiah Crowell",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-17177",
+    "espn_player_id": 17177,
+    "name": "Allen Hurns",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-17372",
+    "espn_player_id": 17372,
+    "name": "Chris Boswell",
+    "default_position_id": 5,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-17437",
+    "espn_player_id": 17437,
+    "name": "Taylor Gabriel",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-17453",
+    "espn_player_id": 17453,
+    "name": "Cameron Brate",
+    "default_position_id": 4,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-2508176",
+    "espn_player_id": 2508176,
+    "name": "David Johnson",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-2515416",
+    "espn_player_id": 2515416,
+    "name": "Jeremy Langford",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-2520698",
+    "espn_player_id": 2520698,
+    "name": "Cameron Meredith",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-2573079",
+    "espn_player_id": 2573079,
+    "name": "Carson Wentz",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2573300",
+    "espn_player_id": 2573300,
+    "name": "Jay Ajayi",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-2575408",
+    "espn_player_id": 2575408,
+    "name": "Robert Kelley",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-2576237",
+    "espn_player_id": 2576237,
+    "name": "Thomas Rawls",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017
+    ]
+  },
+  {
+    "id": "player-2576336",
+    "espn_player_id": 2576336,
+    "name": "Ameer Abdullah",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-2576434",
+    "espn_player_id": 2576434,
+    "name": "Melvin Gordon",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2576623",
+    "espn_player_id": 2576623,
+    "name": "DeVante Parker",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2576716",
+    "espn_player_id": 2576716,
+    "name": "Jamison Crowder",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-2576980",
+    "espn_player_id": 2576980,
+    "name": "Marcus Mariota",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-2577327",
+    "espn_player_id": 2577327,
+    "name": "Tyler Lockett",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2577417",
+    "espn_player_id": 2577417,
+    "name": "Dak Prescott",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2578553",
+    "espn_player_id": 2578553,
+    "name": "Malcolm Mitchell",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-2587819",
+    "espn_player_id": 2587819,
+    "name": "Tyrell Williams",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2019,
+      2021
+    ]
+  },
+  {
+    "id": "player-2969939",
+    "espn_player_id": 2969939,
+    "name": "Jameis Winston",
+    "default_position_id": 1,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-2969962",
+    "espn_player_id": 2969962,
+    "name": "Duke Johnson Jr.",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-2971433",
+    "espn_player_id": 2971433,
+    "name": "Dorial Green-Beckham",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-2976212",
+    "espn_player_id": 2976212,
+    "name": "Stefon Diggs",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2976316",
+    "espn_player_id": 2976316,
+    "name": "Michael Thomas",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2976499",
+    "espn_player_id": 2976499,
+    "name": "Amari Cooper",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2976516",
+    "espn_player_id": 2976516,
+    "name": "T.J. Yeldon",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2018
+    ]
+  },
+  {
+    "id": "player-2976592",
+    "espn_player_id": 2976592,
+    "name": "Sterling Shepard",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2977609",
+    "espn_player_id": 2977609,
+    "name": "Devin Funchess",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-2977644",
+    "espn_player_id": 2977644,
+    "name": "Todd Gurley",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2979477",
+    "espn_player_id": 2979477,
+    "name": "Tevin Coleman",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-2980105",
+    "espn_player_id": 2980105,
+    "name": "Matt Jones",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-2980148",
+    "espn_player_id": 2980148,
+    "name": "C.J. Prosise",
+    "default_position_id": 2,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-3042435",
+    "espn_player_id": 3042435,
+    "name": "Kevin White",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-3043078",
+    "espn_player_id": 3043078,
+    "name": "Derrick Henry",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3051392",
+    "espn_player_id": 3051392,
+    "name": "Ezekiel Elliott",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3051889",
+    "espn_player_id": 3051889,
+    "name": "Laquon Treadwell",
+    "default_position_id": 3,
+    "seasons": [
+      2016
+    ]
+  },
+  {
+    "id": "player-3060022",
+    "espn_player_id": 3060022,
+    "name": "Jordan Howard",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3116406",
+    "espn_player_id": 3116406,
+    "name": "Tyreek Hill",
+    "default_position_id": 3,
+    "seasons": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3122866",
+    "espn_player_id": 3122866,
+    "name": "Devontae Booker",
+    "default_position_id": 2,
+    "seasons": [
+      2016,
+      2021
+    ]
+  },
+  {
+    "id": "player--16030",
+    "espn_player_id": -16030,
+    "name": "Jaguars D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16027",
+    "espn_player_id": -16027,
+    "name": "Buccaneers D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16024",
+    "espn_player_id": -16024,
+    "name": "Chargers D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2021
+    ]
+  },
+  {
+    "id": "player--16023",
+    "espn_player_id": -16023,
+    "name": "Steelers D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16021",
+    "espn_player_id": -16021,
+    "name": "Eagles D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16018",
+    "espn_player_id": -16018,
+    "name": "Saints D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16014",
+    "espn_player_id": -16014,
+    "name": "Rams D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16010",
+    "espn_player_id": -16010,
+    "name": "Titans D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16008",
+    "espn_player_id": -16008,
+    "name": "Lions D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player--16006",
+    "espn_player_id": -16006,
+    "name": "Cowboys D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16003",
+    "espn_player_id": -16003,
+    "name": "Bears D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3609",
+    "espn_player_id": 3609,
+    "name": "Josh McCown",
+    "default_position_id": 1,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-4527",
+    "espn_player_id": 4527,
+    "name": "Jason Witten",
+    "default_position_id": 4,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-8416",
+    "espn_player_id": 8416,
+    "name": "Alex Smith",
+    "default_position_id": 1,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-10453",
+    "espn_player_id": 10453,
+    "name": "Ted Ginn Jr.",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-10456",
+    "espn_player_id": 10456,
+    "name": "Marshawn Lynch",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-11283",
+    "espn_player_id": 11283,
+    "name": "DeSean Jackson",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-11439",
+    "espn_player_id": 11439,
+    "name": "Pierre Garcon",
+    "default_position_id": 3,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-11674",
+    "espn_player_id": 11674,
+    "name": "Danny Amendola",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-12460",
+    "espn_player_id": 12460,
+    "name": "Graham Gano",
+    "default_position_id": 5,
+    "seasons": [
+      2017,
+      2018,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-12537",
+    "espn_player_id": 12537,
+    "name": "Jared Cook",
+    "default_position_id": 4,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-12731",
+    "espn_player_id": 12731,
+    "name": "Ryan Succop",
+    "default_position_id": 5,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-14145",
+    "espn_player_id": 14145,
+    "name": "Charles Clay",
+    "default_position_id": 4,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-14198",
+    "espn_player_id": 14198,
+    "name": "Dion Lewis",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-14402",
+    "espn_player_id": 14402,
+    "name": "Chris Hogan",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-14816",
+    "espn_player_id": 14816,
+    "name": "Kai Forbath",
+    "default_position_id": 5,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-14851",
+    "espn_player_id": 14851,
+    "name": "Terrelle Pryor Sr.",
+    "default_position_id": 3,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-14993",
+    "espn_player_id": 14993,
+    "name": "Greg Zuerlein",
+    "default_position_id": 5,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-15009",
+    "espn_player_id": 15009,
+    "name": "Alfred Morris",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-15245",
+    "espn_player_id": 15245,
+    "name": "Giorgio Tavecchio",
+    "default_position_id": 5,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-15880",
+    "espn_player_id": 15880,
+    "name": "Robert Woods",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15952",
+    "espn_player_id": 15952,
+    "name": "Mike Gillislee",
+    "default_position_id": 2,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-15966",
+    "espn_player_id": 15966,
+    "name": "Chris Thompson",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-15971",
+    "espn_player_id": 15971,
+    "name": "Rex Burkhead",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-16016",
+    "espn_player_id": 16016,
+    "name": "Kenny Stills",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-16504",
+    "espn_player_id": 16504,
+    "name": "Jack Doyle",
+    "default_position_id": 4,
+    "seasons": [
+      2017,
+      2018,
+      2020
+    ]
+  },
+  {
+    "id": "player-16760",
+    "espn_player_id": 16760,
+    "name": "Jimmy Garoppolo",
+    "default_position_id": 1,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-16781",
+    "espn_player_id": 16781,
+    "name": "Paul Richardson",
+    "default_position_id": 3,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-16795",
+    "espn_player_id": 16795,
+    "name": "Austin Seferian-Jenkins",
+    "default_position_id": 4,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-16886",
+    "espn_player_id": 16886,
+    "name": "Martavis Bryant",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-17331",
+    "espn_player_id": 17331,
+    "name": "Orleans Darkwa",
+    "default_position_id": 2,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-2574808",
+    "espn_player_id": 2574808,
+    "name": "Robby Anderson",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2577134",
+    "espn_player_id": 2577134,
+    "name": "Ty Montgomery",
+    "default_position_id": 2,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-2582410",
+    "espn_player_id": 2582410,
+    "name": "Tyler Kroft",
+    "default_position_id": 4,
+    "seasons": [
+      2017
+    ]
+  },
+  {
+    "id": "player-2971618",
+    "espn_player_id": 2971618,
+    "name": "Nelson Agholor",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-2974858",
+    "espn_player_id": 2974858,
+    "name": "Kenny Golladay",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2977187",
+    "espn_player_id": 2977187,
+    "name": "Cooper Kupp",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2979843",
+    "espn_player_id": 2979843,
+    "name": "Kenyan Drake",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2980453",
+    "espn_player_id": 2980453,
+    "name": "Jamaal Williams",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2985659",
+    "espn_player_id": 2985659,
+    "name": "Wil Lutz",
+    "default_position_id": 5,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3039707",
+    "espn_player_id": 3039707,
+    "name": "Mitchell Trubisky",
+    "default_position_id": 1,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3042519",
+    "espn_player_id": 3042519,
+    "name": "Aaron Jones",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3042778",
+    "espn_player_id": 3042778,
+    "name": "Corey Davis",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3043080",
+    "espn_player_id": 3043080,
+    "name": "O.J. Howard",
+    "default_position_id": 4,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3043275",
+    "espn_player_id": 3043275,
+    "name": "Austin Hooper",
+    "default_position_id": 4,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-3045138",
+    "espn_player_id": 3045138,
+    "name": "Mike Williams",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3046409",
+    "espn_player_id": 3046409,
+    "name": "Alex Collins",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3046439",
+    "espn_player_id": 3046439,
+    "name": "Hunter Henry",
+    "default_position_id": 4,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3046779",
+    "espn_player_id": 3046779,
+    "name": "Jared Goff",
+    "default_position_id": 1,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3050478",
+    "espn_player_id": 3050478,
+    "name": "Jake Elliott",
+    "default_position_id": 5,
+    "seasons": [
+      2017,
+      2019
+    ]
+  },
+  {
+    "id": "player-3051876",
+    "espn_player_id": 3051876,
+    "name": "Evan Engram",
+    "default_position_id": 4,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3051902",
+    "espn_player_id": 3051902,
+    "name": "Peyton Barber",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3052177",
+    "espn_player_id": 3052177,
+    "name": "John Ross",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-3052876",
+    "espn_player_id": 3052876,
+    "name": "Will Fuller V",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3054850",
+    "espn_player_id": 3054850,
+    "name": "Alvin Kamara",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3059722",
+    "espn_player_id": 3059722,
+    "name": "Zay Jones",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-3059915",
+    "espn_player_id": 3059915,
+    "name": "Kareem Hunt",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3066158",
+    "espn_player_id": 3066158,
+    "name": "Tarik Cohen",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3115364",
+    "espn_player_id": 3115364,
+    "name": "Leonard Fournette",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3116385",
+    "espn_player_id": 3116385,
+    "name": "Joe Mixon",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3116389",
+    "espn_player_id": 3116389,
+    "name": "Samaje Perine",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-3116593",
+    "espn_player_id": 3116593,
+    "name": "Dalvin Cook",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3117251",
+    "espn_player_id": 3117251,
+    "name": "Christian McCaffrey",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3120348",
+    "espn_player_id": 3120348,
+    "name": "JuJu Smith-Schuster",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3122840",
+    "espn_player_id": 3122840,
+    "name": "Deshaun Watson",
+    "default_position_id": 1,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3123076",
+    "espn_player_id": 3123076,
+    "name": "David Njoku",
+    "default_position_id": 4,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3125116",
+    "espn_player_id": 3125116,
+    "name": "D'Onta Foreman",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3129302",
+    "espn_player_id": 3129302,
+    "name": "DeShone Kizer",
+    "default_position_id": 1,
+    "seasons": [
+      2017,
+      2018
+    ]
+  },
+  {
+    "id": "player-3139477",
+    "espn_player_id": 3139477,
+    "name": "Patrick Mahomes",
+    "default_position_id": 1,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3139605",
+    "espn_player_id": 3139605,
+    "name": "Marlon Mack",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3892889",
+    "espn_player_id": 3892889,
+    "name": "Dede Westbrook",
+    "default_position_id": 3,
+    "seasons": [
+      2017,
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3919596",
+    "espn_player_id": 3919596,
+    "name": "Chris Carson",
+    "default_position_id": 2,
+    "seasons": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16028",
+    "espn_player_id": -16028,
+    "name": "Redskins D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2018,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player--16020",
+    "espn_player_id": -16020,
+    "name": "Jets D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player--16015",
+    "espn_player_id": -16015,
+    "name": "Dolphins D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2018,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16011",
+    "espn_player_id": -16011,
+    "name": "Colts D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16005",
+    "espn_player_id": -16005,
+    "name": "Browns D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player--16002",
+    "espn_player_id": -16002,
+    "name": "Bills D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player--16001",
+    "espn_player_id": -16001,
+    "name": "Falcons D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2018,
+      2019,
+      2021
+    ]
+  },
+  {
+    "id": "player-8664",
+    "espn_player_id": 8664,
+    "name": "Ryan Fitzpatrick",
+    "default_position_id": 1,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-9354",
+    "espn_player_id": 9354,
+    "name": "Robbie Gould",
+    "default_position_id": 5,
+    "seasons": [
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-11252",
+    "espn_player_id": 11252,
+    "name": "Joe Flacco",
+    "default_position_id": 1,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-12482",
+    "espn_player_id": 12482,
+    "name": "Mark Sanchez",
+    "default_position_id": 1,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-14012",
+    "espn_player_id": 14012,
+    "name": "Andy Dalton",
+    "default_position_id": 1,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-15807",
+    "espn_player_id": 15807,
+    "name": "Cordarrelle Patterson",
+    "default_position_id": 3,
+    "seasons": [
+      2018,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15839",
+    "espn_player_id": 15839,
+    "name": "Marquise Goodwin",
+    "default_position_id": 3,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-15921",
+    "espn_player_id": 15921,
+    "name": "Kenjon Barner",
+    "default_position_id": 2,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-16486",
+    "espn_player_id": 16486,
+    "name": "Brett Maher",
+    "default_position_id": 5,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-16913",
+    "espn_player_id": 16913,
+    "name": "James White",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-16974",
+    "espn_player_id": 16974,
+    "name": "Trey Burton",
+    "default_position_id": 4,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-17284",
+    "espn_player_id": 17284,
+    "name": "Charcandrick West",
+    "default_position_id": 2,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-17359",
+    "espn_player_id": 17359,
+    "name": "Damien Williams",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-2473037",
+    "espn_player_id": 2473037,
+    "name": "Jason Myers",
+    "default_position_id": 5,
+    "seasons": [
+      2018,
+      2021
+    ]
+  },
+  {
+    "id": "player-2576414",
+    "espn_player_id": 2576414,
+    "name": "Raheem Mostert",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2577253",
+    "espn_player_id": 2577253,
+    "name": "Javorius Allen",
+    "default_position_id": 2,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-2971573",
+    "espn_player_id": 2971573,
+    "name": "Ka'imi Fairbairn",
+    "default_position_id": 5,
+    "seasons": [
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-3025433",
+    "espn_player_id": 3025433,
+    "name": "Mike Davis",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3040151",
+    "espn_player_id": 3040151,
+    "name": "George Kittle",
+    "default_position_id": 4,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3042494",
+    "espn_player_id": 3042494,
+    "name": "Elijah McGuire",
+    "default_position_id": 2,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-3045144",
+    "espn_player_id": 3045144,
+    "name": "Tyler Boyd",
+    "default_position_id": 3,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3045147",
+    "espn_player_id": 3045147,
+    "name": "James Conner",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3045260",
+    "espn_player_id": 3045260,
+    "name": "Corey Clement",
+    "default_position_id": 2,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-3049916",
+    "espn_player_id": 3049916,
+    "name": "Matt Breida",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3051738",
+    "espn_player_id": 3051738,
+    "name": "Marquez Valdes-Scantling",
+    "default_position_id": 3,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3051891",
+    "espn_player_id": 3051891,
+    "name": "Jordan Wilkins",
+    "default_position_id": 2,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-3051926",
+    "espn_player_id": 3051926,
+    "name": "Gus Edwards",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2021
+    ]
+  },
+  {
+    "id": "player-3052117",
+    "espn_player_id": 3052117,
+    "name": "Phillip Lindsay",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3052587",
+    "espn_player_id": 3052587,
+    "name": "Baker Mayfield",
+    "default_position_id": 1,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3055899",
+    "espn_player_id": 3055899,
+    "name": "Harrison Butker",
+    "default_position_id": 5,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3059989",
+    "espn_player_id": 3059989,
+    "name": "Nick Mullens",
+    "default_position_id": 1,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3068267",
+    "espn_player_id": 3068267,
+    "name": "Austin Ekeler",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3068939",
+    "espn_player_id": 3068939,
+    "name": "Aldrick Rosas",
+    "default_position_id": 5,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3116136",
+    "espn_player_id": 3116136,
+    "name": "Justin Jackson",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3116721",
+    "espn_player_id": 3116721,
+    "name": "Jaylen Samuels",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3121427",
+    "espn_player_id": 3121427,
+    "name": "Curtis Samuel",
+    "default_position_id": 3,
+    "seasons": [
+      2018,
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3122449",
+    "espn_player_id": 3122449,
+    "name": "James Washington",
+    "default_position_id": 3,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3122672",
+    "espn_player_id": 3122672,
+    "name": "Royce Freeman",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-3127292",
+    "espn_player_id": 3127292,
+    "name": "Will Dissly",
+    "default_position_id": 4,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3128429",
+    "espn_player_id": 3128429,
+    "name": "Courtland Sutton",
+    "default_position_id": 3,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3128720",
+    "espn_player_id": 3128720,
+    "name": "Nick Chubb",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3128721",
+    "espn_player_id": 3128721,
+    "name": "Sony Michel",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3139925",
+    "espn_player_id": 3139925,
+    "name": "Rashaad Penny",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3843750",
+    "espn_player_id": 3843750,
+    "name": "Derrius Guice",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player-3895856",
+    "espn_player_id": 3895856,
+    "name": "Christian Kirk",
+    "default_position_id": 3,
+    "seasons": [
+      2018,
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3912547",
+    "espn_player_id": 3912547,
+    "name": "Sam Darnold",
+    "default_position_id": 1,
+    "seasons": [
+      2018,
+      2021
+    ]
+  },
+  {
+    "id": "player-3915097",
+    "espn_player_id": 3915097,
+    "name": "Antonio Callaway",
+    "default_position_id": 3,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-3915416",
+    "espn_player_id": 3915416,
+    "name": "DJ Moore",
+    "default_position_id": 3,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3915823",
+    "espn_player_id": 3915823,
+    "name": "Keke Coutee",
+    "default_position_id": 3,
+    "seasons": [
+      2018
+    ]
+  },
+  {
+    "id": "player-3916387",
+    "espn_player_id": 3916387,
+    "name": "Lamar Jackson",
+    "default_position_id": 1,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3916925",
+    "espn_player_id": 3916925,
+    "name": "Kerryon Johnson",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-3918298",
+    "espn_player_id": 3918298,
+    "name": "Josh Allen",
+    "default_position_id": 1,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3925357",
+    "espn_player_id": 3925357,
+    "name": "Calvin Ridley",
+    "default_position_id": 3,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3929630",
+    "espn_player_id": 3929630,
+    "name": "Saquon Barkley",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3932420",
+    "espn_player_id": 3932420,
+    "name": "Josh Adams",
+    "default_position_id": 2,
+    "seasons": [
+      2018,
+      2019
+    ]
+  },
+  {
+    "id": "player--16025",
+    "espn_player_id": -16025,
+    "name": "49ers D/ST",
+    "default_position_id": 16,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-14876",
+    "espn_player_id": 14876,
+    "name": "Ryan Tannehill",
+    "default_position_id": 1,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15773",
+    "espn_player_id": 15773,
+    "name": "Darren Fells",
+    "default_position_id": 4,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-15853",
+    "espn_player_id": 15853,
+    "name": "Vance McDonald",
+    "default_position_id": 4,
+    "seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-2573401",
+    "espn_player_id": 2573401,
+    "name": "Tyler Higbee",
+    "default_position_id": 4,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2574630",
+    "espn_player_id": 2574630,
+    "name": "Jeff Driskel",
+    "default_position_id": 1,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-2576925",
+    "espn_player_id": 2576925,
+    "name": "Darren Waller",
+    "default_position_id": 4,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2578570",
+    "espn_player_id": 2578570,
+    "name": "Jacoby Brissett",
+    "default_position_id": 1,
+    "seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-2582139",
+    "espn_player_id": 2582139,
+    "name": "Sam Ficken",
+    "default_position_id": 5,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-2980077",
+    "espn_player_id": 2980077,
+    "name": "Jonathan Williams",
+    "default_position_id": 2,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-2998120",
+    "espn_player_id": 2998120,
+    "name": "Josh Lambo",
+    "default_position_id": 5,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-3043116",
+    "espn_player_id": 3043116,
+    "name": "Demarcus Robinson",
+    "default_position_id": 3,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-3043234",
+    "espn_player_id": 3043234,
+    "name": "Zane Gonzalez",
+    "default_position_id": 5,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-3045127",
+    "espn_player_id": 3045127,
+    "name": "Wayne Gallman",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3049899",
+    "espn_player_id": 3049899,
+    "name": "Younghoe Koo",
+    "default_position_id": 5,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3115394",
+    "espn_player_id": 3115394,
+    "name": "DJ Chark Jr.",
+    "default_position_id": 3,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3116165",
+    "espn_player_id": 3116165,
+    "name": "Chris Godwin",
+    "default_position_id": 3,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3116365",
+    "espn_player_id": 3116365,
+    "name": "Mark Andrews",
+    "default_position_id": 4,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3119195",
+    "espn_player_id": 3119195,
+    "name": "Chase Edmonds",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3121422",
+    "espn_player_id": 3121422,
+    "name": "Terry McLaurin",
+    "default_position_id": 3,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3123052",
+    "espn_player_id": 3123052,
+    "name": "Michael Badgley",
+    "default_position_id": 5,
+    "seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-3124084",
+    "espn_player_id": 3124084,
+    "name": "Joey Slye",
+    "default_position_id": 5,
+    "seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-3125404",
+    "espn_player_id": 3125404,
+    "name": "Jacob Hollister",
+    "default_position_id": 4,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-3126367",
+    "espn_player_id": 3126367,
+    "name": "Bo Scarbrough",
+    "default_position_id": 2,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-3126486",
+    "espn_player_id": 3126486,
+    "name": "Deebo Samuel",
+    "default_position_id": 3,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3912550",
+    "espn_player_id": 3912550,
+    "name": "Ronald Jones II",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3915411",
+    "espn_player_id": 3915411,
+    "name": "Ty Johnson",
+    "default_position_id": 2,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-3916148",
+    "espn_player_id": 3916148,
+    "name": "Tony Pollard",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3917315",
+    "espn_player_id": 3917315,
+    "name": "Kyler Murray",
+    "default_position_id": 1,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3917792",
+    "espn_player_id": 3917792,
+    "name": "Daniel Jones",
+    "default_position_id": 1,
+    "seasons": [
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3918639",
+    "espn_player_id": 3918639,
+    "name": "Gerald Everett",
+    "default_position_id": 4,
+    "seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-4035538",
+    "espn_player_id": 4035538,
+    "name": "David Montgomery",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4036133",
+    "espn_player_id": 4036133,
+    "name": "T.J. Hockenson",
+    "default_position_id": 4,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4036348",
+    "espn_player_id": 4036348,
+    "name": "Michael Gallup",
+    "default_position_id": 3,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4038524",
+    "espn_player_id": 4038524,
+    "name": "Gardner Minshew II",
+    "default_position_id": 1,
+    "seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-4039359",
+    "espn_player_id": 4039359,
+    "name": "Darrell Henderson Jr.",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4040616",
+    "espn_player_id": 4040616,
+    "name": "Dwayne Haskins Jr.",
+    "default_position_id": 1,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-4040761",
+    "espn_player_id": 4040761,
+    "name": "Devin Singletary",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4045163",
+    "espn_player_id": 4045163,
+    "name": "Miles Sanders",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4047365",
+    "espn_player_id": 4047365,
+    "name": "Josh Jacobs",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4047646",
+    "espn_player_id": 4047646,
+    "name": "A.J. Brown",
+    "default_position_id": 3,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4047650",
+    "espn_player_id": 4047650,
+    "name": "DK Metcalf",
+    "default_position_id": 3,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4047839",
+    "espn_player_id": 4047839,
+    "name": "N'Keal Harry",
+    "default_position_id": 3,
+    "seasons": [
+      2019,
+      2020
+    ]
+  },
+  {
+    "id": "player-4048244",
+    "espn_player_id": 4048244,
+    "name": "Alexander Mattison",
+    "default_position_id": 2,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241372",
+    "espn_player_id": 4241372,
+    "name": "Marquise Brown",
+    "default_position_id": 3,
+    "seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4249087",
+    "espn_player_id": 4249087,
+    "name": "Matt Gay",
+    "default_position_id": 5,
+    "seasons": [
+      2019,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4361606",
+    "espn_player_id": 4361606,
+    "name": "Darwin Thompson",
+    "default_position_id": 2,
+    "seasons": [
+      2019
+    ]
+  },
+  {
+    "id": "player-15091",
+    "espn_player_id": 15091,
+    "name": "Randy Bullock",
+    "default_position_id": 5,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-16813",
+    "espn_player_id": 16813,
+    "name": "Logan Thomas",
+    "default_position_id": 4,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2468609",
+    "espn_player_id": 2468609,
+    "name": "Taysom Hill",
+    "default_position_id": 1,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-2570986",
+    "espn_player_id": 2570986,
+    "name": "Malcolm Brown",
+    "default_position_id": 2,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-2975674",
+    "espn_player_id": 2975674,
+    "name": "Robert Tonyan",
+    "default_position_id": 4,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2998565",
+    "espn_player_id": 2998565,
+    "name": "Mo Alie-Cox",
+    "default_position_id": 4,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-3051439",
+    "espn_player_id": 3051439,
+    "name": "Boston Scott",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3051909",
+    "espn_player_id": 3051909,
+    "name": "Daniel Carlson",
+    "default_position_id": 5,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3054212",
+    "espn_player_id": 3054212,
+    "name": "Jonnu Smith",
+    "default_position_id": 4,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3057987",
+    "espn_player_id": 3057987,
+    "name": "DaeSean Hamilton",
+    "default_position_id": 3,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-3116164",
+    "espn_player_id": 3116164,
+    "name": "Mike Gesicki",
+    "default_position_id": 4,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3121023",
+    "espn_player_id": 3121023,
+    "name": "Dallas Goedert",
+    "default_position_id": 4,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3123050",
+    "espn_player_id": 3123050,
+    "name": "Chris Herndon",
+    "default_position_id": 4,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-3124679",
+    "espn_player_id": 3124679,
+    "name": "Jason Sanders",
+    "default_position_id": 5,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3128390",
+    "espn_player_id": 3128390,
+    "name": "Allen Lazard",
+    "default_position_id": 3,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-3128774",
+    "espn_player_id": 3128774,
+    "name": "Kalen Ballage",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3134353",
+    "espn_player_id": 3134353,
+    "name": "Tim Patrick",
+    "default_position_id": 3,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3139522",
+    "espn_player_id": 3139522,
+    "name": "Travis Fulgham",
+    "default_position_id": 3,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-3886818",
+    "espn_player_id": 3886818,
+    "name": "Myles Gaskin",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3910544",
+    "espn_player_id": 3910544,
+    "name": "Joshua Kelley",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3914397",
+    "espn_player_id": 3914397,
+    "name": "Scotty Miller",
+    "default_position_id": 3,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-3915165",
+    "espn_player_id": 3915165,
+    "name": "Rodrigo Blankenship",
+    "default_position_id": 5,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3915511",
+    "espn_player_id": 3915511,
+    "name": "Joe Burrow",
+    "default_position_id": 1,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3916430",
+    "espn_player_id": 3916430,
+    "name": "Nyheim Hines",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3916945",
+    "espn_player_id": 3916945,
+    "name": "Darius Slayton",
+    "default_position_id": 3,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-3917232",
+    "espn_player_id": 3917232,
+    "name": "Tyler Bass",
+    "default_position_id": 5,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3924365",
+    "espn_player_id": 3924365,
+    "name": "Hayden Hurst",
+    "default_position_id": 4,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-3925347",
+    "espn_player_id": 3925347,
+    "name": "Damien Harris",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3928925",
+    "espn_player_id": 3928925,
+    "name": "JaMycal Hasty",
+    "default_position_id": 2,
+    "seasons": [
+      2020
+    ]
+  },
+  {
+    "id": "player-3932905",
+    "espn_player_id": 3932905,
+    "name": "Diontae Johnson",
+    "default_position_id": 3,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4036131",
+    "espn_player_id": 4036131,
+    "name": "Noah Fant",
+    "default_position_id": 4,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4038941",
+    "espn_player_id": 4038941,
+    "name": "Justin Herbert",
+    "default_position_id": 1,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4040715",
+    "espn_player_id": 4040715,
+    "name": "Jalen Hurts",
+    "default_position_id": 1,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4046692",
+    "espn_player_id": 4046692,
+    "name": "Chase Claypool",
+    "default_position_id": 3,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4052042",
+    "espn_player_id": 4052042,
+    "name": "James Robinson",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4239993",
+    "espn_player_id": 4239993,
+    "name": "Tee Higgins",
+    "default_position_id": 3,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4240021",
+    "espn_player_id": 4240021,
+    "name": "Cam Akers",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241389",
+    "espn_player_id": 4241389,
+    "name": "CeeDee Lamb",
+    "default_position_id": 3,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241463",
+    "espn_player_id": 4241463,
+    "name": "Jerry Jeudy",
+    "default_position_id": 3,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241475",
+    "espn_player_id": 4241475,
+    "name": "Henry Ruggs III",
+    "default_position_id": 3,
+    "seasons": [
+      2020,
+      2021
+    ]
+  },
+  {
+    "id": "player-4241479",
+    "espn_player_id": 4241479,
+    "name": "Tua Tagovailoa",
+    "default_position_id": 1,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241985",
+    "espn_player_id": 4241985,
+    "name": "J.K. Dobbins",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4242214",
+    "espn_player_id": 4242214,
+    "name": "Clyde Edwards-Helaire",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4242335",
+    "espn_player_id": 4242335,
+    "name": "Jonathan Taylor",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4259545",
+    "espn_player_id": 4259545,
+    "name": "D'Andre Swift",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4262921",
+    "espn_player_id": 4262921,
+    "name": "Justin Jefferson",
+    "default_position_id": 3,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4360294",
+    "espn_player_id": 4360294,
+    "name": "Antonio Gibson",
+    "default_position_id": 2,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4360438",
+    "espn_player_id": 4360438,
+    "name": "Brandon Aiyuk",
+    "default_position_id": 3,
+    "seasons": [
+      2020,
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-10621",
+    "espn_player_id": 10621,
+    "name": "Nick Folk",
+    "default_position_id": 5,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-15349",
+    "espn_player_id": 15349,
+    "name": "Cole Beasley",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-16339",
+    "espn_player_id": 16339,
+    "name": "Brandon McManus",
+    "default_position_id": 5,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2572861",
+    "espn_player_id": 2572861,
+    "name": "J.D. McKissic",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-2973405",
+    "espn_player_id": 2973405,
+    "name": "Kalif Raymond",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-3051806",
+    "espn_player_id": 3051806,
+    "name": "Ricky Seals-Jones",
+    "default_position_id": 4,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-3115375",
+    "espn_player_id": 3115375,
+    "name": "Darrel Williams",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3115378",
+    "espn_player_id": 3115378,
+    "name": "Russell Gage",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-3117256",
+    "espn_player_id": 3117256,
+    "name": "Dalton Schultz",
+    "default_position_id": 4,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3121410",
+    "espn_player_id": 3121410,
+    "name": "Parris Campbell",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-3122976",
+    "espn_player_id": 3122976,
+    "name": "Jeff Wilson Jr.",
+    "default_position_id": 2,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-3135321",
+    "espn_player_id": 3135321,
+    "name": "Hunter Renfrow",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3139602",
+    "espn_player_id": 3139602,
+    "name": "D'Ernest Johnson",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3895827",
+    "espn_player_id": 3895827,
+    "name": "Ty'Son Williams",
+    "default_position_id": 2,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-3911853",
+    "espn_player_id": 3911853,
+    "name": "Adam Trautman",
+    "default_position_id": 4,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-3915486",
+    "espn_player_id": 3915486,
+    "name": "Tyler Conklin",
+    "default_position_id": 4,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3916209",
+    "espn_player_id": 3916209,
+    "name": "Xavier Jones",
+    "default_position_id": 2,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-3916433",
+    "espn_player_id": 3916433,
+    "name": "Jakobi Meyers",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3916566",
+    "espn_player_id": 3916566,
+    "name": "K.J. Osborn",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3930066",
+    "espn_player_id": 3930066,
+    "name": "Van Jefferson",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3930086",
+    "espn_player_id": 3930086,
+    "name": "Dawson Knox",
+    "default_position_id": 4,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-3932144",
+    "espn_player_id": 3932144,
+    "name": "Jacob Harris",
+    "default_position_id": 4,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-3975763",
+    "espn_player_id": 3975763,
+    "name": "Greg Joseph",
+    "default_position_id": 5,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4035004",
+    "espn_player_id": 4035004,
+    "name": "Mecole Hardman",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4035170",
+    "espn_player_id": 4035170,
+    "name": "Marquez Callaway",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4035676",
+    "espn_player_id": 4035676,
+    "name": "Zack Moss",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4035687",
+    "espn_player_id": 4035687,
+    "name": "Michael Pittman Jr.",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4035793",
+    "espn_player_id": 4035793,
+    "name": "Quintez Cephus",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4035886",
+    "espn_player_id": 4035886,
+    "name": "Khalil Herbert",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4036378",
+    "espn_player_id": 4036378,
+    "name": "Jordan Love",
+    "default_position_id": 1,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4038818",
+    "espn_player_id": 4038818,
+    "name": "Bryan Edwards",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4040655",
+    "espn_player_id": 4040655,
+    "name": "Darnell Mooney",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4040980",
+    "espn_player_id": 4040980,
+    "name": "Irv Smith Jr.",
+    "default_position_id": 4,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4046676",
+    "espn_player_id": 4046676,
+    "name": "Tony Jones Jr.",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4212989",
+    "espn_player_id": 4212989,
+    "name": "Dan Arnold",
+    "default_position_id": 4,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4239934",
+    "espn_player_id": 4239934,
+    "name": "AJ Dillon",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4239992",
+    "espn_player_id": 4239992,
+    "name": "Amari Rodgers",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4239996",
+    "espn_player_id": 4239996,
+    "name": "Travis Etienne Jr.",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4240380",
+    "espn_player_id": 4240380,
+    "name": "KJ Hamler",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4240600",
+    "espn_player_id": 4240600,
+    "name": "Kadarius Toney",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4240657",
+    "espn_player_id": 4240657,
+    "name": "Michael Carter",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241401",
+    "espn_player_id": 4241401,
+    "name": "Trey Sermon",
+    "default_position_id": 2,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4241416",
+    "espn_player_id": 4241416,
+    "name": "Chuba Hubbard",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241457",
+    "espn_player_id": 4241457,
+    "name": "Najee Harris",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241464",
+    "espn_player_id": 4241464,
+    "name": "Mac Jones",
+    "default_position_id": 1,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241478",
+    "espn_player_id": 4241478,
+    "name": "DeVonta Smith",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241555",
+    "espn_player_id": 4241555,
+    "name": "Elijah Mitchell",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4241802",
+    "espn_player_id": 4241802,
+    "name": "Jalen Reagor",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4242433",
+    "espn_player_id": 4242433,
+    "name": "Joshua Palmer",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4243160",
+    "espn_player_id": 4243160,
+    "name": "Laviska Shenault Jr.",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4258173",
+    "espn_player_id": 4258173,
+    "name": "Nico Collins",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4258195",
+    "espn_player_id": 4258195,
+    "name": "Donovan Peoples-Jones",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4258595",
+    "espn_player_id": 4258595,
+    "name": "Cole Kmet",
+    "default_position_id": 4,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4360234",
+    "espn_player_id": 4360234,
+    "name": "Evan McPherson",
+    "default_position_id": 5,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4360248",
+    "espn_player_id": 4360248,
+    "name": "Kyle Pitts",
+    "default_position_id": 4,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4360310",
+    "espn_player_id": 4360310,
+    "name": "Trevor Lawrence",
+    "default_position_id": 1,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4360939",
+    "espn_player_id": 4360939,
+    "name": "Rashod Bateman",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4361259",
+    "espn_player_id": 4361259,
+    "name": "Zach Wilson",
+    "default_position_id": 1,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4361411",
+    "espn_player_id": 4361411,
+    "name": "Pat Freiermuth",
+    "default_position_id": 4,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4361577",
+    "espn_player_id": 4361577,
+    "name": "Dyami Brown",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4361579",
+    "espn_player_id": 4361579,
+    "name": "Javonte Williams",
+    "default_position_id": 2,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4362628",
+    "espn_player_id": 4362628,
+    "name": "Ja'Marr Chase",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4362630",
+    "espn_player_id": 4362630,
+    "name": "Terrace Marshall Jr.",
+    "default_position_id": 3,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4362887",
+    "espn_player_id": 4362887,
+    "name": "Justin Fields",
+    "default_position_id": 1,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4371733",
+    "espn_player_id": 4371733,
+    "name": "Kenneth Gainwell",
+    "default_position_id": 2,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4372016",
+    "espn_player_id": 4372016,
+    "name": "Jaylen Waddle",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4372414",
+    "espn_player_id": 4372414,
+    "name": "Elijah Moore",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4372485",
+    "espn_player_id": 4372485,
+    "name": "Rondale Moore",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4372780",
+    "espn_player_id": 4372780,
+    "name": "Tommy Tremble",
+    "default_position_id": 4,
+    "seasons": [
+      2021
+    ]
+  },
+  {
+    "id": "player-4374302",
+    "espn_player_id": 4374302,
+    "name": "Amon-Ra St. Brown",
+    "default_position_id": 3,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4383351",
+    "espn_player_id": 4383351,
+    "name": "Trey Lance",
+    "default_position_id": 1,
+    "seasons": [
+      2021,
+      2022,
+      2023
+    ]
+  },
+  {
+    "id": "player-4569173",
+    "espn_player_id": 4569173,
+    "name": "Rhamondre Stevenson",
+    "default_position_id": 2,
+    "seasons": [
+      2021
+    ]
+  }
+]

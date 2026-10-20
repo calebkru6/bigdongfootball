@@ -1,0 +1,14 @@
+{
+  "id": 2017,
+  "state": "played",
+  "league_name": "BigDongFootball",
+  "team_count": 8,
+  "champion_team_id": "team-8",
+  "champion_manager_ids": [
+    "manager-568cd68f93a9"
+  ],
+  "matchup_count": 60,
+  "transaction_count": 0,
+  "drafted": true,
+  "coverage": "coverage.json#season=2017"
+}

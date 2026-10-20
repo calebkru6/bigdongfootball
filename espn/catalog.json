@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "league_id": 1923288,
+  "built_at_utc": "2026-10-07T00:09:51.828207+00:00",
+  "counts": {
+    "played_seasons": 6,
+    "franchises": 8,
+    "managers": 10,
+    "played_team_seasons": 48,
+    "scored_matchups": 364,
+    "transactions": 1704,
+    "players": 477
+  },
+  "categories": [
+    {
+      "name": "Seasons and champions",
+      "entry": "seasons.json",
+      "suggested_page": "/seasons/:year"
+    },
+    {
+      "name": "Teams and name changes",
+      "entry": "teams.json",
+      "suggested_page": "/teams/:id"
+    },
+    {
+      "name": "Manager careers",
+      "entry": "managers.json",
+      "suggested_page": "/managers/:id"
+    },
+    {
+      "name": "Games and lineups",
+      "entry": "seasons/:year/matchups.json",
+      "suggested_page": "/seasons/:year/games/:id"
+    },
+    {
+      "name": "Draft history",
+      "entry": "seasons/:year/draft.json",
+      "suggested_page": "/seasons/:year/draft"
+    },
+    {
+      "name": "Adds, drops and waivers",
+      "entry": "seasons/:year/transactions.json",
+      "suggested_page": "/moves"
+    },
+    {
+      "name": "Trade history",
+      "entry": "seasons/:year/trades.json",
+      "suggested_page": "/trades"
+    },
+    {
+      "name": "Players and statistical records",
+      "entry": "players.json",
+      "suggested_page": "/players/:id"
+    },
+    {
+      "name": "Record book",
+      "entry": "records.json",
+      "suggested_page": "/records"
+    },
+    {
+      "name": "Head-to-head history",
+      "entry": "head-to-head.json",
+      "suggested_page": "/head-to-head"
+    },
+    {
+      "name": "League scrapbook",
+      "entry": "memories.json",
+      "suggested_page": "/memories"
+    }
+  ],
+  "files": [
+    "catalog.json",
+    "coverage.json",
+    "head-to-head.json",
+    "league.json",
+    "managers.json",
+    "memories.json",
+    "players.json",
+    "players/2016.json",
+    "players/2017.json",
+    "players/2018.json",
+    "players/2019.json",
+    "players/2020.json",
+    "players/2021.json",
+    "players/2022.json",
+    "players/2023.json",
+    "records.json",
+    "seasons.json",
+    "seasons/2016/draft.json",
+    "seasons/2016/lineups.json",
+    "seasons/2016/matchups.json",
+    "seasons/2016/rules.json",
+    "seasons/2016/standings.json",
+    "seasons/2016/summary.json",
+    "seasons/2016/trades.json",
+    "seasons/2016/transactions.json",
+    "seasons/2017/draft.json",
+    "seasons/2017/lineups.json",
+    "seasons/2017/matchups.json",
+    "seasons/2017/rules.json",
+    "seasons/2017/standings.json",
+    "seasons/2017/summary.json",
+    "seasons/2017/trades.json",
+    "seasons/2017/transactions.json",
+    "seasons/2018/draft.json",
+    "seasons/2018/lineups.json",
+    "seasons/2018/matchups.json",
+    "seasons/2018/rules.json",
+    "seasons/2018/standings.json",
+    "seasons/2018/summary.json",
+    "seasons/2018/trades.json",
+    "seasons/2018/transactions.json",
+    "seasons/2019/draft.json",
+    "seasons/2019/lineups.json",
+    "seasons/2019/matchups.json",
+    "seasons/2019/rules.json",
+    "seasons/2019/standings.json",
+    "seasons/2019/summary.json",
+    "seasons/2019/trades.json",
+    "seasons/2019/transactions.json",
+    "seasons/2020/draft.json",
+    "seasons/2020/lineups.json",
+    "seasons/2020/matchups.json",
+    "seasons/2020/rules.json",
+    "seasons/2020/standings.json",
+    "seasons/2020/summary.json",
+    "seasons/2020/trades.json",
+    "seasons/2020/transactions.json",
+    "seasons/2021/draft.json",
+    "seasons/2021/lineups.json",
+    "seasons/2021/matchups.json",
+    "seasons/2021/rules.json",
+    "seasons/2021/standings.json",
+    "seasons/2021/summary.json",
+    "seasons/2021/trades.json",
+    "seasons/2021/transactions.json",
+    "seasons/2022/draft.json",
+    "seasons/2022/lineups.json",
+    "seasons/2022/matchups.json",
+    "seasons/2022/rules.json",
+    "seasons/2022/standings.json",
+    "seasons/2022/summary.json",
+    "seasons/2022/trades.json",
+    "seasons/2022/transactions.json",
+    "seasons/2023/draft.json",
+    "seasons/2023/lineups.json",
+    "seasons/2023/matchups.json",
+    "seasons/2023/rules.json",
+    "seasons/2023/standings.json",
+    "seasons/2023/summary.json",
+    "seasons/2023/trades.json",
+    "seasons/2023/transactions.json",
+    "teams.json"
+  ]
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "2018-09-03-trade-email",
+    "season": 2018,
+    "date": "2018-09-03",
+    "title": "Tyreek Hill / Kirk Cousins trade acceptance",
+    "kind": "email_evidence",
+    "summary": "An ESPN email records acceptance of a Tyreek Hill / Kirk Cousins trade, pending league review.",
+    "team_ids": [
+      "team-6",
+      "team-7"
+    ],
+    "publication_state": "needs_editorial_review",
+    "attachment_public": false,
+    "note": "Original email image remains local because it contains manager names; acceptance alone does not establish completion."
+  }
+]

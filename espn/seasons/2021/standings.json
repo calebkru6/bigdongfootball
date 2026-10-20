@@ -1,0 +1,178 @@
+[
+  {
+    "id": "2021-team-4",
+    "season": 2021,
+    "team_id": "team-4",
+    "name": "Houston We Have a Problem",
+    "manager_ids": [
+      "manager-60db4d2afcd8"
+    ],
+    "final_rank": 1,
+    "playoff_seed": 1,
+    "regular_season": {
+      "wins": 10,
+      "losses": 4,
+      "ties": 0,
+      "pointsFor": 1636.5,
+      "pointsAgainst": 1524.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "team_id": 4
+    }
+  },
+  {
+    "id": "2021-team-7",
+    "season": 2021,
+    "team_id": "team-7",
+    "name": "Gang Green",
+    "manager_ids": [
+      "manager-73727dabffa3"
+    ],
+    "final_rank": 2,
+    "playoff_seed": 2,
+    "regular_season": {
+      "wins": 9,
+      "losses": 5,
+      "ties": 0,
+      "pointsFor": 1724.0,
+      "pointsAgainst": 1661.5
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "team_id": 7
+    }
+  },
+  {
+    "id": "2021-team-1",
+    "season": 2021,
+    "team_id": "team-1",
+    "name": "Los Angeles Girthquakes",
+    "manager_ids": [
+      "manager-662dc4d6af44"
+    ],
+    "final_rank": 3,
+    "playoff_seed": 3,
+    "regular_season": {
+      "wins": 9,
+      "losses": 5,
+      "ties": 0,
+      "pointsFor": 1818.5,
+      "pointsAgainst": 1603.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "team_id": 1
+    }
+  },
+  {
+    "id": "2021-team-5",
+    "season": 2021,
+    "team_id": "team-5",
+    "name": "Dunder Mifflin Dwight Schrutes",
+    "manager_ids": [
+      "manager-f8d62c41f309"
+    ],
+    "final_rank": 4,
+    "playoff_seed": 4,
+    "regular_season": {
+      "wins": 8,
+      "losses": 6,
+      "ties": 0,
+      "pointsFor": 1664.5,
+      "pointsAgainst": 1418.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "team_id": 5
+    }
+  },
+  {
+    "id": "2021-team-3",
+    "season": 2021,
+    "team_id": "team-3",
+    "name": "Chung Turtleneckers",
+    "manager_ids": [
+      "manager-a70279f72efe"
+    ],
+    "final_rank": 5,
+    "playoff_seed": 5,
+    "regular_season": {
+      "wins": 6,
+      "losses": 8,
+      "ties": 0,
+      "pointsFor": 1619.0,
+      "pointsAgainst": 1662.5
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "team_id": 3
+    }
+  },
+  {
+    "id": "2021-team-8",
+    "season": 2021,
+    "team_id": "team-8",
+    "name": "Team Red",
+    "manager_ids": [
+      "manager-568cd68f93a9"
+    ],
+    "final_rank": 6,
+    "playoff_seed": 7,
+    "regular_season": {
+      "wins": 5,
+      "losses": 9,
+      "ties": 0,
+      "pointsFor": 1533.0,
+      "pointsAgainst": 1709.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "team_id": 8
+    }
+  },
+  {
+    "id": "2021-team-2",
+    "season": 2021,
+    "team_id": "team-2",
+    "name": "Bacon 76ers",
+    "manager_ids": [
+      "manager-c615bbb19631"
+    ],
+    "final_rank": 7,
+    "playoff_seed": 8,
+    "regular_season": {
+      "wins": 4,
+      "losses": 10,
+      "ties": 0,
+      "pointsFor": 1459.0,
+      "pointsAgainst": 1690.5
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "team_id": 2
+    }
+  },
+  {
+    "id": "2021-team-6",
+    "season": 2021,
+    "team_id": "team-6",
+    "name": "Naturday Saints",
+    "manager_ids": [
+      "manager-7783ef2ca401"
+    ],
+    "final_rank": 8,
+    "playoff_seed": 6,
+    "regular_season": {
+      "wins": 5,
+      "losses": 9,
+      "ties": 0,
+      "pointsFor": 1610.0,
+      "pointsAgainst": 1796.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "team_id": 6
+    }
+  }
+]

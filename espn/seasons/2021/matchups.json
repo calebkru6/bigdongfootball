@@ -1,0 +1,1730 @@
+[
+  {
+    "id": "2021-matchup-1",
+    "season": 2021,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 1
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 139.0,
+      "points_by_week": {
+        "1": 139.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 124.5,
+      "points_by_week": {
+        "1": 124.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-2",
+    "season": 2021,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 2
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 124.0,
+      "points_by_week": {
+        "1": 124.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 123.5,
+      "points_by_week": {
+        "1": 123.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-3",
+    "season": 2021,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 3
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 119.5,
+      "points_by_week": {
+        "1": 119.5
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 121.0,
+      "points_by_week": {
+        "1": 121.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-4",
+    "season": 2021,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 4
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 152.5,
+      "points_by_week": {
+        "1": 152.5
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 97.0,
+      "points_by_week": {
+        "1": 97.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-5",
+    "season": 2021,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 5
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 104.5,
+      "points_by_week": {
+        "2": 104.5
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 164.0,
+      "points_by_week": {
+        "2": 164.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-6",
+    "season": 2021,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 6
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 90.5,
+      "points_by_week": {
+        "2": 90.5
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 64.5,
+      "points_by_week": {
+        "2": 64.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-7",
+    "season": 2021,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 7
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 125.0,
+      "points_by_week": {
+        "2": 125.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 185.0,
+      "points_by_week": {
+        "2": 185.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-8",
+    "season": 2021,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 8
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 94.5,
+      "points_by_week": {
+        "2": 94.5
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 143.5,
+      "points_by_week": {
+        "2": 143.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-9",
+    "season": 2021,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 9
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 133.5,
+      "points_by_week": {
+        "3": 133.5
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 102.5,
+      "points_by_week": {
+        "3": 102.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-10",
+    "season": 2021,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 10
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 131.5,
+      "points_by_week": {
+        "3": 131.5
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 120.0,
+      "points_by_week": {
+        "3": 120.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-11",
+    "season": 2021,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 11
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 124.5,
+      "points_by_week": {
+        "3": 124.5
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 158.5,
+      "points_by_week": {
+        "3": 158.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-12",
+    "season": 2021,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 12
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 147.5,
+      "points_by_week": {
+        "3": 147.5
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 92.0,
+      "points_by_week": {
+        "3": 92.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-13",
+    "season": 2021,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 13
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 121.0,
+      "points_by_week": {
+        "4": 121.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 163.5,
+      "points_by_week": {
+        "4": 163.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-14",
+    "season": 2021,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 14
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 126.0,
+      "points_by_week": {
+        "4": 126.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 122.5,
+      "points_by_week": {
+        "4": 122.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-15",
+    "season": 2021,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 15
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 127.5,
+      "points_by_week": {
+        "4": 127.5
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 76.5,
+      "points_by_week": {
+        "4": 76.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-16",
+    "season": 2021,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 16
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 97.0,
+      "points_by_week": {
+        "4": 97.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 140.5,
+      "points_by_week": {
+        "4": 140.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-17",
+    "season": 2021,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 17
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 122.5,
+      "points_by_week": {
+        "5": 122.5
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 120.5,
+      "points_by_week": {
+        "5": 120.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-18",
+    "season": 2021,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 18
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 158.5,
+      "points_by_week": {
+        "5": 158.5
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 127.5,
+      "points_by_week": {
+        "5": 127.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-19",
+    "season": 2021,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 19
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 114.5,
+      "points_by_week": {
+        "5": 114.5
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 129.0,
+      "points_by_week": {
+        "5": 129.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-20",
+    "season": 2021,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 20
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 159.5,
+      "points_by_week": {
+        "5": 159.5
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 142.0,
+      "points_by_week": {
+        "5": 142.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-21",
+    "season": 2021,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 21
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 153.5,
+      "points_by_week": {
+        "6": 153.5
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 134.0,
+      "points_by_week": {
+        "6": 134.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-22",
+    "season": 2021,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 22
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 95.0,
+      "points_by_week": {
+        "6": 95.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 125.5,
+      "points_by_week": {
+        "6": 125.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-23",
+    "season": 2021,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 23
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 124.0,
+      "points_by_week": {
+        "6": 124.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 97.5,
+      "points_by_week": {
+        "6": 97.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-24",
+    "season": 2021,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 24
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 133.0,
+      "points_by_week": {
+        "6": 133.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 145.5,
+      "points_by_week": {
+        "6": 145.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-25",
+    "season": 2021,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 25
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 130.5,
+      "points_by_week": {
+        "7": 130.5
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 135.0,
+      "points_by_week": {
+        "7": 135.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-26",
+    "season": 2021,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 26
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 147.0,
+      "points_by_week": {
+        "7": 147.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 44.5,
+      "points_by_week": {
+        "7": 44.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-27",
+    "season": 2021,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 27
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 80.0,
+      "points_by_week": {
+        "7": 80.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 149.0,
+      "points_by_week": {
+        "7": 149.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-28",
+    "season": 2021,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 28
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 108.0,
+      "points_by_week": {
+        "7": 108.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 128.5,
+      "points_by_week": {
+        "7": 128.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-29",
+    "season": 2021,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 29
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 109.5,
+      "points_by_week": {
+        "8": 109.5
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 120.5,
+      "points_by_week": {
+        "8": 120.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-30",
+    "season": 2021,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 30
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 89.5,
+      "points_by_week": {
+        "8": 89.5
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 61.5,
+      "points_by_week": {
+        "8": 61.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-31",
+    "season": 2021,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 31
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 68.5,
+      "points_by_week": {
+        "8": 68.5
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 144.0,
+      "points_by_week": {
+        "8": 144.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-32",
+    "season": 2021,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 32
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 81.0,
+      "points_by_week": {
+        "8": 81.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 122.0,
+      "points_by_week": {
+        "8": 122.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-33",
+    "season": 2021,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 33
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 83.0,
+      "points_by_week": {
+        "9": 83.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 114.0,
+      "points_by_week": {
+        "9": 114.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-34",
+    "season": 2021,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 34
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 111.5,
+      "points_by_week": {
+        "9": 111.5
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 130.0,
+      "points_by_week": {
+        "9": 130.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-35",
+    "season": 2021,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 35
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 114.0,
+      "points_by_week": {
+        "9": 114.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 101.5,
+      "points_by_week": {
+        "9": 101.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-36",
+    "season": 2021,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 36
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 78.0,
+      "points_by_week": {
+        "9": 78.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 88.0,
+      "points_by_week": {
+        "9": 88.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-37",
+    "season": 2021,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 37
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 90.0,
+      "points_by_week": {
+        "10": 90.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 81.0,
+      "points_by_week": {
+        "10": 81.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-38",
+    "season": 2021,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 38
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 141.0,
+      "points_by_week": {
+        "10": 141.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 129.5,
+      "points_by_week": {
+        "10": 129.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-39",
+    "season": 2021,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 39
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 75.5,
+      "points_by_week": {
+        "10": 75.5
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 110.5,
+      "points_by_week": {
+        "10": 110.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-40",
+    "season": 2021,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 40
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 127.5,
+      "points_by_week": {
+        "10": 127.5
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 63.5,
+      "points_by_week": {
+        "10": 63.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-41",
+    "season": 2021,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 41
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 122.0,
+      "points_by_week": {
+        "11": 122.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 103.5,
+      "points_by_week": {
+        "11": 103.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-42",
+    "season": 2021,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 42
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 91.0,
+      "points_by_week": {
+        "11": 91.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 90.5,
+      "points_by_week": {
+        "11": 90.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-43",
+    "season": 2021,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 43
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 137.0,
+      "points_by_week": {
+        "11": 137.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 123.5,
+      "points_by_week": {
+        "11": 123.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-44",
+    "season": 2021,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 44
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 137.5,
+      "points_by_week": {
+        "11": 137.5
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 180.0,
+      "points_by_week": {
+        "11": 180.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-45",
+    "season": 2021,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 45
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 96.5,
+      "points_by_week": {
+        "12": 96.5
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 90.0,
+      "points_by_week": {
+        "12": 90.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-46",
+    "season": 2021,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 46
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 104.5,
+      "points_by_week": {
+        "12": 104.5
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 88.5,
+      "points_by_week": {
+        "12": 88.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-47",
+    "season": 2021,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 47
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 117.5,
+      "points_by_week": {
+        "12": 117.5
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 93.5,
+      "points_by_week": {
+        "12": 93.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-48",
+    "season": 2021,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 48
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 87.0,
+      "points_by_week": {
+        "12": 87.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 95.0,
+      "points_by_week": {
+        "12": 95.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-49",
+    "season": 2021,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 49
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 110.5,
+      "points_by_week": {
+        "13": 110.5
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 157.0,
+      "points_by_week": {
+        "13": 157.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-50",
+    "season": 2021,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 50
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 113.5,
+      "points_by_week": {
+        "13": 113.5
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 151.0,
+      "points_by_week": {
+        "13": 151.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-51",
+    "season": 2021,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 51
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 71.5,
+      "points_by_week": {
+        "13": 71.5
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 96.0,
+      "points_by_week": {
+        "13": 96.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-52",
+    "season": 2021,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 52
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 121.0,
+      "points_by_week": {
+        "13": 121.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 85.0,
+      "points_by_week": {
+        "13": 85.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-53",
+    "season": 2021,
+    "matchup_period": 14,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 53
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 111.5,
+      "points_by_week": {
+        "14": 111.5
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 87.0,
+      "points_by_week": {
+        "14": 87.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-54",
+    "season": 2021,
+    "matchup_period": 14,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 54
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 96.0,
+      "points_by_week": {
+        "14": 96.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 113.5,
+      "points_by_week": {
+        "14": 113.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-55",
+    "season": 2021,
+    "matchup_period": 14,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 55
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 122.0,
+      "points_by_week": {
+        "14": 122.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 174.5,
+      "points_by_week": {
+        "14": 174.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-56",
+    "season": 2021,
+    "matchup_period": 14,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 56
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 175.5,
+      "points_by_week": {
+        "14": 175.5
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 125.0,
+      "points_by_week": {
+        "14": 125.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-57",
+    "season": 2021,
+    "matchup_period": 15,
+    "phase": "championship_playoffs",
+    "playoff_tier": "WINNERS_BRACKET",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 57
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 90.0,
+      "points_by_week": {
+        "15": 90.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 57.0,
+      "points_by_week": {
+        "15": 57.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-58",
+    "season": 2021,
+    "matchup_period": 15,
+    "phase": "championship_playoffs",
+    "playoff_tier": "WINNERS_BRACKET",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 58
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 140.0,
+      "points_by_week": {
+        "15": 140.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 138.0,
+      "points_by_week": {
+        "15": 138.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-59",
+    "season": 2021,
+    "matchup_period": 15,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 59
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 75.5,
+      "points_by_week": {
+        "15": 75.5
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 67.5,
+      "points_by_week": {
+        "15": 67.5
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-60",
+    "season": 2021,
+    "matchup_period": 15,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 60
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 137.0,
+      "points_by_week": {
+        "15": 137.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 90.0,
+      "points_by_week": {
+        "15": 90.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-61",
+    "season": 2021,
+    "matchup_period": 16,
+    "phase": "championship_playoffs",
+    "playoff_tier": "WINNERS_BRACKET",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 61
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 123.0,
+      "points_by_week": {
+        "16": 123.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 115.0,
+      "points_by_week": {
+        "16": 115.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-62",
+    "season": 2021,
+    "matchup_period": 16,
+    "phase": "consolation",
+    "playoff_tier": "WINNERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 62
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 115.5,
+      "points_by_week": {
+        "16": 115.5
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 94.0,
+      "points_by_week": {
+        "16": 94.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-63",
+    "season": 2021,
+    "matchup_period": 16,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 63
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 102.5,
+      "points_by_week": {
+        "16": 102.5
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 97.0,
+      "points_by_week": {
+        "16": 97.0
+      }
+    }
+  },
+  {
+    "id": "2021-matchup-64",
+    "season": 2021,
+    "matchup_period": 16,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2021-season.json",
+      "matchup_id": 64
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 78.0,
+      "points_by_week": {
+        "16": 78.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 138.5,
+      "points_by_week": {
+        "16": 138.5
+      }
+    }
+  }
+]

@@ -1,0 +1,75 @@
+SCHEMA VERSION 1 — BIGDONGFOOTBALL
+
+FORMAT AND IDS
+UTF-8 JSON. Dates ending in Z are UTC; absent values are null.
+team-N is a persistent ESPN franchise slot, not a person.
+manager-HASH is a stable anonymous identifier; never infer a manager from a
+team's latest owner. Join season standings.manager_ids for historical ownership.
+player-N uses ESPN player IDs; negative IDs can be valid defenses.
+Player ID -1 and zero are placeholders and become null references.
+YEAR-matchup-N is unique across seasons; ESPN matchup IDs alone repeat yearly.
+Raw response schemas are preserved separately and have not been modified.
+
+ROOT FILES
+league.json: league identity, played/unplayed years, identity/privacy conventions.
+catalog.json: counts, category-to-page mapping and file inventory.
+seasons.json: one summary per returned season, including unplayed seasons.
+teams.json: franchise identity and chronological team names/owners/ranks.
+  display_name uses the latest played season, avoiding unused Team 4 placeholders.
+managers.json: anonymous label, team-season memberships, regular-season W/L/T,
+  championship years. Manager careers use each season's reported owners.
+players.json: identity index for players/defenses; names may reflect an earlier
+  captured season. Prefer players/YEAR.json.name_in_season on historical pages.
+records.json: twenty highest team scores, margins, combined scores and closest
+  non-tied games, plus champions. Includes playoffs and consolation; phase tags
+  allow UI filters. Scores are not normalized across changing season rules.
+head-to-head.json: each franchise pair once, all-game W/L/T, regular/postseason
+  game counts, and matchup IDs. These are franchise histories, not manager rivalries.
+coverage.json: missing seasons, query coverage, unavailable fields and quality flags.
+memories.json: factual scrapbook entries, related teams, editorial state and
+  attachment-publication status. The original email screenshot is not bundled.
+
+SEASONS/YEAR/
+summary.json: state played/unplayed, champion, team count, scored games and
+  transaction count. A returned schedule alone does not establish a played season.
+standings.json: one team-season row, its historical name and manager IDs, final
+  placement, playoff seed and regular-season W/L/T/pointsFor/pointsAgainst.
+matchups.json: home/away team IDs and points, points by week, matchup period,
+  winner HOME/AWAY/TIE/UNDECIDED, played flag, phase and original playoff tier.
+  phase is regular_season, championship_playoffs, consolation or unknown.
+lineups.json: matchup roster snapshots, week/team/matchup references, player
+  points, team total, manual adjustment and points_reconcile flag.
+  lineup_position is null because the supplied slot values are all zero.
+  lineup_slot_as_returned preserves that original unreliable value for inspection.
+  Compare sum_of_player_points + manual_adjustment with team_points.
+draft.json: draft slots, rounds, picks, team/player references and keeper flag.
+  player_identified=false means a retained unknown slot, not an undrafted player.
+  Check summary.drafted; 2022-2023 contain unused slots and no completed draft.
+rules.json: original scoring/roster/schedule/draft/trade/acquisition settings.
+  Financial and account notification settings are not included in website data.
+transactions.json: one row per season + transaction ID, with observed variants.
+  categories: trades, adds-drops-waivers, draft, roster-actions.
+  observations preserve type, original status, dates and item movements.
+  Repeated observations are deduplicated; conflicting statuses are not overwritten.
+  Status EXECUTED on a decline/veto means that action executed, not that players
+  were traded. A proposal, acceptance or pending email alone is not a completed move.
+  Do not count both a linked trade family and all its event IDs as separate trades.
+trades.json: event families linked only by explicit relatedTransactionId, within
+  one season. execution_recorded means an ESPN TRADE_ACCEPT or TRADE_UPHOLD record
+  had EXECUTED status. recorded_player_movements are taken only from such records.
+  These are service execution markers, not independently verified roster transfers.
+  An event can be useful even if no linked execution record was recovered.
+
+PLAYERS/YEAR.JSON
+One player-season card per identified player. Includes that season's name,
+position/team IDs and stats_as_returned. Stat IDs remain ESPN's numeric keys.
+statSourceId and statSplitTypeId distinguish actual/projection and aggregation
+formats; preserve them. Do not sum projections and actuals or season totals and
+weekly stats together. Raw applied fantasy points reflect ESPN's scoring context.
+
+PROVENANCE
+source.file identifies an unchanged raw capture in the private research archive;
+source matchup/team/player keys identify its underlying object. Transaction IDs
+join to consolidated/transactions.json for exact raw variants and JSON pointers.
+No absolute local filesystem paths or manager account identifiers are required
+by this website package. Manager names remain in the local private archive.

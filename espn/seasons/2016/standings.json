@@ -1,0 +1,178 @@
+[
+  {
+    "id": "2016-team-3",
+    "season": 2016,
+    "team_id": "team-3",
+    "name": "Chung Turtleneckers",
+    "manager_ids": [
+      "manager-a70279f72efe"
+    ],
+    "final_rank": 1,
+    "playoff_seed": 1,
+    "regular_season": {
+      "wins": 10,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 1408.0,
+      "pointsAgainst": 1152.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "team_id": 3
+    }
+  },
+  {
+    "id": "2016-team-7",
+    "season": 2016,
+    "team_id": "team-7",
+    "name": "Starvin Like Marvin",
+    "manager_ids": [
+      "manager-73727dabffa3"
+    ],
+    "final_rank": 2,
+    "playoff_seed": 3,
+    "regular_season": {
+      "wins": 7,
+      "losses": 6,
+      "ties": 0,
+      "pointsFor": 1325.0,
+      "pointsAgainst": 1329.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "team_id": 7
+    }
+  },
+  {
+    "id": "2016-team-6",
+    "season": 2016,
+    "team_id": "team-6",
+    "name": "I tried And it Worked",
+    "manager_ids": [
+      "manager-7783ef2ca401"
+    ],
+    "final_rank": 3,
+    "playoff_seed": 2,
+    "regular_season": {
+      "wins": 8,
+      "losses": 5,
+      "ties": 0,
+      "pointsFor": 1270.0,
+      "pointsAgainst": 1231.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "team_id": 6
+    }
+  },
+  {
+    "id": "2016-team-1",
+    "season": 2016,
+    "team_id": "team-1",
+    "name": "LA Girthquakes",
+    "manager_ids": [
+      "manager-662dc4d6af44"
+    ],
+    "final_rank": 4,
+    "playoff_seed": 4,
+    "regular_season": {
+      "wins": 7,
+      "losses": 6,
+      "ties": 0,
+      "pointsFor": 1281.0,
+      "pointsAgainst": 1147.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "team_id": 1
+    }
+  },
+  {
+    "id": "2016-team-5",
+    "season": 2016,
+    "team_id": "team-5",
+    "name": "Dunder Mifflin Dwight Schrutes",
+    "manager_ids": [
+      "manager-6235cab835cf"
+    ],
+    "final_rank": 5,
+    "playoff_seed": 6,
+    "regular_season": {
+      "wins": 5,
+      "losses": 8,
+      "ties": 0,
+      "pointsFor": 1352.0,
+      "pointsAgainst": 1412.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "team_id": 5
+    }
+  },
+  {
+    "id": "2016-team-8",
+    "season": 2016,
+    "team_id": "team-8",
+    "name": "Team Red",
+    "manager_ids": [
+      "manager-568cd68f93a9"
+    ],
+    "final_rank": 6,
+    "playoff_seed": 7,
+    "regular_season": {
+      "wins": 5,
+      "losses": 8,
+      "ties": 0,
+      "pointsFor": 1135.0,
+      "pointsAgainst": 1290.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "team_id": 8
+    }
+  },
+  {
+    "id": "2016-team-4",
+    "season": 2016,
+    "team_id": "team-4",
+    "name": "Team Lorenz",
+    "manager_ids": [
+      "manager-e0dc69a96669"
+    ],
+    "final_rank": 7,
+    "playoff_seed": 8,
+    "regular_season": {
+      "wins": 4,
+      "losses": 9,
+      "ties": 0,
+      "pointsFor": 1185.0,
+      "pointsAgainst": 1395.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "team_id": 4
+    }
+  },
+  {
+    "id": "2016-team-2",
+    "season": 2016,
+    "team_id": "team-2",
+    "name": "Bacon Turtles",
+    "manager_ids": [
+      "manager-c615bbb19631"
+    ],
+    "final_rank": 8,
+    "playoff_seed": 5,
+    "regular_season": {
+      "wins": 6,
+      "losses": 7,
+      "ties": 0,
+      "pointsFor": 1240.0,
+      "pointsAgainst": 1240.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "team_id": 2
+    }
+  }
+]

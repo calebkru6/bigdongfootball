@@ -1,0 +1,178 @@
+[
+  {
+    "id": "2020-team-6",
+    "season": 2020,
+    "team_id": "team-6",
+    "name": "Naturday Saints",
+    "manager_ids": [
+      "manager-7783ef2ca401"
+    ],
+    "final_rank": 1,
+    "playoff_seed": 1,
+    "regular_season": {
+      "wins": 11,
+      "losses": 2,
+      "ties": 0,
+      "pointsFor": 1392.0,
+      "pointsAgainst": 1158.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "team_id": 6
+    }
+  },
+  {
+    "id": "2020-team-8",
+    "season": 2020,
+    "team_id": "team-8",
+    "name": "Team Red",
+    "manager_ids": [
+      "manager-568cd68f93a9"
+    ],
+    "final_rank": 2,
+    "playoff_seed": 3,
+    "regular_season": {
+      "wins": 10,
+      "losses": 3,
+      "ties": 0,
+      "pointsFor": 1554.0,
+      "pointsAgainst": 1256.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "team_id": 8
+    }
+  },
+  {
+    "id": "2020-team-3",
+    "season": 2020,
+    "team_id": "team-3",
+    "name": "Chung Turtleneckers",
+    "manager_ids": [
+      "manager-a70279f72efe"
+    ],
+    "final_rank": 3,
+    "playoff_seed": 2,
+    "regular_season": {
+      "wins": 8,
+      "losses": 5,
+      "ties": 0,
+      "pointsFor": 1471.0,
+      "pointsAgainst": 1296.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "team_id": 3
+    }
+  },
+  {
+    "id": "2020-team-1",
+    "season": 2020,
+    "team_id": "team-1",
+    "name": "Los Angeles Girthquakes",
+    "manager_ids": [
+      "manager-662dc4d6af44"
+    ],
+    "final_rank": 4,
+    "playoff_seed": 4,
+    "regular_season": {
+      "wins": 7,
+      "losses": 6,
+      "ties": 0,
+      "pointsFor": 1448.0,
+      "pointsAgainst": 1391.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "team_id": 1
+    }
+  },
+  {
+    "id": "2020-team-7",
+    "season": 2020,
+    "team_id": "team-7",
+    "name": "Gang Green",
+    "manager_ids": [
+      "manager-73727dabffa3"
+    ],
+    "final_rank": 5,
+    "playoff_seed": 5,
+    "regular_season": {
+      "wins": 5,
+      "losses": 8,
+      "ties": 0,
+      "pointsFor": 1467.0,
+      "pointsAgainst": 1472.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "team_id": 7
+    }
+  },
+  {
+    "id": "2020-team-4",
+    "season": 2020,
+    "team_id": "team-4",
+    "name": "Andrew Luck MVP year",
+    "manager_ids": [
+      "manager-60db4d2afcd8"
+    ],
+    "final_rank": 6,
+    "playoff_seed": 7,
+    "regular_season": {
+      "wins": 3,
+      "losses": 10,
+      "ties": 0,
+      "pointsFor": 1230.0,
+      "pointsAgainst": 1472.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "team_id": 4
+    }
+  },
+  {
+    "id": "2020-team-5",
+    "season": 2020,
+    "team_id": "team-5",
+    "name": "Dunder Mifflin Dwight Schrutes",
+    "manager_ids": [
+      "manager-f8d62c41f309"
+    ],
+    "final_rank": 7,
+    "playoff_seed": 6,
+    "regular_season": {
+      "wins": 5,
+      "losses": 8,
+      "ties": 0,
+      "pointsFor": 1159.0,
+      "pointsAgainst": 1348.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "team_id": 5
+    }
+  },
+  {
+    "id": "2020-team-2",
+    "season": 2020,
+    "team_id": "team-2",
+    "name": "Bacon 76ers",
+    "manager_ids": [
+      "manager-c615bbb19631"
+    ],
+    "final_rank": 8,
+    "playoff_seed": 8,
+    "regular_season": {
+      "wins": 3,
+      "losses": 10,
+      "ties": 0,
+      "pointsFor": 1195.0,
+      "pointsAgainst": 1523.0
+    },
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2020-season.json",
+      "team_id": 2
+    }
+  }
+]

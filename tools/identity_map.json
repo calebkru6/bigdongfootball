@@ -1,0 +1,25 @@
+{
+  "_note": "Cross-platform manager identity. ESPN manager ids come from website-data/managers.json; Sleeper user ids from the public Sleeper API. Display labels are Sleeper usernames (already public on Sleeper) or neutral labels; no real names are written into site data.",
+  "managers": [
+    {"id": "calebkru6",      "espn_manager_id": "manager-662dc4d6af44", "sleeper_user_id": "473342086494547968", "espn_team": "team-1", "sleeper_roster_id": 3},
+    {"id": "davidbac0n",     "espn_manager_id": "manager-c615bbb19631", "sleeper_user_id": "794265608068931584", "espn_team": "team-2", "sleeper_roster_id": 1},
+    {"id": "dylchung",       "espn_manager_id": "manager-a70279f72efe", "sleeper_user_id": "789600500822740992", "espn_team": "team-3", "sleeper_roster_id": 7},
+    {"id": "wadecha3",       "espn_manager_id": "manager-60db4d2afcd8", "sleeper_user_id": "794260441223278592", "espn_team": "team-4", "sleeper_roster_id": 5},
+    {"id": "DrDawgie420",    "espn_manager_id": "manager-f8d62c41f309", "sleeper_user_id": "797214512158715904", "espn_team": "team-5", "sleeper_roster_id": 4},
+    {"id": "jacehat18",      "espn_manager_id": "manager-7783ef2ca401", "sleeper_user_id": "608004494181072896", "espn_team": "team-6", "sleeper_roster_id": 6},
+    {"id": "evanjames99",    "espn_manager_id": "manager-73727dabffa3", "sleeper_user_id": "730293851419435008", "espn_team": "team-7", "sleeper_roster_id": 2},
+    {"id": "teamreddermaet", "espn_manager_id": "manager-568cd68f93a9", "sleeper_user_id": "789214375562039296", "espn_team": "team-8", "sleeper_roster_id": 8},
+    {"id": "espn-2016-team4-owner", "display_name": "Team Lorenz owner (2016)", "espn_manager_id": "manager-e0dc69a96669", "sleeper_user_id": null, "espn_team": "team-4", "sleeper_roster_id": null},
+    {"id": "espn-2016-team5-owner", "display_name": "Original Dunder Mifflin owner (2016)", "espn_manager_id": "manager-6235cab835cf", "sleeper_user_id": null, "espn_team": "team-5", "sleeper_roster_id": null}
+  ],
+  "franchises": [
+    {"id": "f1", "espn_team": "team-1", "sleeper_roster_id": 3},
+    {"id": "f2", "espn_team": "team-2", "sleeper_roster_id": 1},
+    {"id": "f3", "espn_team": "team-3", "sleeper_roster_id": 7},
+    {"id": "f4", "espn_team": "team-4", "sleeper_roster_id": 5},
+    {"id": "f5", "espn_team": "team-5", "sleeper_roster_id": 4},
+    {"id": "f6", "espn_team": "team-6", "sleeper_roster_id": 6},
+    {"id": "f7", "espn_team": "team-7", "sleeper_roster_id": 2},
+    {"id": "f8", "espn_team": "team-8", "sleeper_roster_id": 8}
+  ]
+}

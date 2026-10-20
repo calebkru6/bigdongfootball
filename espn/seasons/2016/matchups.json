@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "2016-matchup-0",
+    "season": 2016,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 0
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 81.0,
+      "points_by_week": {
+        "1": 81.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 167.0,
+      "points_by_week": {
+        "1": 167.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-1",
+    "season": 2016,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 1
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 108.0,
+      "points_by_week": {
+        "1": 108.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 113.0,
+      "points_by_week": {
+        "1": 113.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-2",
+    "season": 2016,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 2
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 121.0,
+      "points_by_week": {
+        "1": 121.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 69.0,
+      "points_by_week": {
+        "1": 69.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-3",
+    "season": 2016,
+    "matchup_period": 1,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 3
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 83.0,
+      "points_by_week": {
+        "1": 83.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 119.0,
+      "points_by_week": {
+        "1": 119.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-4",
+    "season": 2016,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 4
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 99.0,
+      "points_by_week": {
+        "2": 99.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 75.0,
+      "points_by_week": {
+        "2": 75.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-5",
+    "season": 2016,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 5
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 118.0,
+      "points_by_week": {
+        "2": 118.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 90.0,
+      "points_by_week": {
+        "2": 90.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-6",
+    "season": 2016,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 6
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 101.0,
+      "points_by_week": {
+        "2": 101.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 96.0,
+      "points_by_week": {
+        "2": 96.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-7",
+    "season": 2016,
+    "matchup_period": 2,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 7
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 90.0,
+      "points_by_week": {
+        "2": 90.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 87.0,
+      "points_by_week": {
+        "2": 87.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-8",
+    "season": 2016,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 8
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 68.0,
+      "points_by_week": {
+        "3": 68.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 82.0,
+      "points_by_week": {
+        "3": 82.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-9",
+    "season": 2016,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 9
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 77.0,
+      "points_by_week": {
+        "3": 77.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 112.0,
+      "points_by_week": {
+        "3": 112.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-10",
+    "season": 2016,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 10
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 102.0,
+      "points_by_week": {
+        "3": 102.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 127.0,
+      "points_by_week": {
+        "3": 127.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-11",
+    "season": 2016,
+    "matchup_period": 3,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 11
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 106.0,
+      "points_by_week": {
+        "3": 106.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 134.0,
+      "points_by_week": {
+        "3": 134.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-12",
+    "season": 2016,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 12
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 67.0,
+      "points_by_week": {
+        "4": 67.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 94.0,
+      "points_by_week": {
+        "4": 94.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-13",
+    "season": 2016,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 13
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 115.0,
+      "points_by_week": {
+        "4": 115.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 84.0,
+      "points_by_week": {
+        "4": 84.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-14",
+    "season": 2016,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 14
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 155.0,
+      "points_by_week": {
+        "4": 155.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 85.0,
+      "points_by_week": {
+        "4": 85.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-15",
+    "season": 2016,
+    "matchup_period": 4,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 15
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 82.0,
+      "points_by_week": {
+        "4": 82.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 75.0,
+      "points_by_week": {
+        "4": 75.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-16",
+    "season": 2016,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 16
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 129.0,
+      "points_by_week": {
+        "5": 129.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 61.0,
+      "points_by_week": {
+        "5": 61.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-17",
+    "season": 2016,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 17
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 103.0,
+      "points_by_week": {
+        "5": 103.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 116.0,
+      "points_by_week": {
+        "5": 116.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-18",
+    "season": 2016,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 18
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 104.0,
+      "points_by_week": {
+        "5": 104.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 127.0,
+      "points_by_week": {
+        "5": 127.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-19",
+    "season": 2016,
+    "matchup_period": 5,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 19
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 70.0,
+      "points_by_week": {
+        "5": 70.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 112.0,
+      "points_by_week": {
+        "5": 112.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-20",
+    "season": 2016,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 20
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 55.0,
+      "points_by_week": {
+        "6": 55.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 72.0,
+      "points_by_week": {
+        "6": 72.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-21",
+    "season": 2016,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 21
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 119.0,
+      "points_by_week": {
+        "6": 119.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 59.0,
+      "points_by_week": {
+        "6": 59.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-22",
+    "season": 2016,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 22
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 128.0,
+      "points_by_week": {
+        "6": 128.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 120.0,
+      "points_by_week": {
+        "6": 120.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-23",
+    "season": 2016,
+    "matchup_period": 6,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 23
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 99.0,
+      "points_by_week": {
+        "6": 99.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 69.0,
+      "points_by_week": {
+        "6": 69.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-24",
+    "season": 2016,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 24
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 61.0,
+      "points_by_week": {
+        "7": 61.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 94.0,
+      "points_by_week": {
+        "7": 94.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-25",
+    "season": 2016,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 25
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 80.0,
+      "points_by_week": {
+        "7": 80.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 149.0,
+      "points_by_week": {
+        "7": 149.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-26",
+    "season": 2016,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 26
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 112.0,
+      "points_by_week": {
+        "7": 112.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 78.0,
+      "points_by_week": {
+        "7": 78.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-27",
+    "season": 2016,
+    "matchup_period": 7,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 27
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 95.0,
+      "points_by_week": {
+        "7": 95.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 93.0,
+      "points_by_week": {
+        "7": 93.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-28",
+    "season": 2016,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 28
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 88.0,
+      "points_by_week": {
+        "8": 88.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 65.0,
+      "points_by_week": {
+        "8": 65.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-29",
+    "season": 2016,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 29
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 51.0,
+      "points_by_week": {
+        "8": 51.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 78.0,
+      "points_by_week": {
+        "8": 78.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-30",
+    "season": 2016,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 30
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 83.0,
+      "points_by_week": {
+        "8": 83.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 123.0,
+      "points_by_week": {
+        "8": 123.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-31",
+    "season": 2016,
+    "matchup_period": 8,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 31
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 119.0,
+      "points_by_week": {
+        "8": 119.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 107.0,
+      "points_by_week": {
+        "8": 107.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-32",
+    "season": 2016,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 32
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 96.0,
+      "points_by_week": {
+        "9": 96.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 108.0,
+      "points_by_week": {
+        "9": 108.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-33",
+    "season": 2016,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 33
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 113.0,
+      "points_by_week": {
+        "9": 113.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 133.0,
+      "points_by_week": {
+        "9": 133.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-34",
+    "season": 2016,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 34
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 84.0,
+      "points_by_week": {
+        "9": 84.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 109.0,
+      "points_by_week": {
+        "9": 109.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-35",
+    "season": 2016,
+    "matchup_period": 9,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 35
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 116.0,
+      "points_by_week": {
+        "9": 116.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 70.0,
+      "points_by_week": {
+        "9": 70.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-36",
+    "season": 2016,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 36
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 118.0,
+      "points_by_week": {
+        "10": 118.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 115.0,
+      "points_by_week": {
+        "10": 115.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-37",
+    "season": 2016,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 37
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 70.0,
+      "points_by_week": {
+        "10": 70.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 103.0,
+      "points_by_week": {
+        "10": 103.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-38",
+    "season": 2016,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 38
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 112.0,
+      "points_by_week": {
+        "10": 112.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 87.0,
+      "points_by_week": {
+        "10": 87.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-39",
+    "season": 2016,
+    "matchup_period": 10,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 39
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 119.0,
+      "points_by_week": {
+        "10": 119.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 112.0,
+      "points_by_week": {
+        "10": 112.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-40",
+    "season": 2016,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 40
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 94.0,
+      "points_by_week": {
+        "11": 94.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 100.0,
+      "points_by_week": {
+        "11": 100.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-41",
+    "season": 2016,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 41
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 82.0,
+      "points_by_week": {
+        "11": 82.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 111.0,
+      "points_by_week": {
+        "11": 111.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-42",
+    "season": 2016,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 42
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 80.0,
+      "points_by_week": {
+        "11": 80.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 122.0,
+      "points_by_week": {
+        "11": 122.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-43",
+    "season": 2016,
+    "matchup_period": 11,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 43
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 67.0,
+      "points_by_week": {
+        "11": 67.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 93.0,
+      "points_by_week": {
+        "11": 93.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-44",
+    "season": 2016,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 44
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 112.0,
+      "points_by_week": {
+        "12": 112.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 145.0,
+      "points_by_week": {
+        "12": 145.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-45",
+    "season": 2016,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 45
+    },
+    "home": {
+      "team_id": "team-7",
+      "points": 87.0,
+      "points_by_week": {
+        "12": 87.0
+      }
+    },
+    "away": {
+      "team_id": "team-2",
+      "points": 124.0,
+      "points_by_week": {
+        "12": 124.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-46",
+    "season": 2016,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 46
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 87.0,
+      "points_by_week": {
+        "12": 87.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 78.0,
+      "points_by_week": {
+        "12": 78.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-47",
+    "season": 2016,
+    "matchup_period": 12,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 47
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 102.0,
+      "points_by_week": {
+        "12": 102.0
+      }
+    },
+    "away": {
+      "team_id": "team-3",
+      "points": 83.0,
+      "points_by_week": {
+        "12": 83.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-48",
+    "season": 2016,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 48
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 102.0,
+      "points_by_week": {
+        "13": 102.0
+      }
+    },
+    "away": {
+      "team_id": "team-6",
+      "points": 101.0,
+      "points_by_week": {
+        "13": 101.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-49",
+    "season": 2016,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 49
+    },
+    "home": {
+      "team_id": "team-1",
+      "points": 94.0,
+      "points_by_week": {
+        "13": 94.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 101.0,
+      "points_by_week": {
+        "13": 101.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-50",
+    "season": 2016,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 50
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 113.0,
+      "points_by_week": {
+        "13": 113.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 86.0,
+      "points_by_week": {
+        "13": 86.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-51",
+    "season": 2016,
+    "matchup_period": 13,
+    "phase": "regular_season",
+    "playoff_tier": "NONE",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 51
+    },
+    "home": {
+      "team_id": "team-4",
+      "points": 74.0,
+      "points_by_week": {
+        "13": 74.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 92.0,
+      "points_by_week": {
+        "13": 92.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-52",
+    "season": 2016,
+    "matchup_period": 14,
+    "phase": "championship_playoffs",
+    "playoff_tier": "WINNERS_BRACKET",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 52
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 69.0,
+      "points_by_week": {
+        "14": 69.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 60.0,
+      "points_by_week": {
+        "14": 60.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-53",
+    "season": 2016,
+    "matchup_period": 14,
+    "phase": "championship_playoffs",
+    "playoff_tier": "WINNERS_BRACKET",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 53
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 67.0,
+      "points_by_week": {
+        "14": 67.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 95.0,
+      "points_by_week": {
+        "14": 95.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-54",
+    "season": 2016,
+    "matchup_period": 14,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 54
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 84.0,
+      "points_by_week": {
+        "14": 84.0
+      }
+    },
+    "away": {
+      "team_id": "team-5",
+      "points": 101.0,
+      "points_by_week": {
+        "14": 101.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-55",
+    "season": 2016,
+    "matchup_period": 14,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 55
+    },
+    "home": {
+      "team_id": "team-8",
+      "points": 81.0,
+      "points_by_week": {
+        "14": 81.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 63.0,
+      "points_by_week": {
+        "14": 63.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-56",
+    "season": 2016,
+    "matchup_period": 15,
+    "phase": "championship_playoffs",
+    "playoff_tier": "WINNERS_BRACKET",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 56
+    },
+    "home": {
+      "team_id": "team-3",
+      "points": 141.0,
+      "points_by_week": {
+        "15": 141.0
+      }
+    },
+    "away": {
+      "team_id": "team-7",
+      "points": 113.0,
+      "points_by_week": {
+        "15": 113.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-57",
+    "season": 2016,
+    "matchup_period": 15,
+    "phase": "consolation",
+    "playoff_tier": "WINNERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 57
+    },
+    "home": {
+      "team_id": "team-6",
+      "points": 82.0,
+      "points_by_week": {
+        "15": 82.0
+      }
+    },
+    "away": {
+      "team_id": "team-1",
+      "points": 66.0,
+      "points_by_week": {
+        "15": 66.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-58",
+    "season": 2016,
+    "matchup_period": 15,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "HOME",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 58
+    },
+    "home": {
+      "team_id": "team-5",
+      "points": 61.0,
+      "points_by_week": {
+        "15": 61.0
+      }
+    },
+    "away": {
+      "team_id": "team-8",
+      "points": 59.0,
+      "points_by_week": {
+        "15": 59.0
+      }
+    }
+  },
+  {
+    "id": "2016-matchup-59",
+    "season": 2016,
+    "matchup_period": 15,
+    "phase": "consolation",
+    "playoff_tier": "LOSERS_CONSOLATION_LADDER",
+    "winner": "AWAY",
+    "played": true,
+    "source": {
+      "file": "bulk-20261006T234116371545Z/2016-season.json",
+      "matchup_id": 59
+    },
+    "home": {
+      "team_id": "team-2",
+      "points": 84.0,
+      "points_by_week": {
+        "15": 84.0
+      }
+    },
+    "away": {
+      "team_id": "team-4",
+      "points": 94.0,
+      "points_by_week": {
+        "15": 94.0
+      }
+    }
+  }
+]

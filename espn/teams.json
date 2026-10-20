@@ -1,0 +1,630 @@
+[
+  {
+    "id": "team-1",
+    "espn_team_id": 1,
+    "seasons": [
+      {
+        "season": 2016,
+        "name": "LA Girthquakes",
+        "manager_ids": [
+          "manager-662dc4d6af44"
+        ],
+        "played": true,
+        "final_rank": 4
+      },
+      {
+        "season": 2017,
+        "name": "LA Girthquakes",
+        "manager_ids": [
+          "manager-662dc4d6af44"
+        ],
+        "played": true,
+        "final_rank": 7
+      },
+      {
+        "season": 2018,
+        "name": "Los Angeles Girthquakes",
+        "manager_ids": [
+          "manager-662dc4d6af44"
+        ],
+        "played": true,
+        "final_rank": 4
+      },
+      {
+        "season": 2019,
+        "name": "Los Angeles Girthquakes",
+        "manager_ids": [
+          "manager-662dc4d6af44"
+        ],
+        "played": true,
+        "final_rank": 4
+      },
+      {
+        "season": 2020,
+        "name": "Los Angeles Girthquakes",
+        "manager_ids": [
+          "manager-662dc4d6af44"
+        ],
+        "played": true,
+        "final_rank": 4
+      },
+      {
+        "season": 2021,
+        "name": "Los Angeles Girthquakes",
+        "manager_ids": [
+          "manager-662dc4d6af44"
+        ],
+        "played": true,
+        "final_rank": 3
+      },
+      {
+        "season": 2022,
+        "name": "Los Angeles Girthquakes",
+        "manager_ids": [
+          "manager-662dc4d6af44"
+        ],
+        "played": false,
+        "final_rank": null
+      },
+      {
+        "season": 2023,
+        "name": "Los Angeles Girthquakes",
+        "manager_ids": [
+          "manager-662dc4d6af44"
+        ],
+        "played": false,
+        "final_rank": null
+      }
+    ],
+    "display_name": "Los Angeles Girthquakes"
+  },
+  {
+    "id": "team-2",
+    "espn_team_id": 2,
+    "seasons": [
+      {
+        "season": 2016,
+        "name": "Bacon Turtles",
+        "manager_ids": [
+          "manager-c615bbb19631"
+        ],
+        "played": true,
+        "final_rank": 8
+      },
+      {
+        "season": 2017,
+        "name": "Bacon 76ers",
+        "manager_ids": [
+          "manager-c615bbb19631"
+        ],
+        "played": true,
+        "final_rank": 6
+      },
+      {
+        "season": 2018,
+        "name": "Bacon 76ers",
+        "manager_ids": [
+          "manager-c615bbb19631"
+        ],
+        "played": true,
+        "final_rank": 1
+      },
+      {
+        "season": 2019,
+        "name": "Bacon 76ers",
+        "manager_ids": [
+          "manager-c615bbb19631"
+        ],
+        "played": true,
+        "final_rank": 7
+      },
+      {
+        "season": 2020,
+        "name": "Bacon 76ers",
+        "manager_ids": [
+          "manager-c615bbb19631"
+        ],
+        "played": true,
+        "final_rank": 8
+      },
+      {
+        "season": 2021,
+        "name": "Bacon 76ers",
+        "manager_ids": [
+          "manager-c615bbb19631"
+        ],
+        "played": true,
+        "final_rank": 7
+      },
+      {
+        "season": 2022,
+        "name": "Bacon 76ers",
+        "manager_ids": [
+          "manager-c615bbb19631"
+        ],
+        "played": false,
+        "final_rank": null
+      },
+      {
+        "season": 2023,
+        "name": "Bacon 76ers",
+        "manager_ids": [
+          "manager-c615bbb19631"
+        ],
+        "played": false,
+        "final_rank": null
+      }
+    ],
+    "display_name": "Bacon 76ers"
+  },
+  {
+    "id": "team-3",
+    "espn_team_id": 3,
+    "seasons": [
+      {
+        "season": 2016,
+        "name": "Chung Turtleneckers",
+        "manager_ids": [
+          "manager-a70279f72efe"
+        ],
+        "played": true,
+        "final_rank": 1
+      },
+      {
+        "season": 2017,
+        "name": "Chung Turtleneckers",
+        "manager_ids": [
+          "manager-a70279f72efe"
+        ],
+        "played": true,
+        "final_rank": 2
+      },
+      {
+        "season": 2018,
+        "name": "Chung Turtleneckers",
+        "manager_ids": [
+          "manager-a70279f72efe"
+        ],
+        "played": true,
+        "final_rank": 3
+      },
+      {
+        "season": 2019,
+        "name": "Chung Turtleneckers",
+        "manager_ids": [
+          "manager-a70279f72efe"
+        ],
+        "played": true,
+        "final_rank": 1
+      },
+      {
+        "season": 2020,
+        "name": "Chung Turtleneckers",
+        "manager_ids": [
+          "manager-a70279f72efe"
+        ],
+        "played": true,
+        "final_rank": 3
+      },
+      {
+        "season": 2021,
+        "name": "Chung Turtleneckers",
+        "manager_ids": [
+          "manager-a70279f72efe"
+        ],
+        "played": true,
+        "final_rank": 5
+      },
+      {
+        "season": 2022,
+        "name": "Chung Turtleneckers",
+        "manager_ids": [
+          "manager-a70279f72efe"
+        ],
+        "played": false,
+        "final_rank": null
+      },
+      {
+        "season": 2023,
+        "name": "Chung Turtleneckers",
+        "manager_ids": [
+          "manager-a70279f72efe"
+        ],
+        "played": false,
+        "final_rank": null
+      }
+    ],
+    "display_name": "Chung Turtleneckers"
+  },
+  {
+    "id": "team-4",
+    "espn_team_id": 4,
+    "seasons": [
+      {
+        "season": 2016,
+        "name": "Team Lorenz",
+        "manager_ids": [
+          "manager-e0dc69a96669"
+        ],
+        "played": true,
+        "final_rank": 7
+      },
+      {
+        "season": 2017,
+        "name": "Detroit Homeless Blacks",
+        "manager_ids": [
+          "manager-60db4d2afcd8"
+        ],
+        "played": true,
+        "final_rank": 8
+      },
+      {
+        "season": 2018,
+        "name": "Detroit Homeless Blacks",
+        "manager_ids": [
+          "manager-60db4d2afcd8"
+        ],
+        "played": true,
+        "final_rank": 5
+      },
+      {
+        "season": 2019,
+        "name": "Andrew Luck MVP year",
+        "manager_ids": [
+          "manager-60db4d2afcd8"
+        ],
+        "played": true,
+        "final_rank": 3
+      },
+      {
+        "season": 2020,
+        "name": "Andrew Luck MVP year",
+        "manager_ids": [
+          "manager-60db4d2afcd8"
+        ],
+        "played": true,
+        "final_rank": 6
+      },
+      {
+        "season": 2021,
+        "name": "Houston We Have a Problem",
+        "manager_ids": [
+          "manager-60db4d2afcd8"
+        ],
+        "played": true,
+        "final_rank": 1
+      },
+      {
+        "season": 2022,
+        "name": "Team 4",
+        "manager_ids": [],
+        "played": false,
+        "final_rank": null
+      },
+      {
+        "season": 2023,
+        "name": "Team 4",
+        "manager_ids": [],
+        "played": false,
+        "final_rank": null
+      }
+    ],
+    "display_name": "Houston We Have a Problem"
+  },
+  {
+    "id": "team-5",
+    "espn_team_id": 5,
+    "seasons": [
+      {
+        "season": 2016,
+        "name": "Dunder Mifflin Dwight Schrutes",
+        "manager_ids": [
+          "manager-6235cab835cf"
+        ],
+        "played": true,
+        "final_rank": 5
+      },
+      {
+        "season": 2017,
+        "name": "Dunder Mifflin Dwight Schrutes",
+        "manager_ids": [
+          "manager-f8d62c41f309"
+        ],
+        "played": true,
+        "final_rank": 4
+      },
+      {
+        "season": 2018,
+        "name": "Dunder Mifflin Dwight Schrutes",
+        "manager_ids": [
+          "manager-f8d62c41f309"
+        ],
+        "played": true,
+        "final_rank": 6
+      },
+      {
+        "season": 2019,
+        "name": "Dunder Mifflin Dwight Schrutes",
+        "manager_ids": [
+          "manager-f8d62c41f309"
+        ],
+        "played": true,
+        "final_rank": 8
+      },
+      {
+        "season": 2020,
+        "name": "Dunder Mifflin Dwight Schrutes",
+        "manager_ids": [
+          "manager-f8d62c41f309"
+        ],
+        "played": true,
+        "final_rank": 7
+      },
+      {
+        "season": 2021,
+        "name": "Dunder Mifflin Dwight Schrutes",
+        "manager_ids": [
+          "manager-f8d62c41f309"
+        ],
+        "played": true,
+        "final_rank": 4
+      },
+      {
+        "season": 2022,
+        "name": "Dunder Mifflin Dwight Schrutes",
+        "manager_ids": [
+          "manager-f8d62c41f309"
+        ],
+        "played": false,
+        "final_rank": null
+      },
+      {
+        "season": 2023,
+        "name": "Dunder Mifflin Dwight Schrutes",
+        "manager_ids": [
+          "manager-f8d62c41f309"
+        ],
+        "played": false,
+        "final_rank": null
+      }
+    ],
+    "display_name": "Dunder Mifflin Dwight Schrutes"
+  },
+  {
+    "id": "team-6",
+    "espn_team_id": 6,
+    "seasons": [
+      {
+        "season": 2016,
+        "name": "I tried And it Worked",
+        "manager_ids": [
+          "manager-7783ef2ca401"
+        ],
+        "played": true,
+        "final_rank": 3
+      },
+      {
+        "season": 2017,
+        "name": "I tried And it Worked",
+        "manager_ids": [
+          "manager-7783ef2ca401"
+        ],
+        "played": true,
+        "final_rank": 5
+      },
+      {
+        "season": 2018,
+        "name": "Mexico City Llamas",
+        "manager_ids": [
+          "manager-7783ef2ca401"
+        ],
+        "played": true,
+        "final_rank": 2
+      },
+      {
+        "season": 2019,
+        "name": "Naturday Saints",
+        "manager_ids": [
+          "manager-7783ef2ca401"
+        ],
+        "played": true,
+        "final_rank": 2
+      },
+      {
+        "season": 2020,
+        "name": "Naturday Saints",
+        "manager_ids": [
+          "manager-7783ef2ca401"
+        ],
+        "played": true,
+        "final_rank": 1
+      },
+      {
+        "season": 2021,
+        "name": "Naturday Saints",
+        "manager_ids": [
+          "manager-7783ef2ca401"
+        ],
+        "played": true,
+        "final_rank": 8
+      },
+      {
+        "season": 2022,
+        "name": "Naturday Saints",
+        "manager_ids": [
+          "manager-7783ef2ca401"
+        ],
+        "played": false,
+        "final_rank": null
+      },
+      {
+        "season": 2023,
+        "name": "Naturday Saints",
+        "manager_ids": [
+          "manager-7783ef2ca401"
+        ],
+        "played": false,
+        "final_rank": null
+      }
+    ],
+    "display_name": "Naturday Saints"
+  },
+  {
+    "id": "team-7",
+    "espn_team_id": 7,
+    "seasons": [
+      {
+        "season": 2016,
+        "name": "Starvin Like Marvin",
+        "manager_ids": [
+          "manager-73727dabffa3"
+        ],
+        "played": true,
+        "final_rank": 2
+      },
+      {
+        "season": 2017,
+        "name": "Gang Green",
+        "manager_ids": [
+          "manager-73727dabffa3"
+        ],
+        "played": true,
+        "final_rank": 3
+      },
+      {
+        "season": 2018,
+        "name": "Gang Green",
+        "manager_ids": [
+          "manager-73727dabffa3"
+        ],
+        "played": true,
+        "final_rank": 7
+      },
+      {
+        "season": 2019,
+        "name": "Gang Green",
+        "manager_ids": [
+          "manager-73727dabffa3"
+        ],
+        "played": true,
+        "final_rank": 6
+      },
+      {
+        "season": 2020,
+        "name": "Gang Green",
+        "manager_ids": [
+          "manager-73727dabffa3"
+        ],
+        "played": true,
+        "final_rank": 5
+      },
+      {
+        "season": 2021,
+        "name": "Gang Green",
+        "manager_ids": [
+          "manager-73727dabffa3"
+        ],
+        "played": true,
+        "final_rank": 2
+      },
+      {
+        "season": 2022,
+        "name": "Gang Green",
+        "manager_ids": [
+          "manager-73727dabffa3"
+        ],
+        "played": false,
+        "final_rank": null
+      },
+      {
+        "season": 2023,
+        "name": "Gang Green",
+        "manager_ids": [
+          "manager-73727dabffa3"
+        ],
+        "played": false,
+        "final_rank": null
+      }
+    ],
+    "display_name": "Gang Green"
+  },
+  {
+    "id": "team-8",
+    "espn_team_id": 8,
+    "seasons": [
+      {
+        "season": 2016,
+        "name": "Team Red",
+        "manager_ids": [
+          "manager-568cd68f93a9"
+        ],
+        "played": true,
+        "final_rank": 6
+      },
+      {
+        "season": 2017,
+        "name": "Team Red",
+        "manager_ids": [
+          "manager-568cd68f93a9"
+        ],
+        "played": true,
+        "final_rank": 1
+      },
+      {
+        "season": 2018,
+        "name": "Team Red",
+        "manager_ids": [
+          "manager-568cd68f93a9"
+        ],
+        "played": true,
+        "final_rank": 8
+      },
+      {
+        "season": 2019,
+        "name": "Team Red",
+        "manager_ids": [
+          "manager-568cd68f93a9"
+        ],
+        "played": true,
+        "final_rank": 5
+      },
+      {
+        "season": 2020,
+        "name": "Team Red",
+        "manager_ids": [
+          "manager-568cd68f93a9"
+        ],
+        "played": true,
+        "final_rank": 2
+      },
+      {
+        "season": 2021,
+        "name": "Team Red",
+        "manager_ids": [
+          "manager-568cd68f93a9"
+        ],
+        "played": true,
+        "final_rank": 6
+      },
+      {
+        "season": 2022,
+        "name": "Team Red",
+        "manager_ids": [
+          "manager-568cd68f93a9"
+        ],
+        "played": false,
+        "final_rank": null
+      },
+      {
+        "season": 2023,
+        "name": "Team Red",
+        "manager_ids": [
+          "manager-568cd68f93a9"
+        ],
+        "played": false,
+        "final_rank": null
+      }
+    ],
+    "display_name": "Team Red"
+  }
+]
