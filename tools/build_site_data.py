@@ -43,6 +43,10 @@ def build_espn_players():
         players[espn_player_key(p["id"])] = {
             "name": p["name"], "pos": ESPN_POS.get(p.get("default_position_id"), None), "team": None}
     # prefer the latest in-season name (slim map derived from the archive's players/YEAR.json)
+    extra = ESPN / "players-extra.json"
+    if extra.exists():
+        for pid, info in load(extra).items():
+            players.setdefault("e:" + pid, {"name": info["name"], "pos": info.get("pos"), "team": info.get("team")})
     names = ESPN / "player-names.json"
     if names.exists():
         for pid, name in load(names).items():
@@ -104,6 +108,17 @@ def build_espn_season(year):
         })
     name_by_team = {s["team_id"]: s["name"] for s in standings}
     lineup_by = {(l["week"], l["team_id"]): l for l in lineups}
+    rfile = ESPN / "rosters" / f"{year}.json"
+    rost = load(rfile) if rfile.exists() else {"weeks": {}, "final": {}, "note": None}
+    ESPN_SLOT_ORDER = ["QB", "RB", "WR", "TE", "FLEX", "OP", "K", "DEF", "BN", "IR"]
+    def roster_entries(lst, with_pts=True):
+        out = []
+        for e in lst:
+            starter = e["slot"] not in ("BN", "IR")
+            out.append({"p": "e:" + e["p"], "pts": (r2(e["pts"]) if e["pts"] is not None else 0.0) if with_pts else None,
+                        "slot": e["slot"], "starter": starter})
+        out.sort(key=lambda x: (ESPN_SLOT_ORDER.index(x["slot"]) if x["slot"] in ESPN_SLOT_ORDER else 50, -(x["pts"] or 0)))
+        return out
 
     def side(obj, period):
         tid = obj["team_id"]
@@ -111,13 +126,22 @@ def build_espn_season(year):
         out = {"franchise": FR_BY_ESPN[tid], "team_name": name_by_team.get(tid),
                "points": r2(obj["points"]),
                "points_by_week": {k: r2(v) for k, v in (obj.get("points_by_week") or {}).items()}}
-        if l:
+        wk_r = rost["weeks"].get(str(period), {}).get(tid.replace("team-", ""))
+        if wk_r:
+            out["lineup"] = roster_entries(wk_r)
+            out["lineup_sum"] = r2(sum(x["pts"] for x in out["lineup"] if x["starter"]))
+            out["manual_adjustment"] = r2(l["manual_adjustment"]) if l else 0.0
+            out["lineup_reconciles"] = abs((out["lineup_sum"] or 0) + (out["manual_adjustment"] or 0) - (out["points"] or 0)) < 0.01
+        elif l:
             out["lineup"] = [{"p": espn_player_key(e["player_id"]), "pts": r2(e["player_points"]), "slot": None,
                               "starter": None} for e in l["entries"] if e["player_id"]]
             out["lineup_sum"] = r2(l["sum_of_player_points"])
             out["manual_adjustment"] = r2(l["manual_adjustment"])
             out["lineup_reconciles"] = bool(l["points_reconcile"])
         return out
+    final_rosters = {FR_BY_ESPN["team-" + tid]: roster_entries(lst, with_pts=False) for tid, lst in rost["final"].items() if "team-" + tid in FR_BY_ESPN}
+    rosters = {"final": final_rosters, "final_label": "End of season", "weekly": bool(rost["weeks"]),
+               "weekly_note": rost.get("note")}
 
     ms = []
     for m in matchups:
@@ -140,8 +164,12 @@ def build_espn_season(year):
                       "p": espn_player_key(p["player_id"]) if p.get("player_identified") and p.get("player_id") else None,
                       "keeper": bool(p.get("keeper")), "bid": p.get("bid_amount") or None})
     ds = rules.get("draftSettings", {})
-    drafts = [{"label": f"{year} draft", "type": (ds.get("type") or "").lower(), "order": (ds.get("orderType") or "").lower(),
-               "rounds": max((p["round"] for p in picks), default=0), "picks": picks,
+    keepers = sum(1 for p in picks if p["keeper"])
+    nrounds = max((p["round"] for p in picks), default=0)
+    dlabel = (f"Startup draft ({nrounds} rounds, {(ds.get('type') or '').lower()})" if not keepers
+              else f"Keeper draft ({nrounds} rounds, {keepers} picks flagged as keepers)")
+    drafts = [{"label": dlabel, "type": (ds.get("type") or "").lower(), "order": (ds.get("orderType") or "").lower(),
+               "rounds": nrounds, "picks": picks, "keepers": keepers,
                "unidentified_slots": cov.get("unidentified_draft_slots", 0)}] if picks else []
 
     # transactions: executed adds/drops/waivers + executed trades
@@ -202,14 +230,15 @@ def build_espn_season(year):
         "roster_positions": roster_positions,
         "scoring_type": scoring.get("playerRankType"),
         "draft": {"type": (ds.get("type") or "").lower(), "order": (ds.get("orderType") or "").lower(),
-                  "keepers": ds.get("keeperCount")},
+                  "keepers": ds.get("keeperCount"), "keepers_used": keepers},
+        "format": "dynasty (run as an ESPN keeper league: rosters carried over through keeper picks)" if keepers else "dynasty (startup season)",
         "trade_deadline": None, "waivers": None, "faab": None,
     }
     notes = []
     if cov.get("transaction_state") == "not_returned":
         notes.append("ESPN did not return this season's transaction log. The empty moves list is a data gap, not evidence the league made no moves.")
-    if not cov.get("lineup_positions_reliable", True):
-        notes.append("ESPN's archived lineups do not record which slot each player filled, so box scores list players without starter/bench labels.")
+    if not rost["weeks"]:
+        notes.append("ESPN returned no weekly roster snapshots for this season: box scores show the nine starters without slot labels, and the Rosters tab only has the end-of-season roster.")
     if cov.get("lineup_point_mismatches"):
         notes.append(f"{len(cov['lineup_point_mismatches'])} box scores have player totals that do not reproduce the official team score; the official score is shown.")
     if cov.get("unidentified_draft_slots"):
@@ -221,7 +250,7 @@ def build_espn_season(year):
         "season": year, "platform": "espn", "status": "complete", "league_name": summary["league_name"],
         "champion": next((t["manager"] for t in teams if t["champion"]), None),
         "teams": teams, "matchups": ms, "bracket": None, "drafts": drafts, "transactions": events,
-        "settings": settings, "notes": notes,
+        "settings": settings, "notes": notes, "rosters": rosters,
     }
 
 # ----------------------------------------------------------------------------- SLEEPER
@@ -316,6 +345,24 @@ def build_sleeper_season(year):
 
     # starters slot labels
     slots = [p for p in lg["roster_positions"] if p != "BN"]
+    final_rosters = {}
+    for r in rosters:
+        starters = r.get("starters") or []
+        lst = []
+        for i, pid in enumerate(starters):
+            if pid and pid != "0":
+                lst.append({"p": ensure_sleeper_player(pid), "pts": None, "slot": slots[i] if i < len(slots) else None, "starter": True})
+        for pid in (r.get("reserve") or []):
+            lst.append({"p": ensure_sleeper_player(pid), "pts": None, "slot": "IR", "starter": False})
+        for pid in (r.get("taxi") or []):
+            lst.append({"p": ensure_sleeper_player(pid), "pts": None, "slot": "TAXI", "starter": False})
+        seen = {x["p"] for x in lst}
+        for pid in (r.get("players") or []):
+            k = ensure_sleeper_player(pid)
+            if k not in seen:
+                lst.append({"p": k, "pts": None, "slot": "BN", "starter": False})
+        final_rosters[FR_BY_ROSTER[r["roster_id"]]] = lst
+    rosters_out = {"final": final_rosters, "final_label": "Current roster" if in_season else "End of season", "weekly": True, "weekly_note": None}
 
     def side(mrow):
         t = by_roster[mrow["roster_id"]]
@@ -460,6 +507,7 @@ def build_sleeper_season(year):
         "scoring": {k: sc.get(k) for k in ("pass_td", "pass_yd", "pass_int", "rush_yd", "rec", "rec_yd", "rec_td", "fum_lost") if k in sc},
         "draft": {"type": "dynasty" if st.get("type") == 2 else "keeper" if st.get("type") == 1 else "redraft",
                   "rounds": st.get("draft_rounds"), "keepers": st.get("max_keepers")},
+        "format": ("dynasty" if st.get("type") == 2 else "keeper" if st.get("type") == 1 else "redraft") + (" with superflex" if "SUPER_FLEX" in lg["roster_positions"] else ""),
         "trade_deadline": st.get("trade_deadline"), "waivers": "FAAB" if st.get("waiver_type") == 2 else "rolling",
         "faab": st.get("waiver_budget"), "superflex": "SUPER_FLEX" in lg["roster_positions"],
     }
@@ -471,7 +519,7 @@ def build_sleeper_season(year):
         "league_name": lg["name"], "champion": next((t["manager"] for t in teams if t["champion"]), None),
         "current_week": current_week, "last_scored_week": last_scored,
         "teams": teams, "matchups": ms, "bracket": {"winners": wb, "losers": lb, "roster_to_franchise": {str(k): v for k, v in FR_BY_ROSTER.items()}},
-        "drafts": drafts, "transactions": events, "settings": settings, "notes": notes,
+        "drafts": drafts, "transactions": events, "settings": settings, "notes": notes, "rosters": rosters_out,
     }
 
 # ----------------------------------------------------------------------------- AGGREGATES
@@ -711,6 +759,8 @@ def main():
     dump("league.json", {
         "name": "BigDongFootball",
         "founded": seasons[0]["season"],
+        "format": "dynasty",
+        "history_note": "ESPN returned no data for 2013-2015; if the league ran before 2016, those seasons are not recoverable from ESPN.",
         "eras": [{"platform": "espn", "label": "ESPN era", "seasons": [s["season"] for s in seasons if s["platform"] == "espn"], "league_id": "1923288",
                   "url": "https://fantasy.espn.com/football/league?leagueId=1923288"},
                  {"platform": "sleeper", "label": "Sleeper era", "seasons": [s["season"] for s in seasons if s["platform"] == "sleeper"],

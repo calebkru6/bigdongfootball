@@ -118,7 +118,7 @@
     $app.innerHTML = `
       <section class="hero">
         <h1>BigDongFootball</h1>
-        <p class="tag">One league, two platforms, ${L.counts.seasons} seasons. Six years on ESPN (2016–2021), then the same eight franchises carried on to Sleeper in 2022 — every game, draft and trade is here in one place.</p>
+        <p class="tag">A dynasty league since day one. The first six seasons ran on ESPN as a keeper league because ESPN had no dynasty format; in 2022 the same eight franchises moved to Sleeper and kept building. Every game, roster, draft and trade from both eras is here in one place.</p>
         <div class="stat-row">
           <div class="stat"><span class="v">${L.counts.seasons}</span><span class="l">Seasons</span></div>
           <div class="stat"><span class="v">${L.counts.games}</span><span class="l">Games played</span></div>
@@ -168,19 +168,20 @@
     <div class="table-wrap"><table class="tbl"><thead><tr><th>Season</th><th>Platform</th><th>Champion</th><th>Runner-up</th><th>#1 seed</th><th>Points leader</th><th class="num">Games</th><th class="num">Moves</th><th class="num">Trades</th><th>Scoring</th></tr></thead><tbody>
     ${D.seasons.slice().reverse().map(s => `<tr><td><a href="#/season/${s.season}"><b>${s.season}</b></a>${s.status !== 'complete' ? ` <span class="pill pill-live">Week ${esc(s.current_week)}</span>` : ''}</td><td>${platformPill(s.platform)}</td><td>${s.champion ? `<b>${esc(s.champion_team)}</b><br><span class="small muted">${mgrLink(s.champion)}</span>` : '<span class="muted">TBD</span>'}</td><td>${s.runner_up ? mgrLink(s.runner_up) : '—'}</td><td>${s.top_seed ? mgrLink(s.top_seed) : '—'}</td><td>${mgrLink(s.points_leader)}</td><td class="num">${s.games}</td><td class="num">${s.transactions || '<span class="muted">n/a</span>'}</td><td class="num">${s.trades || (s.transactions ? 0 : '<span class="muted">n/a</span>')}</td><td class="small">${esc(s.scoring_type || '')}</td></tr>`).join('')}
     </tbody></table></div>
-    <div class="notes">ESPN did not return move logs for 2016 and 2017; "n/a" means the log was not recoverable, not that the league made no moves. 2022 and 2023 exist on ESPN only as unused auto-renewed shells; the real seasons were played on Sleeper and are shown from there.</div>`;
+    <div class="notes">BigDongFootball has always been a dynasty league. On ESPN (2016–2021) that was done through yearly keeper drafts where managers re-selected their carried-over rosters; the move to Sleeper in 2022 made it a native dynasty league. ESPN returned nothing for 2013–2015, so any seasons before 2016 are not recoverable. ESPN did not return move logs for 2016 and 2017; "n/a" means the log was not recoverable, not that the league made no moves. 2022 and 2023 exist on ESPN only as unused auto-renewed shells; the real seasons were played on Sleeper and are shown from there.</div>`;
   }
 
-  async function pageSeason(year, tab = 'standings') {
+  async function pageSeason(year, tab = 'standings', arg) {
     const s = await loadSeason(year);
     const idx = D.seasons.findIndex(x => x.season === year);
     const prev = D.seasons[idx - 1], next = D.seasons[idx + 1];
-    const tabs = [['standings', 'Standings'], ['schedule', 'Schedule & scores'], ['playoffs', 'Playoffs'], ['draft', 'Draft'], ['moves', 'Moves'], ['trades', 'Trades'], ['rules', 'Rules']];
+    const tabs = [['standings', 'Standings'], ['schedule', 'Schedule & scores'], ['playoffs', 'Playoffs'], ['rosters', 'Rosters'], ['draft', 'Draft'], ['moves', 'Moves'], ['trades', 'Trades'], ['rules', 'Rules']];
     const champ = s.teams.find(t => t.champion);
     let body = '';
     if (tab === 'standings') body = seasonStandings(s);
     else if (tab === 'schedule') body = seasonSchedule(s);
     else if (tab === 'playoffs') body = seasonPlayoffs(s);
+    else if (tab === 'rosters') body = seasonRosters(s, arg);
     else if (tab === 'draft') body = seasonDraft(s);
     else if (tab === 'moves') body = seasonMoves(s, false);
     else if (tab === 'trades') body = seasonMoves(s, true);
@@ -221,6 +222,39 @@
     const champ = s.teams.find(t => t.champion);
     return `${champ ? `<div class="card" style="margin-bottom:18px;display:flex;gap:16px;align-items:center">${avatar(champ.manager, true)}<div><div class="small muted">${s.season} champion</div><h2 style="margin:0">${esc(champ.team_name)}</h2><div>${mgrLink(champ.manager)} · ${rec(champ)} regular season · #${champ.playoff_seed || '?'} seed</div></div></div>` : ''}
       <div class="bracket">${col('Championship bracket', po)}${co.length ? col('Consolation bracket', co) : ''}</div>`;
+  }
+  function seasonRosters(s, which) {
+    // weekly rosters come from the matchup lineups; the final/current snapshot from rosters.final
+    const weeks = [...new Set(s.matchups.filter(m => m.played || m.live).flatMap(m => m.weeks))].sort((a, b) => a - b);
+    const hasFinal = s.rosters && Object.keys(s.rosters.final || {}).length;
+    const sel = which && which !== 'final' ? +which : (which === 'final' || !weeks.length ? 'final' : weeks[weeks.length - 1]);
+    const byFr = {};
+    if (sel === 'final') {
+      Object.entries(s.rosters.final).forEach(([f, lu]) => byFr[f] = { lineup: lu, pts: null });
+    } else {
+      s.matchups.forEach(m => {
+        if (!m.weeks.includes(sel)) return;
+        [m.home, m.away].forEach(side => {
+          const lu = side.lineups_by_week ? side.lineups_by_week[String(sel)] : (m.weeks.length === 1 ? side.lineup : null);
+          if (lu) byFr[side.franchise] = { lineup: lu, pts: side.points_by_week ? side.points_by_week[String(sel)] : side.points, opp: (side === m.home ? m.away : m.home).team_name, label: m.round || null };
+        });
+      });
+    }
+    const order = s.teams.slice().sort((a, b) => (a.final_rank || a.standing || 99) - (b.final_rank || b.standing || 99));
+    const picker = `<div class="row" style="margin-bottom:14px"><span class="muted small">Week</span><div class="row" style="gap:4px">${weeks.map(w => `<a class="btn" style="padding:4px 9px" href="#/season/${s.season}/rosters/${w}" ${sel === w ? 'data-active' : ''}>${w}</a>`).join('')}${hasFinal ? `<a class="btn" style="padding:4px 9px" href="#/season/${s.season}/rosters/final" ${sel === 'final' ? 'data-active' : ''}>${esc(s.rosters.final_label)}</a>` : ''}</div><span class="spacer"></span><input class="inp" id="rosterFilter" placeholder="Find a player…" style="min-width:200px"></div>`;
+    const slotless = s.platform === 'espn' && sel !== 'final' && !s.rosters.weekly;
+    const card = t => {
+      const r = byFr[t.franchise];
+      if (!r) return `<div class="card"><h3>${esc(t.team_name)}</h3><div class="empty">No roster recorded for this week.</div></div>`;
+      const starters = r.lineup.filter(e => e.starter !== false), bench = r.lineup.filter(e => e.starter === false);
+      const rows = list => list.map(e => `<tr class="${e.starter === false ? 'bench' : ''}" data-name="${esc(player(e.p).name.toLowerCase())}"><td class="slot">${esc(e.slot || '')}</td><td>${e.p ? playerLabel(e.p) : '<span class="muted">Empty</span>'}</td><td class="pts">${e.pts == null ? '' : pts(e.pts)}</td></tr>`).join('');
+      return `<div class="card roster-card"><div class="card-head"><div>${teamCell(t, { link: true })}</div><div class="num mono">${r.pts != null ? pts(r.pts) : ''}</div></div>${r.opp ? `<div class="small muted" style="margin:-6px 0 8px">${esc(r.label || 'Week ' + sel)} vs ${esc(r.opp)}</div>` : ''}<table class="box-table">${rows(starters)}${bench.length ? `<tr class="bench-head"><td colspan="3">Bench${bench.some(e => e.slot === 'IR' || e.slot === 'TAXI') ? ' / IR' : ''}</td></tr>${rows(bench)}` : ''}</table></div>`;
+    };
+    setTimeout(() => {
+      const inp = document.getElementById('rosterFilter');
+      if (inp) inp.oninput = () => { const q = inp.value.trim().toLowerCase(); document.querySelectorAll('.roster-card tr[data-name]').forEach(tr => { tr.style.display = !q || tr.dataset.name.includes(q) ? '' : 'none'; tr.classList.toggle('hit', !!q && tr.dataset.name.includes(q)); }); document.querySelectorAll('.roster-card').forEach(c => c.style.display = !q || c.querySelector('tr.hit') ? '' : 'none'); };
+    }, 0);
+    return `${picker}${slotless ? '<div class="notes">ESPN kept only the nine starters for each week of this season, without slot labels. The full roster is only available as the end-of-season snapshot.</div>' : ''}<div class="grid grid-2 rosters">${order.map(card).join('')}</div>`;
   }
   function seasonDraft(s) {
     if (!s.drafts.length) return '<div class="empty">No draft recorded for this season.</div>';
@@ -267,7 +301,7 @@
     const starters = st.roster_positions.filter(p => p !== 'BN' && p !== 'IR');
     const rows = [
       ['Platform', `${s.platform === 'espn' ? 'ESPN' : 'Sleeper'} league ${esc(st.platform_league_id)}`],
-      ['Format', s.platform === 'sleeper' ? `${esc(st.draft.type)}${st.superflex ? ' · superflex' : ''}${st.draft.keepers ? ` · ${st.draft.keepers} keeper` : ''}` : `redraft${st.draft.keepers ? ' (keeper count setting ' + st.draft.keepers + ')' : ''}`],
+      ['Format', esc(st.format || '')],
       ['Scoring', esc(st.scoring_type || '')],
       ['Starting lineup', starters.join(', ')],
       ['Bench', `${st.roster_positions.filter(p => p === 'BN').length} bench${st.roster_positions.includes('IR') ? ' + IR' : ''}`],
@@ -336,7 +370,8 @@
             ${rivals.map(r => `<tr><td><a href="#/h2h/${enc(id)}/${enc(r.other)}">${esc(mgrName(r.other))}</a></td><td class="num ${r.w > r.l ? '' : r.w < r.l ? 'muted' : ''}">${r.w}-${r.l}${r.t ? '-' + r.t : ''}</td><td class="num">${pct(r.g ? (r.w + .5 * r.t) / r.g : null)}</td><td class="num">${pts(+(r.pf / r.g).toFixed(1))}</td><td class="num">${pts(+(r.pa / r.g).toFixed(1))}</td><td class="num">${r.po || ''}</td></tr>`).join('')}
           </tbody></table></div></div>
           <div class="card" style="margin-top:18px"><h3>Team names</h3><ul style="margin:0;padding-left:18px">${m.team_names.map(t => `<li>${esc(t.name)} <span class="muted small">${t.from === t.to ? t.from : `${t.from}–${t.to}`}</span></li>`).join('')}</ul>
-          ${prevOwners.length ? `<p class="small muted" style="margin:10px 0 0">Franchise slot previously run by ${prevOwners.join(', ')}.</p>` : ''}</div>
+          ${prevOwners.length ? `<p class="small muted" style="margin:10px 0 0">Franchise previously run by ${prevOwners.join(', ')}.</p>` : ''}
+          ${!m.active && c.espn_seasons.length && !c.sleeper_seasons.length ? `<p class="small muted" style="margin:10px 0 0">Only ${c.espn_seasons.join(', ')} was recoverable from ESPN for this manager. ESPN returned no data for 2013–2015, so any earlier seasons they played are missing, not disputed.</p>` : ''}</div>
           ${bestWins.length ? `<div class="card" style="margin-top:18px"><h3>Top scoring games</h3><ol class="record-list">${bestWins.map((r, i) => `<li data-game="${r.season}|${esc(r.id)}" style="cursor:pointer"><span class="i">${i + 1}</span><span class="d">${r.season} ${r.round ? esc(r.round) : 'week ' + r.week} vs ${esc(r.opponent)}<small>${esc(r.team_name)}</small></span><span class="v">${pts(r.points)}</span></li>`).join('')}</ol></div>` : ''}
         </div>
       </div>`;
@@ -423,7 +458,7 @@
   const routes = [
     [/^\/?$/, () => pageHome()],
     [/^\/seasons$/, () => pageSeasons()],
-    [/^\/season\/(\d{4})(?:\/([a-z]+))?$/, (y, tab) => pageSeason(+y, tab || 'standings')],
+    [/^\/season\/(\d{4})(?:\/([a-z]+))?(?:\/([a-z0-9]+))?$/, (y, tab, arg) => pageSeason(+y, tab || 'standings', arg)],
     [/^\/managers$/, () => pageManagers()],
     [/^\/manager\/([^/]+)$/, id => pageManager(decodeURIComponent(id))],
     [/^\/h2h(?:\/([^/]+)\/([^/]+))?$/, (a, b) => pageH2H(a && decodeURIComponent(a), b && decodeURIComponent(b))],
