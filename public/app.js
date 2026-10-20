@@ -40,16 +40,27 @@
   const ordinal = n => n == null ? '—' : n + (['th', 'st', 'nd', 'rd'][(n % 100 > 10 && n % 100 < 14) ? 0 : (n % 10 < 4 ? n % 10 : 0)]);
   const player = k => D.players[k] || { name: k ? `Unknown (${k})` : 'Empty slot', pos: null, team: null };
   const playerLabel = k => { const p = player(k); return `${k ? `<a class="plink" href="#/player/${enc(k)}">${esc(p.name)}</a>` : esc(p.name)}${p.pos ? ` <span class="muted small">${esc(p.pos)}${p.team ? ' · ' + esc(p.team) : ''}</span>` : ''}`; };
+  const playerRow = k => `<span class="prow">${headshot(k, 'hs hs-xs')}${playerLabel(k)}</span>`;
   const playerLink = k => k ? `<a class="plink" href="#/player/${enc(k)}">${esc(player(k).name)}</a>` : '—';
   const yearRanges = ys => { const u = [...new Set(ys)].sort((a, b) => a - b); const out = []; let st = null, pv = null; u.forEach(y => { if (st === null) { st = pv = y; return; } if (y === pv + 1) { pv = y; return; } out.push(st === pv ? `${st}` : `${st}–${pv}`); st = pv = y; }); if (st !== null) out.push(st === pv ? `${st}` : `${st}–${pv}`); return out.join(', '); };
   const frName = (season, f) => { const t = season && teamOf(season, f); return t ? t.team_name : (D.fr[f] ? D.fr[f].current_name : f); };
+  const headshotUrl = k => {
+    if (!k) return null;
+    const p = player(k);
+    if (p.pos === 'DEF') { const ab = (k.startsWith('s:') ? k.slice(2) : (p.team || '')).toLowerCase(); return ab ? `https://sleepercdn.com/images/team_logos/nfl/${esc(ab)}.png` : null; }
+    if (k.startsWith('s:')) return `https://sleepercdn.com/content/nfl/players/thumb/${esc(k.slice(2))}.jpg`;
+    if (k.startsWith('e:')) return `https://a.espncdn.com/i/headshots/nfl/players/full/${esc(k.slice(2))}.png`;
+    return null;
+  };
+  const headshot = (k, cls = 'hs') => { const u = headshotUrl(k); return u ? `<img class="${cls}" src="${u}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : `<span class="${cls} hs-empty"></span>`; };
+  const logoImg = (t, cls = 'tlogo') => t && t.logo ? `<img class="${cls}" src="${esc(t.logo)}" alt="" loading="lazy" onerror="this.remove()">` : '';
   const avatar = (m, lg) => {
     const mg = typeof m === 'string' ? D.mgr[m] : m;
     const name = mg ? mg.display_name : '?';
     if (mg && mg.avatar) return `<img class="avatar${lg ? ' lg' : ''}" src="${esc(mg.avatar)}" alt="" loading="lazy">`;
     return `<span class="avatar${lg ? ' lg' : ''}">${esc(name.slice(0, 1).toUpperCase())}</span>`;
   };
-  const teamCell = (t, opts = {}) => `<div class="team-cell">${avatar(t.manager)}<div><div class="tn">${opts.link ? `<a href="#/manager/${enc(t.manager)}">${esc(t.team_name)}</a>` : esc(t.team_name)}${t.champion ? ' <span class="trophy" title="Champion">🏆</span>' : ''}</div><div class="mn">${esc(mgrName(t.manager))}</div></div></div>`;
+  const teamCell = (t, opts = {}) => `<div class="team-cell">${t.logo ? logoImg(t, 'avatar') : avatar(t.manager)}<div><div class="tn">${opts.roster ? `<a href="#/season/${opts.roster}/rosters/final/${t.franchise}" title="Season roster view">${esc(t.team_name)}</a>` : opts.link ? `<a href="#/manager/${enc(t.manager)}">${esc(t.team_name)}</a>` : esc(t.team_name)}${t.champion ? ' <span class="trophy" title="Champion">🏆</span>' : ''}</div><div class="mn">${esc(mgrName(t.manager))}</div></div></div>`;
   const dateFmt = iso => iso ? new Date(iso).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : '';
   const weekLabel = m => m.weeks && m.weeks.length > 1 ? `Weeks ${m.weeks[0]}–${m.weeks[m.weeks.length - 1]}` : `Week ${m.week}`;
   function teamOf(season, franchise) { return season.teams.find(t => t.franchise === franchise); }
@@ -66,7 +77,7 @@
     const side = (s, who) => {
       const t = teamOf(season, s.franchise) || {};
       const cls = m.winner === who ? 'w' : (m.winner && m.winner !== 'tie' ? 'l' : '');
-      return `<div class="side ${cls}"><div class="n"><span class="t">${esc(s.team_name)}</span><span class="m">${esc(mgrName(t.manager))}${t.playoff_seed && m.phase !== 'regular' ? ` · #${t.playoff_seed} seed` : ''}</span></div><span class="p">${m.played || m.live ? pts(s.points) : ''}</span></div>`;
+      return `<div class="side ${cls}"><div class="n"><span class="t">${logoImg(t, 'tlogo sm')}${esc(s.team_name)}</span><span class="m">${esc(mgrName(t.manager))}${t.playoff_seed && m.phase !== 'regular' ? ` · #${t.playoff_seed} seed` : ''}</span></div><span class="p">${m.played || m.live ? pts(s.points) : ''}</span></div>`;
     };
     const meta = opts.hideMeta ? '' : `<div class="meta"><span>${esc(m.round || weekLabel(m))}${m.round && m.weeks.length > 1 ? ` · ${weekLabel(m)}` : ''}</span><span>${m.live ? '<span class="pill pill-live">Live</span>' : (!m.played ? 'Upcoming' : (opts.showSeason ? season.season : ''))}</span></div>`;
     return `<div class="mu" data-game="${season.season}|${esc(m.id)}">${meta}${side(m.home, 'home')}${side(m.away, 'away')}</div>`;
@@ -78,11 +89,11 @@
       const body = lineups.map(([wk, lu]) => {
         const starters = lu.filter(e => e.starter !== false);
         const bench = lu.filter(e => e.starter === false);
-        const rowsFor = list => list.map(e => `<tr class="${e.starter === false ? 'bench' : ''}"><td class="slot">${esc(e.slot || '')}</td><td>${e.p ? playerLabel(e.p) : '<span class="muted">Empty</span>'}</td><td class="pts">${pts(e.pts)}</td></tr>`).join('');
+        const rowsFor = list => list.map(e => `<tr class="${e.starter === false ? 'bench' : ''}"><td class="slot">${esc(e.slot || '')}</td><td>${e.p ? playerRow(e.p) : '<span class="muted">Empty</span>'}</td><td class="pts">${pts(e.pts)}</td></tr>`).join('');
         return `${wk ? `<tr class="bench-head"><td colspan="3">Week ${wk} · ${pts(s.points_by_week[wk])}</td></tr>` : ''}${rowsFor(starters)}${bench.length ? `<tr class="bench-head"><td colspan="3">Bench</td></tr>${rowsFor(bench)}` : ''}`;
       }).join('');
       const note = s.lineup_reconciles === false ? `<div class="small muted">Player points sum to ${pts(s.lineup_sum)}${s.manual_adjustment ? ` (+${pts(s.manual_adjustment)} adj.)` : ''}; the official score is shown.</div>` : '';
-      return `<div><h4><span>${esc(s.team_name)} <span class="muted small">${esc(mgrName(t.manager))}</span></span><span class="mono ${m.winner === who ? 'trophy' : ''}">${pts(s.points)}</span></h4>${note}<table>${body || '<tr><td class="muted">No lineup recorded</td></tr>'}</table></div>`;
+      return `<div><h4><span>${logoImg(t, 'tlogo')}${esc(s.team_name)} <span class="muted small">${esc(mgrName(t.manager))}</span></span><span class="mono ${m.winner === who ? 'trophy' : ''}">${pts(s.points)}</span></h4>${note}<table>${body || '<tr><td class="muted">No lineup recorded</td></tr>'}</table></div>`;
     };
     const espnNote = season.platform === 'espn' ? `<p class="small muted">ESPN's archive does not say which players started, so starters and bench are not separated for ${season.season}.</p>` : '';
     return `<div class="row"><h3 style="margin:0">${esc(m.round || weekLabel(m))} · ${season.season}</h3>${platformPill(season.platform)}${m.round ? `<span class="muted small">${weekLabel(m)}</span>` : ''}</div>${espnNote}<div class="box">${col(m.home, 'home')}${col(m.away, 'away')}</div>`;
@@ -149,7 +160,7 @@
       </section>
       <section class="section">
         <div class="card-head"><h2>Champions</h2><a class="small" href="#/records">Record book →</a></div>
-        <div class="champs">${champs.map(c => `<a class="champ" href="#/season/${c.season}"><div class="y">${c.season}</div><div class="t">${esc(c.team_name)}</div><div class="m">${esc(mgrName(c.manager))} · ${esc(c.record)}</div></a>`).join('')}</div>
+        <div class="champs">${champs.map(c => `<a class="champ" href="#/season/${c.season}"><div class="y">${c.season}</div>${c.logo ? `<img class="champ-logo" src="${esc(c.logo)}" alt="" loading="lazy" onerror="this.remove()">` : ''}<div class="t">${esc(c.team_name)}</div><div class="m">${esc(mgrName(c.manager))} · ${esc(c.record)}</div></a>`).join('')}</div>
       </section>
       <section class="section grid grid-2">
         <div class="card">
@@ -169,12 +180,12 @@
   function pageSeasons() {
     $app.innerHTML = `<div class="page-head"><h1>Seasons</h1><span class="sub">${D.seasons.length} seasons · ESPN 2016–2021 · Sleeper 2022–present</span></div>
     <div class="table-wrap"><table class="tbl"><thead><tr><th>Season</th><th>Platform</th><th>Champion</th><th>Runner-up</th><th>#1 seed</th><th>Points leader</th><th class="num">Games</th><th class="num">Moves</th><th class="num">Trades</th><th>Scoring</th></tr></thead><tbody>
-    ${D.seasons.slice().reverse().map(s => `<tr><td><a href="#/season/${s.season}"><b>${s.season}</b></a>${s.status !== 'complete' ? ` <span class="pill pill-live">Week ${esc(s.current_week)}</span>` : ''}</td><td>${platformPill(s.platform)}</td><td>${s.champion ? `<b>${esc(s.champion_team)}</b><br><span class="small muted">${mgrLink(s.champion)}</span>` : '<span class="muted">TBD</span>'}</td><td>${s.runner_up ? mgrLink(s.runner_up) : '—'}</td><td>${s.top_seed ? mgrLink(s.top_seed) : '—'}</td><td>${mgrLink(s.points_leader)}</td><td class="num">${s.games}</td><td class="num">${s.transactions || '<span class="muted">n/a</span>'}</td><td class="num">${s.trades || (s.transactions ? 0 : '<span class="muted">n/a</span>')}</td><td class="small">${esc(s.scoring_type || '')}</td></tr>`).join('')}
+    ${D.seasons.slice().reverse().map(s => `<tr><td><a href="#/season/${s.season}"><b>${s.season}</b></a>${s.status !== 'complete' ? ` <span class="pill pill-live">Week ${esc(s.current_week)}</span>` : ''}</td><td>${platformPill(s.platform)}</td><td>${s.champion ? `<div class="team-cell">${s.champion_logo ? `<img class="avatar" src="${esc(s.champion_logo)}" alt="" loading="lazy">` : avatar(s.champion)}<div><b>${esc(s.champion_team)}</b><div class="small muted">${mgrLink(s.champion)}</div></div></div>` : '<span class="muted">TBD</span>'}</td><td>${s.runner_up ? mgrLink(s.runner_up) : '—'}</td><td>${s.top_seed ? mgrLink(s.top_seed) : '—'}</td><td>${mgrLink(s.points_leader)}</td><td class="num">${s.games}</td><td class="num">${s.transactions || '<span class="muted">n/a</span>'}</td><td class="num">${s.trades || (s.transactions ? 0 : '<span class="muted">n/a</span>')}</td><td class="small">${esc(s.scoring_type || '')}</td></tr>`).join('')}
     </tbody></table></div>
     <div class="notes">BigDongFootball has always been a dynasty league. On ESPN (2016–2021) that was done through yearly keeper drafts where managers re-selected their carried-over rosters; the move to Sleeper in 2022 made it a native dynasty league. The league began in 2016. ESPN no longer serves itemized move logs for 2016 and 2017; those seasons show official per-team counters plus moves reconstructed from lineups and rosters, marked "reconstructed". 2022 and 2023 exist on ESPN only as unused auto-renewed shells; the real seasons were played on Sleeper and are shown from there.</div>`;
   }
 
-  async function pageSeason(year, tab = 'standings', arg) {
+  async function pageSeason(year, tab = 'standings', arg, arg2) {
     const s = await loadSeason(year);
     const idx = D.seasons.findIndex(x => x.season === year);
     const prev = D.seasons[idx - 1], next = D.seasons[idx + 1];
@@ -184,7 +195,7 @@
     if (tab === 'standings') body = seasonStandings(s);
     else if (tab === 'schedule') body = seasonSchedule(s);
     else if (tab === 'playoffs') body = seasonPlayoffs(s);
-    else if (tab === 'rosters') body = seasonRosters(s, arg);
+    else if (tab === 'rosters') body = seasonRosters(s, arg, arg2);
     else if (tab === 'draft') body = seasonDraft(s);
     else if (tab === 'moves') body = seasonMoves(s, false);
     else if (tab === 'trades') body = seasonMoves(s, true);
@@ -199,7 +210,7 @@
     const byDiv = divs.length && s.teams.some(t => t.division) ? divs.map(d => [d, s.teams.filter(t => t.division === d)]) : [[null, s.teams]];
     const order = list => list.slice().sort((a, b) => (a.standing || a.final_rank || 99) - (b.standing || b.final_rank || 99) || (a.final_rank || 99) - (b.final_rank || 99));
     const table = (list, title) => `<div class="card"><div class="card-head"><h3>${title || 'Regular season'}</h3></div><div class="table-wrap"><table class="tbl"><thead><tr><th class="rank">#</th><th>Team</th><th class="num">W</th><th class="num">L</th>${s.teams.some(t => t.ties) ? '<th class="num">T</th>' : ''}<th class="num">Pct</th><th class="num">PF</th><th class="num">PA</th><th class="num">Diff</th><th class="num">Seed</th><th class="num">Final</th></tr></thead><tbody>
-      ${order(list).map((t, i) => { const g = t.wins + t.losses + t.ties; return `<tr class="${t.playoff_seed ? 'hl' : ''}"><td class="rank">${i + 1}</td><td>${teamCell(t, { link: true })}</td><td class="num">${t.wins}</td><td class="num">${t.losses}</td>${s.teams.some(x => x.ties) ? `<td class="num">${t.ties}</td>` : ''}<td class="num">${g ? pct((t.wins + .5 * t.ties) / g) : '—'}</td><td class="num">${pts(t.pf)}</td><td class="num">${pts(t.pa)}</td><td class="num ${t.pf - t.pa >= 0 ? '' : 'muted'}">${t.pf != null ? (t.pf - t.pa >= 0 ? '+' : '') + pts(+(t.pf - t.pa).toFixed(2)) : '—'}</td><td class="num">${t.playoff_seed || ''}</td><td class="num">${t.final_rank ? ordinal(t.final_rank) : ''}</td></tr>`; }).join('')}
+      ${order(list).map((t, i) => { const g = t.wins + t.losses + t.ties; return `<tr class="${t.playoff_seed ? 'hl' : ''}"><td class="rank">${i + 1}</td><td>${teamCell(t, { link: true, roster: s.season })}</td><td class="num">${t.wins}</td><td class="num">${t.losses}</td>${s.teams.some(x => x.ties) ? `<td class="num">${t.ties}</td>` : ''}<td class="num">${g ? pct((t.wins + .5 * t.ties) / g) : '—'}</td><td class="num">${pts(t.pf)}</td><td class="num">${pts(t.pa)}</td><td class="num ${t.pf - t.pa >= 0 ? '' : 'muted'}">${t.pf != null ? (t.pf - t.pa >= 0 ? '+' : '') + pts(+(t.pf - t.pa).toFixed(2)) : '—'}</td><td class="num">${t.playoff_seed || ''}</td><td class="num">${t.final_rank ? ordinal(t.final_rank) : ''}</td></tr>`; }).join('')}
       </tbody></table></div></div>`;
     const finalOrder = s.status === 'complete' ? `<div class="card" style="margin-top:18px"><div class="card-head"><h3>Final standings</h3><span class="small muted">after playoffs</span></div><div class="table-wrap"><table class="tbl"><thead><tr><th class="rank">#</th><th>Team</th><th>Regular season</th><th>Result</th></tr></thead><tbody>
       ${s.teams.slice().sort((a, b) => (a.final_rank || 99) - (b.final_rank || 99)).map(t => `<tr><td class="rank">${t.final_rank}</td><td>${teamCell(t, { link: true })}</td><td>${rec(t)} · ${pts(t.pf)} pts${t.playoff_seed ? ` · #${t.playoff_seed} seed` : ''}</td><td>${t.final_rank === 1 ? '<span class="pill pill-champ">Champion</span>' : t.final_rank === 2 ? 'Runner-up' : t.final_rank === 3 ? 'Third place' : t.final_rank === s.teams.length ? '<span class="muted">Last place</span>' : ''}</td></tr>`).join('')}
@@ -223,14 +234,11 @@
     const group = list => { const g = {}; list.forEach(m => (g[m.round] = g[m.round] || []).push(m)); return Object.entries(g); };
     const col = (title, list) => `<div class="col"><h4>${title}</h4>${group(list).map(([r, ms]) => `<h3 style="font-size:1rem;margin:10px 0 6px">${esc(r)} <span class="small muted" style="font-family:var(--font);font-weight:400">${weekLabel(ms[0])}</span></h3>${ms.map(m => matchupCard(s, m, { hideMeta: true })).join('')}`).join('')}</div>`;
     const champ = s.teams.find(t => t.champion);
-    return `${champ ? `<div class="card" style="margin-bottom:18px;display:flex;gap:16px;align-items:center">${avatar(champ.manager, true)}<div><div class="small muted">${s.season} champion</div><h2 style="margin:0">${esc(champ.team_name)}</h2><div>${mgrLink(champ.manager)} · ${rec(champ)} regular season · #${champ.playoff_seed || '?'} seed</div></div></div>` : ''}
+    return `${champ ? `<div class="card" style="margin-bottom:18px;display:flex;gap:16px;align-items:center">${champ.logo ? `<img class="avatar lg" src="${esc(champ.logo)}" alt="">` : avatar(champ.manager, true)}<div><div class="small muted">${s.season} champion</div><h2 style="margin:0">${esc(champ.team_name)}</h2><div>${mgrLink(champ.manager)} · ${rec(champ)} regular season · #${champ.playoff_seed || '?'} seed</div></div></div>` : ''}
       <div class="bracket">${col('Championship bracket', po)}${co.length ? col('Consolation bracket', co) : ''}</div>`;
   }
-  function seasonRosters(s, which) {
+  function rosterWeek(s, sel) {
     // weekly rosters come from the matchup lineups; the final/current snapshot from rosters.final
-    const weeks = [...new Set(s.matchups.filter(m => m.played || m.live).flatMap(m => m.weeks))].sort((a, b) => a - b);
-    const hasFinal = s.rosters && Object.keys(s.rosters.final || {}).length;
-    const sel = which && which !== 'final' ? +which : (which === 'final' || !weeks.length ? 'final' : weeks[weeks.length - 1]);
     const byFr = {};
     if (sel === 'final') {
       Object.entries(s.rosters.final).forEach(([f, lu]) => byFr[f] = { lineup: lu, pts: null });
@@ -239,25 +247,92 @@
         if (!m.weeks.includes(sel)) return;
         [m.home, m.away].forEach(side => {
           const lu = side.lineups_by_week ? side.lineups_by_week[String(sel)] : (m.weeks.length === 1 ? side.lineup : null);
-          if (lu) byFr[side.franchise] = { lineup: lu, pts: side.points_by_week ? side.points_by_week[String(sel)] : side.points, opp: (side === m.home ? m.away : m.home).team_name, label: m.round || null };
+          if (lu) byFr[side.franchise] = { lineup: lu, pts: side.points_by_week ? side.points_by_week[String(sel)] : side.points, opp: (side === m.home ? m.away : m.home).team_name, label: m.round || null, won: m.winner === (side === m.home ? 'home' : 'away') };
         });
       });
     }
+    return byFr;
+  }
+  function seasonRosters(s, which, arg2) {
+    const weeks = [...new Set(s.matchups.filter(m => m.played || m.live).flatMap(m => m.weeks))].sort((a, b) => a - b);
+    const hasFinal = s.rosters && Object.keys(s.rosters.final || {}).length;
+    const teamSel = arg2 && /^f\d+$/.test(arg2) ? arg2 : null;
+    const view = teamSel ? 'team' : (arg2 === 'cards' ? 'cards' : 'grid');
+    const sel = which && which !== 'final' ? +which : (which === 'final' || !weeks.length ? 'final' : weeks[weeks.length - 1]);
+    const byFr = rosterWeek(s, sel);
     const order = s.teams.slice().sort((a, b) => (a.final_rank || a.standing || 99) - (b.final_rank || b.standing || 99));
-    const picker = `<div class="row" style="margin-bottom:14px"><span class="muted small">Week</span><div class="row" style="gap:4px">${weeks.map(w => `<a class="btn" style="padding:4px 9px" href="#/season/${s.season}/rosters/${w}" ${sel === w ? 'data-active' : ''}>${w}</a>`).join('')}${hasFinal ? `<a class="btn" style="padding:4px 9px" href="#/season/${s.season}/rosters/final" ${sel === 'final' ? 'data-active' : ''}>${esc(s.rosters.final_label)}</a>` : ''}</div><span class="spacer"></span><input class="inp" id="rosterFilter" placeholder="Find a player…" style="min-width:200px"></div>`;
+    const suffix = view === 'cards' ? '/cards' : '';
+    const picker = `<div class="row" style="margin-bottom:14px"><span class="muted small">Week</span><div class="row" style="gap:4px">${weeks.map(w => `<a class="btn" style="padding:4px 9px" href="#/season/${s.season}/rosters/${w}${suffix}" ${sel === w ? 'data-active' : ''}>${w}</a>`).join('')}${hasFinal ? `<a class="btn" style="padding:4px 9px" href="#/season/${s.season}/rosters/final${suffix}" ${sel === 'final' ? 'data-active' : ''}>${esc(s.rosters.final_label)}</a>` : ''}</div><span class="spacer"></span>
+      <select class="sel" id="rosterTeam"><option value="">All teams</option>${order.map(t => `<option value="${t.franchise}" ${teamSel === t.franchise ? 'selected' : ''}>${esc(t.team_name)}</option>`).join('')}</select>
+      ${!teamSel ? `<div class="seg"><a class="${view === 'grid' ? 'active' : ''}" href="#/season/${s.season}/rosters/${sel}">Grid</a><a class="${view === 'cards' ? 'active' : ''}" href="#/season/${s.season}/rosters/${sel}/cards">Cards</a></div>` : ''}
+      <input class="inp" id="rosterFilter" placeholder="Find a player…" style="min-width:180px"></div>`;
     const slotless = s.platform === 'espn' && sel !== 'final' && !s.rosters.weekly;
+    setTimeout(() => { const t = document.getElementById('rosterTeam'); if (t) t.onchange = () => { location.hash = `#/season/${s.season}/rosters/${sel}${t.value ? '/' + t.value : ''}`; }; }, 0);
+    setTimeout(() => {
+      const inp = document.getElementById('rosterFilter');
+      if (inp) inp.oninput = () => { const q = inp.value.trim().toLowerCase(); document.querySelectorAll('.roster-card tr[data-name]').forEach(tr => { tr.style.display = !q || tr.dataset.name.includes(q) ? '' : 'none'; tr.classList.toggle('hit', !!q && tr.dataset.name.includes(q)); }); document.querySelectorAll('.roster-card').forEach(c => c.style.display = !q || c.querySelector('tr.hit') ? '' : 'none'); document.querySelectorAll('.gcell[data-name]').forEach(g => { g.classList.toggle('hit', !!q && g.dataset.name.includes(q)); g.classList.toggle('dim', !!q && !g.dataset.name.includes(q)); }); };
+    }, 0);
+    if (teamSel) return picker + teamSeasonView(s, teamSel, weeks);
+    if (view === 'grid') {
+      // one compact table: rows = lineup slots, columns = teams
+      const starterSlots = s.settings.roster_positions.filter(p => p !== 'BN' && p !== 'IR');
+      const cols = order.map(t => ({ t, r: byFr[t.franchise] }));
+      const maxBench = Math.max(0, ...cols.map(c => c.r ? c.r.lineup.filter(e => e.starter === false).length : 0));
+      const cell = e => e ? `<div class="gcell ${e.starter === false ? 'bench' : ''}" data-name="${esc(player(e.p).name.toLowerCase())}"><span class="gn">${e.p ? playerLink(e.p) : '<span class="muted">—</span>'}</span><span class="gp">${player(e.p).pos ? esc(player(e.p).pos) : ''}${e.pts != null && sel !== 'final' ? ` · <b>${pts(e.pts)}</b>` : ''}</span></div>` : '<div class="gcell muted">—</div>';
+      const rowsHtml = [];
+      if (slotless) {
+        const maxN = Math.max(0, ...cols.map(c => c.r ? c.r.lineup.length : 0));
+        for (let i = 0; i < maxN; i++) rowsHtml.push(`<tr><td class="slot">${i + 1}</td>${cols.map(c => `<td>${cell(c.r && c.r.lineup[i])}</td>`).join('')}</tr>`);
+      } else {
+        starterSlots.forEach((slot, i) => {
+          rowsHtml.push(`<tr><td class="slot">${esc(slot)}</td>${cols.map(c => { const st = c.r ? c.r.lineup.filter(e => e.starter !== false) : []; const e = st.find((x, j) => x.slot === slot && !st.slice(0, j).some((y, k) => y.slot === slot && k >= 0 && st.slice(0, j).filter(z => z.slot === slot).length > i - starterSlots.slice(0, i).filter(z => z === slot).length)) ; return `<td>${cell(st.filter(x => x.slot === slot)[starterSlots.slice(0, i).filter(z => z === slot).length])}</td>`; }).join('')}</tr>`);
+        });
+        if (maxBench) rowsHtml.push(`<tr class="bench-head"><td class="slot">BN</td>${cols.map(() => '<td></td>').join('')}</tr>`);
+        for (let i = 0; i < maxBench; i++) rowsHtml.push(`<tr class="benchrow"><td class="slot"></td>${cols.map(c => { const b = c.r ? c.r.lineup.filter(e => e.starter === false) : []; return `<td>${cell(b[i])}</td>`; }).join('')}</tr>`);
+      }
+      return `${picker}${slotless ? '<div class="notes">ESPN kept only the nine starters for each week of this season, without slot labels. The full roster is only available as the end-of-season snapshot.</div>' : ''}
+        <div class="table-wrap"><table class="rgrid"><thead><tr><th></th>${cols.map(c => `<th><a href="#/season/${s.season}/rosters/${sel}/${c.t.franchise}">${logoImg(c.t, 'tlogo')}${esc(c.t.team_name)}</a><div class="small muted" style="font-weight:400">${esc(mgrName(c.t.manager))}${c.r && c.r.pts != null ? ` · ${pts(c.r.pts)}${c.r.won ? ' ✓' : ''}` : ''}</div></th>`).join('')}</tr></thead><tbody>${rowsHtml.join('')}</tbody></table></div>
+        <p class="small muted">Click a team name for its week-by-week season view.</p>`;
+    }
     const card = t => {
       const r = byFr[t.franchise];
       if (!r) return `<div class="card"><h3>${esc(t.team_name)}</h3><div class="empty">No roster recorded for this week.</div></div>`;
       const starters = r.lineup.filter(e => e.starter !== false), bench = r.lineup.filter(e => e.starter === false);
-      const rows = list => list.map(e => `<tr class="${e.starter === false ? 'bench' : ''}" data-name="${esc(player(e.p).name.toLowerCase())}"><td class="slot">${esc(e.slot || '')}</td><td>${e.p ? playerLabel(e.p) : '<span class="muted">Empty</span>'}</td><td class="pts">${e.pts == null ? '' : pts(e.pts)}</td></tr>`).join('');
+      const rows = list => list.map(e => `<tr class="${e.starter === false ? 'bench' : ''}" data-name="${esc(player(e.p).name.toLowerCase())}"><td class="slot">${esc(e.slot || '')}</td><td>${e.p ? playerRow(e.p) : '<span class="muted">Empty</span>'}</td><td class="pts">${e.pts == null ? '' : pts(e.pts)}</td></tr>`).join('');
       return `<div class="card roster-card"><div class="card-head"><div>${teamCell(t, { link: true })}</div><div class="num mono">${r.pts != null ? pts(r.pts) : ''}</div></div>${r.opp ? `<div class="small muted" style="margin:-6px 0 8px">${esc(r.label || 'Week ' + sel)} vs ${esc(r.opp)}</div>` : ''}<table class="box-table">${rows(starters)}${bench.length ? `<tr class="bench-head"><td colspan="3">Bench${bench.some(e => e.slot === 'IR' || e.slot === 'TAXI') ? ' / IR' : ''}</td></tr>${rows(bench)}` : ''}</table></div>`;
     };
     setTimeout(() => {
       const inp = document.getElementById('rosterFilter');
-      if (inp) inp.oninput = () => { const q = inp.value.trim().toLowerCase(); document.querySelectorAll('.roster-card tr[data-name]').forEach(tr => { tr.style.display = !q || tr.dataset.name.includes(q) ? '' : 'none'; tr.classList.toggle('hit', !!q && tr.dataset.name.includes(q)); }); document.querySelectorAll('.roster-card').forEach(c => c.style.display = !q || c.querySelector('tr.hit') ? '' : 'none'); };
+      if (inp) inp.oninput = () => { const q = inp.value.trim().toLowerCase(); document.querySelectorAll('.roster-card tr[data-name]').forEach(tr => { tr.style.display = !q || tr.dataset.name.includes(q) ? '' : 'none'; tr.classList.toggle('hit', !!q && tr.dataset.name.includes(q)); }); document.querySelectorAll('.roster-card').forEach(c => c.style.display = !q || c.querySelector('tr.hit') ? '' : 'none'); document.querySelectorAll('.gcell[data-name]').forEach(g => g.classList.toggle('hit', !!q && g.dataset.name.includes(q))); document.querySelectorAll('.gcell[data-name]').forEach(g => g.classList.toggle('dim', !!q && !g.dataset.name.includes(q))); };
     }, 0);
     return `${picker}${slotless ? '<div class="notes">ESPN kept only the nine starters for each week of this season, without slot labels. The full roster is only available as the end-of-season snapshot.</div>' : ''}<div class="grid grid-2 rosters">${order.map(card).join('')}</div>`;
+  }
+  function teamSeasonView(s, fr, weeks) {
+    // one team, weeks across, starters down (by slot), bench below; cells are player + points
+    const t = teamOf(s, fr);
+    const cols = weeks.map(w => ({ w, r: rosterWeek(s, w)[fr] }));
+    const starterSlots = s.settings.roster_positions.filter(p => p !== 'BN' && p !== 'IR');
+    const slotless = s.platform === 'espn' && !s.rosters.weekly;
+    const cell = e => e ? `<div class="gcell ${e.starter === false ? 'bench' : ''}" data-name="${esc(player(e.p).name.toLowerCase())}"><span class="gn">${e.p ? playerLink(e.p) : '<span class="muted">—</span>'}</span><span class="gp">${e.pts != null ? `<b>${pts(e.pts)}</b>` : ''}</span></div>` : '<div class="gcell muted">—</div>';
+    const rows = [];
+    if (slotless) {
+      const maxN = Math.max(0, ...cols.map(c => c.r ? c.r.lineup.length : 0));
+      for (let i = 0; i < maxN; i++) rows.push(`<tr><td class="slot">${i + 1}</td>${cols.map(c => `<td>${cell(c.r && c.r.lineup.slice().sort((a, b) => (b.pts || 0) - (a.pts || 0))[i])}</td>`).join('')}</tr>`);
+    } else {
+      starterSlots.forEach((slot, i) => {
+        const nth = starterSlots.slice(0, i).filter(z => z === slot).length;
+        rows.push(`<tr><td class="slot">${esc(slot)}</td>${cols.map(c => { const st = c.r ? c.r.lineup.filter(e => e.starter !== false && e.slot === slot) : []; return `<td>${cell(st[nth])}</td>`; }).join('')}</tr>`);
+      });
+      const maxBench = Math.max(0, ...cols.map(c => c.r ? c.r.lineup.filter(e => e.starter === false).length : 0));
+      if (maxBench) rows.push(`<tr class="bench-head"><td class="slot">BN</td>${cols.map(() => '<td></td>').join('')}</tr>`);
+      for (let i = 0; i < maxBench; i++) rows.push(`<tr class="benchrow"><td class="slot"></td>${cols.map(c => { const b = c.r ? c.r.lineup.filter(e => e.starter === false) : []; return `<td>${cell(b[i])}</td>`; }).join('')}</tr>`);
+    }
+    const final = (s.rosters.final || {})[fr];
+    const totals = cols.map(c => c.r && c.r.pts != null ? pts(c.r.pts) : '');
+    return `<div class="card" style="margin-bottom:14px;display:flex;gap:14px;align-items:center">${t.logo ? `<img class="avatar lg" src="${esc(t.logo)}" alt="">` : avatar(t.manager, true)}<div><h2 style="margin:0">${esc(t.team_name)}</h2><div class="muted">${mgrLink(t.manager)} · ${rec(t)}${t.pf != null ? ` · ${pts(t.pf)} pts` : ''}${t.final_rank ? ` · finished ${ordinal(t.final_rank)}` : ''}</div></div></div>
+      ${slotless ? '<div class="notes">ESPN kept only the nine starters per week for this season, without slot labels; starters are listed by points.</div>' : ''}
+      <div class="table-wrap"><table class="rgrid team"><thead><tr><th></th>${cols.map(c => `<th><a href="#/season/${s.season}/rosters/${c.w}">Wk ${c.w}</a><div class="small muted" style="font-weight:400">${c.r ? `${c.r.won ? '<span class="trophy">W</span>' : c.r.won === false && c.r.pts != null ? 'L' : ''} ${c.r.label ? esc(c.r.label) : ''} vs ${esc(c.r.opp || '')}` : ''}</div></th>`).join('')}</tr></thead><tbody>${rows.join('')}<tr class="total"><td class="slot">Pts</td>${totals.map(x => `<td><b>${x}</b></td>`).join('')}</tr></tbody></table></div>
+      ${final && final.length ? `<h3 style="margin-top:22px">${esc(s.rosters.final_label)}</h3><div class="row" style="gap:6px">${final.map(e => `<span class="pill pill-neutral" style="text-transform:none;font-size:.8rem">${e.slot && e.slot !== 'BN' ? `<span class="muted">${esc(e.slot)}</span> ` : ''}${playerLink(e.p)}</span>`).join('')}</div>` : ''}`;
   }
   function seasonDraft(s) {
     if (!s.drafts.length) return '<div class="empty">No draft recorded for this season.</div>';
@@ -381,7 +456,7 @@
       </div>
       <div class="grid grid-2">
         <div class="card"><h3>Season by season</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Year</th><th>Team</th><th class="num">W-L</th><th class="num">PF</th><th class="num">Seed</th><th class="num">Finish</th></tr></thead><tbody>
-          ${m.seasons.slice().reverse().map(s => `<tr class="${s.champion ? 'hl' : ''}"><td><a href="#/season/${s.season}">${s.season}</a> ${platformPill(s.platform)}</td><td>${esc(s.team_name)}</td><td class="num">${rec(s)}</td><td class="num">${pts(s.pf)}</td><td class="num">${s.playoff_seed || ''}</td><td class="num">${s.status !== 'complete' ? `<span class="muted">${ordinal(s.standing)} now</span>` : (s.champion ? '🏆 1st' : ordinal(s.final_rank))}</td></tr>`).join('')}
+          ${m.seasons.slice().reverse().map(s => `<tr class="${s.champion ? 'hl' : ''}"><td><a href="#/season/${s.season}">${s.season}</a> ${platformPill(s.platform)}</td><td><span class="prow">${s.logo ? `<img class="tlogo" src="${esc(s.logo)}" alt="" loading="lazy" onerror="this.remove()">` : ''}<a href="#/season/${s.season}/rosters/final/${s.franchise}">${esc(s.team_name)}</a></span></td><td class="num">${rec(s)}</td><td class="num">${pts(s.pf)}</td><td class="num">${s.playoff_seed || ''}</td><td class="num">${s.status !== 'complete' ? `<span class="muted">${ordinal(s.standing)} now</span>` : (s.champion ? '🏆 1st' : ordinal(s.final_rank))}</td></tr>`).join('')}
         </tbody></table></div></div>
         <div>
           <div class="card"><h3>Head-to-head</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Opponent</th><th class="num">W-L</th><th class="num">Pct</th><th class="num">Avg PF</th><th class="num">Avg PA</th><th class="num">PO</th></tr></thead><tbody>
@@ -390,7 +465,7 @@
           <div class="card" style="margin-top:18px"><h3>Team names</h3><ul style="margin:0;padding-left:18px">${m.team_names.map(t => `<li>${esc(t.name)} <span class="muted small">${t.from === t.to ? t.from : `${t.from}–${t.to}`}</span></li>`).join('')}</ul>
           ${prevOwners.length ? `<p class="small muted" style="margin:10px 0 0">Franchise previously run by ${prevOwners.join(', ')}.</p>` : ''}
           ${!m.active && c.espn_seasons.length && !c.sleeper_seasons.length ? `<p class="small muted" style="margin:10px 0 0">Original owner of this franchise in the league's first season; the franchise changed hands in 2017.</p>` : ''}</div>
-          ${(m.hall_of_fame || []).length ? `<div class="card" style="margin-top:18px"><div class="card-head"><h3>Hall of fame</h3><span class="small muted">points scored while starting for ${esc(m.display_name)}</span></div><div class="table-wrap"><table class="tbl"><thead><tr><th class="rank">#</th><th>Player</th><th class="num">Pts</th><th class="num">Starts</th><th class="num">PPG</th><th>Seasons</th><th class="num">Best</th></tr></thead><tbody>${m.hall_of_fame.slice(0, 12).map((h, i) => `<tr><td class="rank">${i + 1}</td><td>${playerLabel(h.p)}</td><td class="num">${pts(h.starter_pts)}</td><td class="num">${h.starts}</td><td class="num">${pts(h.ppg)}</td><td class="small muted nowrap">${yearRanges(h.seasons)}</td><td class="num">${h.best ? pts(h.best.pts) : ''}</td></tr>`).join('')}</tbody></table></div><p class="small muted" style="margin:8px 0 0">2016–2017 ESPN data only records starters, so bench points from those years are not counted anywhere.</p></div>` : ''}
+          ${(m.hall_of_fame || []).length ? `<div class="card" style="margin-top:18px"><div class="card-head"><h3>Hall of fame</h3><span class="small muted">points scored while starting for ${esc(m.display_name)}</span></div><div class="table-wrap"><table class="tbl"><thead><tr><th class="rank">#</th><th>Player</th><th class="num">Pts</th><th class="num">Starts</th><th class="num">PPG</th><th>Seasons</th><th class="num">Best</th></tr></thead><tbody>${m.hall_of_fame.slice(0, 12).map((h, i) => `<tr><td class="rank">${i + 1}</td><td>${playerRow(h.p)}</td><td class="num">${pts(h.starter_pts)}</td><td class="num">${h.starts}</td><td class="num">${pts(h.ppg)}</td><td class="small muted nowrap">${yearRanges(h.seasons)}</td><td class="num">${h.best ? pts(h.best.pts) : ''}</td></tr>`).join('')}</tbody></table></div><p class="small muted" style="margin:8px 0 0">2016–2017 ESPN data only records starters, so bench points from those years are not counted anywhere.</p></div>` : ''}
           ${bestWins.length ? `<div class="card" style="margin-top:18px"><h3>Top scoring games</h3><ol class="record-list">${bestWins.map((r, i) => `<li data-game="${r.season}|${esc(r.id)}" style="cursor:pointer"><span class="i">${i + 1}</span><span class="d">${r.season} ${r.round ? esc(r.round) : 'week ' + r.week} vs ${esc(r.opponent)}<small>${esc(r.team_name)}</small></span><span class="v">${pts(r.points)}</span></li>`).join('')}</ol></div>` : ''}
         </div>
       </div>`;
@@ -484,7 +559,7 @@
     $app.innerHTML = `<div class="page-head"><h1>Players</h1><span class="sub">${idx.length} players who have been on a BigDongFootball roster. Points are what they scored while started; both eras combined.</span></div>
       <div class="row" style="margin-bottom:14px"><input class="inp" id="plq" placeholder="Search players…" value="${esc(plQuery)}" style="min-width:240px"><div class="seg">${['', 'QB', 'RB', 'WR', 'TE', 'K', 'DEF'].map(x => `<button class="${plPos === x ? 'active' : ''}" data-pos="${x}">${x || 'All'}</button>`).join('')}</div><span class="muted small">${rows.length} shown</span></div>
       <div class="table-wrap"><table class="tbl"><thead><tr><th class="rank">#</th>${cols.map(([k, l]) => `<th class="sortable ${k === 'name' || k === 'pos' ? '' : 'num'} ${plSort.key === k ? 'sorted' + (plSort.dir > 0 ? ' asc' : '') : ''}" data-key="${k}">${l}</th>`).join('')}</tr></thead><tbody>
-      ${rows.slice(0, 300).map((r, i) => `<tr><td class="rank">${i + 1}</td><td><a href="#/player/${enc(r.id)}"><b>${esc(r.name)}</b></a> ${r.team ? `<span class="muted small">${esc(r.team)}</span>` : ''}</td><td>${esc(r.pos || '')}</td><td class="num">${pts(r.pts)}</td><td class="num">${pts(r.total)}</td><td class="num">${r.starts}</td><td class="num">${r.weeks}</td><td class="num">${r.first || ''}</td><td class="num">${r.last || ''}</td><td class="num">${r.teams}</td><td class="num">${r.trades || ''}</td></tr>`).join('')}
+      ${rows.slice(0, 300).map((r, i) => `<tr><td class="rank">${i + 1}</td><td><span class="prow">${headshot(r.id, 'hs hs-sm')}<a href="#/player/${enc(r.id)}"><b>${esc(r.name)}</b></a> ${r.team ? `<span class="muted small">${esc(r.team)}</span>` : ''}</span></td><td>${esc(r.pos || '')}</td><td class="num">${pts(r.pts)}</td><td class="num">${pts(r.total)}</td><td class="num">${r.starts}</td><td class="num">${r.weeks}</td><td class="num">${r.first || ''}</td><td class="num">${r.last || ''}</td><td class="num">${r.teams}</td><td class="num">${r.trades || ''}</td></tr>`).join('')}
       </tbody></table></div>${rows.length > 300 ? '<p class="small muted">Showing the first 300; narrow the search to see more.</p>' : ''}`;
     const inp = document.getElementById('plq');
     inp.oninput = () => { plQuery = inp.value; const pos = inp.selectionStart; pagePlayers().then(() => { const n = document.getElementById('plq'); n.focus(); n.setSelectionRange(pos, pos); }); };
@@ -527,7 +602,7 @@
     d.weekly.filter(w => w.starter).forEach(w => (bySeason[w.season] = bySeason[w.season] || []).push(w));
     const maxPts = Math.max(1, ...d.weekly.map(w => w.pts || 0));
     const spark = Object.keys(bySeason).map(Number).sort((a, b) => a - b).map(y => `<div class="spark-season"><div class="small muted">${y}</div><div class="spark">${bySeason[y].sort((a, b) => a.week - b.week).map(w => `<i style="height:${Math.max(2, Math.round(40 * (w.pts || 0) / maxPts))}px" title="${y} wk ${w.week}: ${pts(w.pts)} (${esc(frName(seasonOf(y), w.franchise))})"></i>`).join('')}</div></div>`).join('');
-    $app.innerHTML = `<div class="page-head"><h1>${esc(d.name)}</h1><span class="pill pill-neutral">${esc(d.pos || '')}${d.team ? ' · ' + esc(d.team) : ''}</span><span class="sub">In the league ${c.seasons.length ? `${c.seasons[0]}–${c.seasons[c.seasons.length - 1]}` : ''} · ${c.managers.length} team${c.managers.length === 1 ? '' : 's'}</span></div>
+    $app.innerHTML = `<div class="page-head" style="align-items:center">${headshot(d.id, 'hs hs-lg')}<div><h1 style="margin:0">${esc(d.name)}</h1><div class="row" style="gap:8px;margin-top:4px"><span class="pill pill-neutral">${esc(d.pos || '')}${d.team ? ' · ' + esc(d.team) : ''}</span><span class="sub">In the league ${c.seasons.length ? `${c.seasons[0]}–${c.seasons[c.seasons.length - 1]}` : ''} · ${c.managers.length} team${c.managers.length === 1 ? '' : 's'}</span></div></div></div>
       <div class="kpis">
         <div class="kpi"><div class="v">${pts(c.starter_pts)}</div><div class="l">Points as starter</div></div>
         <div class="kpi"><div class="v">${pts(c.total_pts)}</div><div class="l">Points while rostered</div></div>
@@ -538,14 +613,35 @@
         <div class="kpi"><div class="v">${d.best_weeks[0] ? pts(d.best_weeks[0].pts) : '—'}</div><div class="l">Best week</div></div>
       </div>
       ${spark ? `<div class="card" style="margin-bottom:18px"><h3>Weekly scoring as a starter</h3><div class="sparks">${spark}</div></div>` : ''}
+      ${gameLog(d)}
       <div class="grid grid-2">
         <div>
           <div class="card"><h3>Teams</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Manager</th><th class="num">Pts</th><th class="num">Starts</th><th class="num">Weeks</th><th>Seasons</th></tr></thead><tbody>${homes.map(([m, a]) => `<tr><td>${mgrLink(m)}</td><td class="num">${pts(+a.pts.toFixed(2))}</td><td class="num">${a.starts}</td><td class="num">${a.weeks}</td><td class="small muted nowrap">${yearRanges(a.seasons)}</td></tr>`).join('') || '<tr><td colspan="5" class="muted">Never on a roster during a scored week.</td></tr>'}</tbody></table></div></div>
           <div class="card" style="margin-top:18px"><h3>Season by season</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Year</th><th>Team</th><th class="num">Wks</th><th class="num">Starts</th><th class="num">Starter pts</th><th class="num">Total</th><th class="num">PPG</th><th class="num">Best</th></tr></thead><tbody>${tenRows || '<tr><td colspan="8" class="muted">—</td></tr>'}</tbody></table></div></div>
         </div>
-        <div class="card"><h3>Transaction history</h3>${d.events.filter(e => e.type !== 'carryover' && e.type !== 'keeper').length ? d.events.map(evLine).join('') : '<div class="empty">No recorded moves.</div>'}${c.carryovers ? `<p class="small muted" style="margin-top:10px">Carried over between seasons ${c.carryovers} time${c.carryovers > 1 ? 's' : ''} (keeper-draft re-selections and the 2022 migration draft are not listed as moves).</p>` : ''}</div>
+        <div class="card"><h3>Transaction history</h3>${d.events.filter(e => e.type !== 'carryover' && e.type !== 'keeper').length ? d.events.slice().reverse().map(evLine).join('') : '<div class="empty">No recorded moves.</div>'}${c.carryovers ? `<p class="small muted" style="margin-top:10px">Carried over between seasons ${c.carryovers} time${c.carryovers > 1 ? 's' : ''} (keeper-draft re-selections and the 2022 migration draft are not listed as moves).</p>` : ''}</div>
       </div>`;
   }
+
+  function gameLog(d) {
+    const seasons = [...new Set(d.weekly.map(w => w.season))].sort((a, b) => b - a);
+    if (!seasons.length) return '';
+    const cur = plLogSeason && seasons.includes(plLogSeason) ? plLogSeason : seasons[0];
+    const rows = d.weekly.filter(w => w.season === cur).sort((a, b) => a.week - b.week);
+    const sn = D.season[cur];
+    const tn = f => { const t = sn && teamOf(sn, f); return t ? t.team_name : f; };
+    const tot = rows.filter(w => w.starter).reduce((a, w) => a + (w.pts || 0), 0);
+    return `<div class="card" style="margin-bottom:18px"><div class="card-head"><h3>Game log</h3><div class="row" style="gap:4px">${seasons.map(y => `<button class="btn ${y === cur ? 'active' : ''}" style="padding:3px 9px" data-logseason="${y}">${y}</button>`).join('')}</div></div>
+      <div class="table-wrap"><table class="tbl"><thead><tr><th>Wk</th><th>Team</th><th>Slot</th><th class="num">Pts</th><th>Opponent</th><th class="num">Score</th><th>Result</th></tr></thead><tbody>
+      ${rows.map(w => `<tr class="${w.starter ? '' : 'muted'}" data-game="${cur}|${esc(w.game)}" style="cursor:pointer"><td>${w.week}${w.round ? ` <span class="small muted">${esc(w.round)}</span>` : ''}</td><td>${esc(tn(w.franchise))}</td><td class="mono small">${w.starter ? esc(w.slot || '') : 'BN'}</td><td class="num"><b>${pts(w.pts)}</b></td><td>${esc(tn(w.opp))}</td><td class="num mono small">${w.team_pts != null ? `${pts(w.team_pts)}–${pts(w.opp_pts)}` : ''}</td><td>${w.won === true ? '<span class="trophy">W</span>' : w.won === false ? '<span class="muted">L</span>' : ''}</td></tr>`).join('')}
+      <tr class="total"><td colspan="3"><b>${cur} as starter</b></td><td class="num"><b>${pts(+tot.toFixed(2))}</b></td><td colspan="3" class="small muted">${rows.filter(w => w.starter).length} starts · ${rows.length} weeks rostered · click a row for the box score</td></tr>
+      </tbody></table></div></div>`;
+  }
+  let plLogSeason = null;
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-logseason]');
+    if (b) { plLogSeason = +b.dataset.logseason; route(); }
+  });
 
   // ---- transaction detail
   async function pageTx(year, id) {
@@ -588,7 +684,7 @@
   const routes = [
     [/^\/?$/, () => pageHome()],
     [/^\/seasons$/, () => pageSeasons()],
-    [/^\/season\/(\d{4})(?:\/([a-z]+))?(?:\/([a-z0-9]+))?$/, (y, tab, arg) => pageSeason(+y, tab || 'standings', arg)],
+    [/^\/season\/(\d{4})(?:\/([a-z]+))?(?:\/([a-z0-9]+))?(?:\/([a-z0-9]+))?$/, (y, tab, arg, arg2) => pageSeason(+y, tab || 'standings', arg, arg2)],
     [/^\/managers$/, () => pageManagers()],
     [/^\/manager\/([^/]+)$/, id => pageManager(decodeURIComponent(id))],
     [/^\/h2h(?:\/([^/]+)\/([^/]+))?$/, (a, b) => pageH2H(a && decodeURIComponent(a), b && decodeURIComponent(b))],

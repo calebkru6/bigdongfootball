@@ -33,6 +33,14 @@ ESPN_POS = {1: "QB", 2: "RB", 3: "WR", 4: "TE", 5: "K", 7: "P", 9: "DT", 10: "DE
             12: "CB", 13: "S", 14: "HC", 16: "DEF"}
 
 players = {}   # key -> {name, pos, team}
+_LOGO_INDEX = None
+def team_logo(season, franchise):
+    global _LOGO_INDEX
+    if _LOGO_INDEX is None:
+        p = HERE.parent / "public" / "img" / "logos" / "index.json"
+        _LOGO_INDEX = load(p) if p.exists() else {}
+    e = _LOGO_INDEX.get(f"{season}:{franchise}")
+    return f"img/logos/{e['file']}" if e and e.get("file") else None
 
 # ----------------------------------------------------------------------------- ESPN
 def espn_player_key(pid):
@@ -99,6 +107,7 @@ def build_espn_season(year):
             "manager": m["id"] if m else None,
             "team_name": s["name"],
             "avatar": None,
+            "logo": team_logo(year, FR_BY_ESPN[s["team_id"]]),
             "division": None,
             "wins": rs["wins"], "losses": rs["losses"], "ties": rs["ties"],
             "pf": r2(rs["pointsFor"]), "pa": r2(rs["pointsAgainst"]),
@@ -370,6 +379,7 @@ def build_sleeper_season(year):
             "roster_id": r["roster_id"],
             "team_name": (u.get("metadata") or {}).get("team_name") or u.get("display_name"),
             "avatar": (f"https://sleepercdn.com/avatars/thumbs/{u['avatar']}" if u.get("avatar") else None),
+            "logo": team_logo(year, FR_BY_ROSTER[r["roster_id"]]),
             "division": div_names.get(s.get("division")),
             "wins": s.get("wins", 0), "losses": s.get("losses", 0), "ties": s.get("ties", 0),
             "pf": r2(pf), "pa": r2(pa),
@@ -604,7 +614,7 @@ def build_aggregates(seasons):
                 continue
             mg = mgrs[t["manager"]]
             mg["seasons"].append({"season": s["season"], "platform": s["platform"], "franchise": t["franchise"],
-                                  "team_name": t["team_name"], "wins": t["wins"], "losses": t["losses"], "ties": t["ties"],
+                                  "team_name": t["team_name"], "logo": t.get("logo"), "wins": t["wins"], "losses": t["losses"], "ties": t["ties"],
                                   "pf": t["pf"], "pa": t["pa"], "playoff_seed": t["playoff_seed"], "final_rank": t["final_rank"],
                                   "champion": t["champion"], "status": s["status"], "standing": t.get("standing")})
             if t["franchise"] not in mg["franchises"]:
@@ -690,7 +700,7 @@ def build_aggregates(seasons):
         for s in seasons:
             t = next((t for t in s["teams"] if t["franchise"] == f["id"]), None)
             if t:
-                rows.append({"season": s["season"], "platform": s["platform"], "manager": t["manager"], "team_name": t["team_name"],
+                rows.append({"season": s["season"], "platform": s["platform"], "manager": t["manager"], "team_name": t["team_name"], "logo": t.get("logo"),
                              "wins": t["wins"], "losses": t["losses"], "ties": t["ties"], "pf": t["pf"], "pa": t["pa"],
                              "final_rank": t["final_rank"], "playoff_seed": t["playoff_seed"], "champion": t["champion"]})
         frs.append({"id": f["id"], "espn_team": f["espn_team"], "sleeper_roster_id": f["sleeper_roster_id"],
@@ -775,6 +785,7 @@ def build_aggregates(seasons):
         "fewest_points_season": sorted(season_rows, key=lambda x: (x["ppg"] or 0))[:N],
         "champions": [{"season": s["season"], "platform": s["platform"], "manager": s["champion"],
                        "team_name": next((t["team_name"] for t in s["teams"] if t["champion"]), None),
+                       "logo": next((t.get("logo") for t in s["teams"] if t["champion"]), None),
                        "runner_up": next((t["manager"] for t in s["teams"] if t["final_rank"] == 2), None),
                        "runner_up_team": next((t["team_name"] for t in s["teams"] if t["final_rank"] == 2), None),
                        "record": next((f"{t['wins']}-{t['losses']}" + (f"-{t['ties']}" if t['ties'] else "") for t in s["teams"] if t["champion"]), None)}
@@ -854,6 +865,11 @@ def build_player_pages(seasons):
     weekly = collections.defaultdict(list)
     def process(sn, m, side, wk, lu):
         fr = side["franchise"]; mg = manager_of(sn, fr)
+        other = m["away"] if side is m["home"] else m["home"]
+        opp_fr = other["franchise"]
+        my_pts = (side.get("points_by_week") or {}).get(str(wk), side.get("points"))
+        opp_pts = (other.get("points_by_week") or {}).get(str(wk), other.get("points"))
+        won = None if m["winner"] in (None, "tie") else ((m["winner"] == "home") == (side is m["home"]))
         for e in lu:
             pid = e.get("p")
             if not pid:
@@ -869,7 +885,8 @@ def build_player_pages(seasons):
                 if t["best"] is None or pts > t["best"]["pts"]:
                     t["best"] = {"week": wk, "pts": r2(pts), "round": m.get("round")}
             t["total_pts"] += pts
-            weekly[pid].append({"season": sn["season"], "week": wk, "franchise": fr, "slot": e.get("slot"), "pts": r2(pts), "starter": starter, "round": m.get("round")})
+            weekly[pid].append({"season": sn["season"], "week": wk, "franchise": fr, "slot": e.get("slot"), "pts": r2(pts), "starter": starter, "round": m.get("round"),
+                                "opp": opp_fr, "team_pts": r2(my_pts) if my_pts is not None else None, "opp_pts": r2(opp_pts) if opp_pts is not None else None, "won": won, "game": m["id"]})
     for sn in seasons:
         for m in sn["matchups"]:
             if not (m["played"] or m.get("live")):
@@ -1002,6 +1019,7 @@ def main():
         dump(f"seasons/{s['season']}.json", s)
     index = [{"season": s["season"], "platform": s["platform"], "status": s["status"], "league_name": s["league_name"],
               "champion": s["champion"], "champion_team": next((t["team_name"] for t in s["teams"] if t["champion"]), None),
+              "champion_logo": next((t.get("logo") for t in s["teams"] if t["champion"]), None),
               "runner_up": next((t["manager"] for t in s["teams"] if t["final_rank"] == 2), None),
               "team_count": len(s["teams"]), "games": sum(1 for m in s["matchups"] if m["played"]),
               "transactions": len(s["transactions"]), "trades": sum(1 for t in s["transactions"] if t["type"] == "trade"),

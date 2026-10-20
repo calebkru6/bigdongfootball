@@ -27,6 +27,8 @@ jobs:
           python-version: "3.12"
       - name: Pull latest Sleeper data
         run: python -I tools/fetch_sleeper.py 1319022882948403200
+      - name: Fetch any new team logos
+        run: python -I tools/fetch_logos.py
       - name: Build site data
         run: python -I tools/build_site_data.py
       - uses: actions/configure-pages@v5

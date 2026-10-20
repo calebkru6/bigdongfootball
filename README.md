@@ -35,6 +35,14 @@ transaction timeline (draft, keeper, trade, waiver, free agent), and per-team te
 page has a hall of fame ranked by points the player scored while starting for that manager.
 `public/data/players/<id>.json` holds one file per player; `players-index.json` feeds the search page.
 
+## Pictures
+
+Player headshots are hotlinked from Sleeper's CDN by player id (ESPN-only ids fall back to ESPN's headshot CDN;
+defenses use NFL team logos). Team logos are per season, "from the time": `espn/team-logos.json` holds the logo URL
+ESPN recorded for each team each year, and each Sleeper season's `users.json` holds that year's team avatar.
+`tools/fetch_logos.py` downloads them into `public/img/logos/` (falling back to the Wayback Machine for dead hosts)
+and writes `index.json`; the build attaches `logo` to every team-season. 77 of 82 team-seasons have a logo.
+
 ## Deployment
 
 `.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to `main`,
