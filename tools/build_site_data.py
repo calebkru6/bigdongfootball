@@ -760,7 +760,7 @@ def main():
         "name": "BigDongFootball",
         "founded": seasons[0]["season"],
         "format": "dynasty",
-        "history_note": "ESPN returned no data for 2013-2015; if the league ran before 2016, those seasons are not recoverable from ESPN.",
+        "history_note": "The league began in 2016 on ESPN.",
         "eras": [{"platform": "espn", "label": "ESPN era", "seasons": [s["season"] for s in seasons if s["platform"] == "espn"], "league_id": "1923288",
                   "url": "https://fantasy.espn.com/football/league?leagueId=1923288"},
                  {"platform": "sleeper", "label": "Sleeper era", "seasons": [s["season"] for s in seasons if s["platform"] == "sleeper"],

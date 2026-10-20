@@ -65,7 +65,7 @@ Managers are labelled by their Sleeper usernames (already public on Sleeper) or,
 
 - ESPN never returned transaction logs for 2016–2017; those seasons show "n/a" moves, not zero.
 - ESPN weekly rosters with real slots exist for 2018–2021 (from the raw weekly box-score captures). For 2016–2017 ESPN kept only the nine starters per week, without slots, plus an end-of-season roster.
-- ESPN returned no data for 2013–2015; if the league ran before 2016, those seasons (and the games of the two original 2016-only owners) are not recoverable from ESPN.
+- The league began in 2016. Two of the eight franchises changed owners after that first season.
 - 2022 and 2023 exist on ESPN only as unused auto-renewed shells; the site uses the Sleeper seasons.
 - Sleeper multi-week playoff games are shown as one game with per-week breakdowns; single-game
   records use one scoring week.
