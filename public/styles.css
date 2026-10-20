@@ -241,8 +241,9 @@ select.sel, input.inp { background: var(--bg-3); border: 1px solid var(--line); 
 .bar { height: 6px; background: var(--bg-3); border-radius: 3px; overflow: hidden; }
 .bar i { display: block; height: 100%; background: var(--accent); }
 
-@media (max-width: 900px) {
-  .grid-3, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 1000px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-2 { grid-template-columns: 1fr; }
   .hero h1 { font-size: 2.4rem; }
 }
 @media (max-width: 680px) {
@@ -270,3 +271,12 @@ select.sel, input.inp { background: var(--bg-3); border: 1px solid var(--line); 
 .box-table tr.bench-head td { padding-top: 10px; font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); border: 0; }
 .box-table tr.hit td { background: rgba(242,181,68,.12); color: var(--text); }
 .btn[data-active] { background: rgba(242,181,68,.15); border-color: var(--accent); color: var(--accent); }
+
+/* players */
+.plink { color: inherit; border-bottom: 1px dotted var(--line); }
+.plink:hover { color: var(--accent); border-color: var(--accent); }
+.sparks { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; }
+.spark-season { display: flex; flex-direction: column; gap: 4px; }
+.spark { display: flex; align-items: flex-end; gap: 2px; height: 42px; }
+.spark i { display: block; width: 7px; background: var(--accent); border-radius: 2px 2px 0 0; opacity: .85; }
+.spark i:hover { opacity: 1; background: #fff; }

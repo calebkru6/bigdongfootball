@@ -27,6 +27,14 @@ site/
   refresh.ps1                fetch + build in one step
 ```
 
+## Players
+
+`tools/build_site_data.py` links ESPN player ids to Sleeper ids by name and position (474 of 477
+matched), so a player's page covers both eras: every week rostered or started with points, a
+transaction timeline (draft, keeper, trade, waiver, free agent), and per-team tenures. Each manager
+page has a hall of fame ranked by points the player scored while starting for that manager.
+`public/data/players/<id>.json` holds one file per player; `players-index.json` feeds the search page.
+
 ## Deployment
 
 `.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to `main`,

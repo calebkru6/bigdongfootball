@@ -724,6 +724,175 @@ def build_aggregates(seasons):
     }
     return list(mgrs.values()), frs, h2h_out, records
 
+
+# ----------------------------------------------------------------------------- PLAYER IDENTITY + PAGES
+def _norm_name(n):
+    n = (n or "").lower().replace(".", "").replace("'", "").replace("-", " ")
+    n = re.sub(r"\b(jr|sr|ii|iii|iv|v)\b", "", n)
+    return re.sub(r"[^a-z]", "", n)
+
+def unify_players(seasons):
+    """Map ESPN player ids onto Sleeper ids by name (and position) so a career reads as one across eras."""
+    db = SLEEPER_PLAYERS or {}
+    by_name, defs = {}, {}
+    for sid, pr in db.items():
+        if pr.get("position") == "DEF":
+            defs[(pr.get("last_name") or "").lower()] = sid
+            continue
+        name = pr.get("full_name") or f"{pr.get('first_name', '')} {pr.get('last_name', '')}".strip()
+        if name:
+            by_name.setdefault(_norm_name(name), []).append((sid, pr.get("position"), pr))
+    alias = {}
+    for k, v in list(players.items()):
+        if not k.startswith("e:"):
+            continue
+        sid = None
+        if v.get("pos") == "DEF" or "D/ST" in (v.get("name") or ""):
+            sid = defs.get(v["name"].replace("D/ST", "").strip().lower())
+        else:
+            cands = by_name.get(_norm_name(v["name"]), [])
+            same = [c for c in cands if c[1] == v.get("pos")]
+            pick = same if same else cands
+            if len(pick) == 1:
+                sid = pick[0][0]
+            elif len(pick) > 1:
+                # prefer the one with NFL experience overlapping the ESPN years (older players)
+                pick.sort(key=lambda c: -(c[2].get("years_exp") or 0))
+                sid = pick[0][0]
+        if sid:
+            alias[k] = "s:" + sid
+    for ek, sk in alias.items():
+        if sk not in players:
+            ensure_sleeper_player(sk[2:])
+        players[sk].setdefault("espn_ids", []).append(ek[2:])
+        del players[ek]
+
+    def fix(e):
+        if e and e.get("p") in alias:
+            e["p"] = alias[e["p"]]
+    for sn in seasons:
+        for m in sn["matchups"]:
+            for side in (m["home"], m["away"]):
+                for e in side.get("lineup") or []:
+                    fix(e)
+                for lu in (side.get("lineups_by_week") or {}).values():
+                    for e in lu:
+                        fix(e)
+        for d in sn["drafts"]:
+            for pk in d["picks"]:
+                fix(pk)
+        for t in sn["transactions"]:
+            for e in t["adds"] + t["drops"]:
+                fix(e)
+        for lst in (sn.get("rosters") or {}).get("final", {}).values():
+            for e in lst:
+                fix(e)
+    return len(alias)
+
+def build_player_pages(seasons):
+    ten = collections.defaultdict(lambda: {"weeks": 0, "starts": 0, "starter_pts": 0.0, "total_pts": 0.0, "best": None, "slots": collections.Counter()})
+    weekly = collections.defaultdict(list)
+    def process(sn, m, side, wk, lu):
+        fr = side["franchise"]; mg = manager_of(sn, fr)
+        for e in lu:
+            pid = e.get("p")
+            if not pid:
+                continue
+            starter = e.get("starter") is not False
+            pts = e.get("pts") or 0.0
+            t = ten[(pid, sn["season"], fr)]
+            t["weeks"] += 1
+            t["manager"] = mg; t["team_name"] = side["team_name"]; t["platform"] = sn["platform"]
+            if starter:
+                t["starts"] += 1; t["starter_pts"] += pts
+                t["slots"][e.get("slot") or "?"] += 1
+                if t["best"] is None or pts > t["best"]["pts"]:
+                    t["best"] = {"week": wk, "pts": r2(pts), "round": m.get("round")}
+            t["total_pts"] += pts
+            weekly[pid].append({"season": sn["season"], "week": wk, "franchise": fr, "slot": e.get("slot"), "pts": r2(pts), "starter": starter, "round": m.get("round")})
+    for sn in seasons:
+        for m in sn["matchups"]:
+            if not (m["played"] or m.get("live")):
+                continue
+            for side in (m["home"], m["away"]):
+                if side.get("lineups_by_week"):
+                    for wk, lu in side["lineups_by_week"].items():
+                        process(sn, m, side, int(wk), lu)
+                elif side.get("lineup"):
+                    process(sn, m, side, m["week"], side["lineup"])
+    events = collections.defaultdict(list)
+    for sn in seasons:
+        for d in sn["drafts"]:
+            for pk in d["picks"]:
+                if pk.get("p"):
+                    events[pk["p"]].append({"season": sn["season"], "date": None, "week": 0, "type": "keeper" if pk["keeper"] else "draft",
+                                            "to": pk["franchise"], "from": None, "round": pk["round"], "pick": pk["pick"], "label": d["label"], "id": None})
+        for t in sn["transactions"]:
+            drops = {e["p"]: e["from"] for e in t["drops"]}
+            adds = {e["p"]: e["to"] for e in t["adds"]}
+            for pid in set(adds) | set(drops):
+                events[pid].append({"season": sn["season"], "date": t["date"], "week": t["week"], "type": t["type"], "id": t["id"],
+                                    "to": adds.get(pid), "from": drops.get(pid), "bid": t.get("bid"),
+                                    "picks": [{"season": x["season"], "round": x["round"], "from": x["from"], "to": x["to"]} for x in t.get("picks") or []] if t["type"] == "trade" else None,
+                                    "others": [e["p"] for e in t["adds"] if e["p"] != pid] if t["type"] == "trade" else None})
+    pids = set(ten_key[0] for ten_key in ten) | set(events)
+    index = []
+    OUT_P = OUT / "players"
+    OUT_P.mkdir(parents=True, exist_ok=True)
+    for old in OUT_P.glob("*.json"):
+        old.unlink()
+    for pid in pids:
+        info = players.get(pid) or {"name": pid, "pos": None, "team": None}
+        rows = []
+        for (p2, season, fr), t in ten.items():
+            if p2 != pid:
+                continue
+            rows.append({"season": season, "platform": t.get("platform"), "franchise": fr, "manager": t.get("manager"), "team_name": t.get("team_name"),
+                         "weeks": t["weeks"], "starts": t["starts"], "starter_pts": r2(t["starter_pts"]), "total_pts": r2(t["total_pts"]),
+                         "ppg": r2(t["starter_pts"] / t["starts"]) if t["starts"] else None, "best": t["best"],
+                         "slots": dict(t["slots"].most_common(3))})
+        rows.sort(key=lambda r: (r["season"], r["franchise"]))
+        ev = sorted(events.get(pid, []), key=lambda e: (e["season"], e["date"] or "", e["week"] or 0))
+        wk = sorted(weekly.get(pid, []), key=lambda w: -(w["pts"] or 0))
+        career = {"weeks": sum(r["weeks"] for r in rows), "starts": sum(r["starts"] for r in rows),
+                  "starter_pts": r2(sum(r["starter_pts"] for r in rows)), "total_pts": r2(sum(r["total_pts"] for r in rows)),
+                  "seasons": sorted({r["season"] for r in rows} | {e["season"] for e in ev}),
+                  "franchises": sorted({r["franchise"] for r in rows} | {e["to"] for e in ev if e.get("to")}),
+                  "managers": sorted({r["manager"] for r in rows if r["manager"]}),
+                  "trades": sum(1 for e in ev if e["type"] == "trade"), "drafted": [e for e in ev if e["type"] == "draft"][:1]}
+        fid = pid.replace(":", "-")
+        detail = {"id": pid, "name": info["name"], "pos": info.get("pos"), "team": info.get("team"), "espn_ids": info.get("espn_ids"),
+                  "career": career, "tenures": rows, "events": ev, "best_weeks": wk[:10], "weekly": sorted(weekly.get(pid, []), key=lambda w: (w["season"], w["week"]))}
+        (OUT_P / f"{fid}.json").write_text(json.dumps(detail, separators=(",", ":"), ensure_ascii=False), encoding="utf-8")
+        if career["weeks"] or ev:
+            index.append({"id": pid, "name": info["name"], "pos": info.get("pos"), "team": info.get("team"),
+                          "pts": career["starter_pts"], "total": career["total_pts"], "starts": career["starts"], "weeks": career["weeks"],
+                          "first": career["seasons"][0] if career["seasons"] else None, "last": career["seasons"][-1] if career["seasons"] else None,
+                          "teams": len(career["franchises"]), "trades": career["trades"]})
+    index.sort(key=lambda x: -(x["pts"] or 0))
+    dump("players-index.json", index)
+    # hall of fame by franchise and by manager
+    def hof(keyfn):
+        agg = collections.defaultdict(lambda: {"starter_pts": 0.0, "total_pts": 0.0, "starts": 0, "weeks": 0, "seasons": set(), "best": None})
+        for (pid, season, fr), t in ten.items():
+            k = keyfn(season, fr, t)
+            if k is None:
+                continue
+            a = agg[(k, pid)]
+            a["starter_pts"] += t["starter_pts"]; a["total_pts"] += t["total_pts"]; a["starts"] += t["starts"]; a["weeks"] += t["weeks"]; a["seasons"].add(season)
+            if t["best"] and (a["best"] is None or t["best"]["pts"] > a["best"]["pts"]):
+                a["best"] = {**t["best"], "season": season}
+        out = collections.defaultdict(list)
+        for (k, pid), a in agg.items():
+            out[k].append({"p": pid, "starter_pts": r2(a["starter_pts"]), "total_pts": r2(a["total_pts"]), "starts": a["starts"], "weeks": a["weeks"],
+                           "ppg": r2(a["starter_pts"] / a["starts"]) if a["starts"] else None,
+                           "seasons": sorted(a["seasons"]), "best": a["best"]})
+        for k in out:
+            out[k].sort(key=lambda x: -x["starter_pts"])
+            out[k] = out[k][:25]
+        return out
+    return hof(lambda season, fr, t: fr), hof(lambda season, fr, t: t.get("manager"))
+
 # ----------------------------------------------------------------------------- MAIN
 def main():
     global SLEEPER_PLAYERS
@@ -733,7 +902,13 @@ def main():
     sleeper_years = sorted(int(x["season"]) for x in load(SLEEPER / "manifest.json")["leagues"])
     seasons += [build_sleeper_season(y) for y in sleeper_years]
     seasons.sort(key=lambda s: s["season"])
+    print("unified espn->sleeper players:", unify_players(seasons))
     managers, franchises, h2h, records = build_aggregates(seasons)
+    hof_fr, hof_mg = build_player_pages(seasons)
+    for f in franchises:
+        f["hall_of_fame"] = hof_fr.get(f["id"], [])
+    for m in managers:
+        m["hall_of_fame"] = hof_mg.get(m["id"], [])
 
     for s in seasons:
         dump(f"seasons/{s['season']}.json", s)

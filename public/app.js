@@ -39,7 +39,10 @@
   const platformPill = p => `<span class="pill pill-${p}">${p === 'espn' ? 'ESPN' : 'Sleeper'}</span>`;
   const ordinal = n => n == null ? '—' : n + (['th', 'st', 'nd', 'rd'][(n % 100 > 10 && n % 100 < 14) ? 0 : (n % 10 < 4 ? n % 10 : 0)]);
   const player = k => D.players[k] || { name: k ? `Unknown (${k})` : 'Empty slot', pos: null, team: null };
-  const playerLabel = k => { const p = player(k); return `${esc(p.name)}${p.pos ? ` <span class="muted small">${esc(p.pos)}${p.team ? ' · ' + esc(p.team) : ''}</span>` : ''}`; };
+  const playerLabel = k => { const p = player(k); return `${k ? `<a class="plink" href="#/player/${enc(k)}">${esc(p.name)}</a>` : esc(p.name)}${p.pos ? ` <span class="muted small">${esc(p.pos)}${p.team ? ' · ' + esc(p.team) : ''}</span>` : ''}`; };
+  const playerLink = k => k ? `<a class="plink" href="#/player/${enc(k)}">${esc(player(k).name)}</a>` : '—';
+  const yearRanges = ys => { const u = [...new Set(ys)].sort((a, b) => a - b); const out = []; let st = null, pv = null; u.forEach(y => { if (st === null) { st = pv = y; return; } if (y === pv + 1) { pv = y; return; } out.push(st === pv ? `${st}` : `${st}–${pv}`); st = pv = y; }); if (st !== null) out.push(st === pv ? `${st}` : `${st}–${pv}`); return out.join(', '); };
+  const frName = (season, f) => { const t = season && teamOf(season, f); return t ? t.team_name : (D.fr[f] ? D.fr[f].current_name : f); };
   const avatar = (m, lg) => {
     const mg = typeof m === 'string' ? D.mgr[m] : m;
     const name = mg ? mg.display_name : '?';
@@ -372,6 +375,7 @@
           <div class="card" style="margin-top:18px"><h3>Team names</h3><ul style="margin:0;padding-left:18px">${m.team_names.map(t => `<li>${esc(t.name)} <span class="muted small">${t.from === t.to ? t.from : `${t.from}–${t.to}`}</span></li>`).join('')}</ul>
           ${prevOwners.length ? `<p class="small muted" style="margin:10px 0 0">Franchise previously run by ${prevOwners.join(', ')}.</p>` : ''}
           ${!m.active && c.espn_seasons.length && !c.sleeper_seasons.length ? `<p class="small muted" style="margin:10px 0 0">Original owner of this franchise in the league's first season; the franchise changed hands in 2017.</p>` : ''}</div>
+          ${(m.hall_of_fame || []).length ? `<div class="card" style="margin-top:18px"><div class="card-head"><h3>Hall of fame</h3><span class="small muted">points scored while starting for ${esc(m.display_name)}</span></div><div class="table-wrap"><table class="tbl"><thead><tr><th class="rank">#</th><th>Player</th><th class="num">Pts</th><th class="num">Starts</th><th class="num">PPG</th><th>Seasons</th><th class="num">Best</th></tr></thead><tbody>${m.hall_of_fame.slice(0, 12).map((h, i) => `<tr><td class="rank">${i + 1}</td><td>${playerLabel(h.p)}</td><td class="num">${pts(h.starter_pts)}</td><td class="num">${h.starts}</td><td class="num">${pts(h.ppg)}</td><td class="small muted nowrap">${yearRanges(h.seasons)}</td><td class="num">${h.best ? pts(h.best.pts) : ''}</td></tr>`).join('')}</tbody></table></div><p class="small muted" style="margin:8px 0 0">2016–2017 ESPN data only records starters, so bench points from those years are not counted anywhere.</p></div>` : ''}
           ${bestWins.length ? `<div class="card" style="margin-top:18px"><h3>Top scoring games</h3><ol class="record-list">${bestWins.map((r, i) => `<li data-game="${r.season}|${esc(r.id)}" style="cursor:pointer"><span class="i">${i + 1}</span><span class="d">${r.season} ${r.round ? esc(r.round) : 'week ' + r.week} vs ${esc(r.opponent)}<small>${esc(r.team_name)}</small></span><span class="v">${pts(r.points)}</span></li>`).join('')}</ol></div>` : ''}
         </div>
       </div>`;
@@ -454,6 +458,72 @@
       ${all.map(({ s, t }) => txLine(s, t)).join('')}`;
   }
 
+  // ---- players
+  let plSort = { key: 'pts', dir: -1 }, plQuery = '', plPos = '';
+  async function pagePlayers() {
+    const idx = await getJSON('data/players-index.json');
+    const q = plQuery.trim().toLowerCase();
+    let rows = idx.filter(r => (!q || r.name.toLowerCase().includes(q)) && (!plPos || r.pos === plPos));
+    rows = sortTable(rows, plSort.key, plSort.dir);
+    const cols = [['name', 'Player'], ['pos', 'Pos'], ['pts', 'Starter pts'], ['total', 'Total pts'], ['starts', 'Starts'], ['weeks', 'Weeks rostered'], ['first', 'First'], ['last', 'Last'], ['teams', 'Teams'], ['trades', 'Trades']];
+    $app.innerHTML = `<div class="page-head"><h1>Players</h1><span class="sub">${idx.length} players who have been on a BigDongFootball roster. Points are what they scored while started; both eras combined.</span></div>
+      <div class="row" style="margin-bottom:14px"><input class="inp" id="plq" placeholder="Search players…" value="${esc(plQuery)}" style="min-width:240px"><div class="seg">${['', 'QB', 'RB', 'WR', 'TE', 'K', 'DEF'].map(x => `<button class="${plPos === x ? 'active' : ''}" data-pos="${x}">${x || 'All'}</button>`).join('')}</div><span class="muted small">${rows.length} shown</span></div>
+      <div class="table-wrap"><table class="tbl"><thead><tr><th class="rank">#</th>${cols.map(([k, l]) => `<th class="sortable ${k === 'name' || k === 'pos' ? '' : 'num'} ${plSort.key === k ? 'sorted' + (plSort.dir > 0 ? ' asc' : '') : ''}" data-key="${k}">${l}</th>`).join('')}</tr></thead><tbody>
+      ${rows.slice(0, 300).map((r, i) => `<tr><td class="rank">${i + 1}</td><td><a href="#/player/${enc(r.id)}"><b>${esc(r.name)}</b></a> ${r.team ? `<span class="muted small">${esc(r.team)}</span>` : ''}</td><td>${esc(r.pos || '')}</td><td class="num">${pts(r.pts)}</td><td class="num">${pts(r.total)}</td><td class="num">${r.starts}</td><td class="num">${r.weeks}</td><td class="num">${r.first || ''}</td><td class="num">${r.last || ''}</td><td class="num">${r.teams}</td><td class="num">${r.trades || ''}</td></tr>`).join('')}
+      </tbody></table></div>${rows.length > 300 ? '<p class="small muted">Showing the first 300; narrow the search to see more.</p>' : ''}`;
+    const inp = document.getElementById('plq');
+    inp.oninput = () => { plQuery = inp.value; const pos = inp.selectionStart; pagePlayers().then(() => { const n = document.getElementById('plq'); n.focus(); n.setSelectionRange(pos, pos); }); };
+    $app.querySelectorAll('[data-pos]').forEach(b => b.onclick = () => { plPos = b.dataset.pos; pagePlayers(); });
+    $app.querySelectorAll('th.sortable').forEach(th => th.onclick = () => { const k = th.dataset.key; plSort = { key: k, dir: plSort.key === k ? -plSort.dir : (k === 'name' || k === 'pos' || k === 'first' ? 1 : -1) }; pagePlayers(); });
+  }
+  async function pagePlayer(id) {
+    let d;
+    try { d = await getJSON(`data/players/${id.replace(':', '-')}.json`); } catch (e) { $app.innerHTML = '<div class="empty">No record of this player in the league.</div>'; return; }
+    await loadAllSeasons();
+    const c = d.career;
+    const seasonOf = y => D.season[y];
+    const evLine = e => {
+      const sn = seasonOf(e.season);
+      const to = e.to ? `<a href="#/manager/${enc((teamOf(sn, e.to) || {}).manager)}">${esc(frName(sn, e.to))}</a>` : null;
+      const from = e.from ? `<a href="#/manager/${enc((teamOf(sn, e.from) || {}).manager)}">${esc(frName(sn, e.from))}</a>` : null;
+      let what;
+      if (e.type === 'draft') what = `Drafted by ${to} — round ${e.round}, pick ${e.pick} <span class="muted small">(${esc(e.label)})</span>`;
+      else if (e.type === 'keeper') what = `Kept by ${to} <span class="muted small">(keeper slot, round ${e.round})</span>`;
+      else if (e.type === 'trade') what = `Traded from ${from || '?'} to ${to || '?'}${e.others && e.others.length ? ` <span class="muted small">— in a deal also involving ${e.others.slice(0, 4).map(playerLink).join(', ')}${e.picks && e.picks.length ? ` and ${e.picks.length} pick${e.picks.length > 1 ? 's' : ''}` : ''}</span>` : (e.picks && e.picks.length ? ` <span class="muted small">— for ${e.picks.length} draft pick${e.picks.length > 1 ? 's' : ''}</span>` : '')}`;
+      else if (e.type === 'waiver') what = e.to ? `Claimed off waivers by ${to}${e.bid != null ? ` <span class="muted small">($${e.bid} FAAB)</span>` : ''}` : `Dropped by ${from}`;
+      else if (e.type === 'commissioner') what = e.to ? `Added to ${to} by the commissioner` : `Removed from ${from} by the commissioner`;
+      else what = e.to ? `Signed as a free agent by ${to}` : `Dropped by ${from}`;
+      if (e.to && e.from && e.type !== 'trade') what = `Moved from ${from} to ${to}`;
+      return `<div class="tx"><div class="when"><a href="#/season/${e.season}/${e.type === 'draft' || e.type === 'keeper' ? 'draft' : e.type === 'trade' ? 'trades' : 'moves'}">${e.season}</a>${e.week ? ` · week ${e.week}` : ''}<br><span class="small">${dateFmt(e.date)}</span></div><div class="what"><div class="line">${what}</div></div></div>`;
+    };
+    const tenRows = d.tenures.slice().reverse().map(t => `<tr><td><a href="#/season/${t.season}/rosters">${t.season}</a> ${platformPill(t.platform)}</td><td><a href="#/manager/${enc(t.manager)}">${esc(t.team_name)}</a><div class="small muted">${esc(mgrName(t.manager))}</div></td><td class="num">${t.weeks}</td><td class="num">${t.starts}</td><td class="num">${pts(t.starter_pts)}</td><td class="num">${pts(t.total_pts)}</td><td class="num">${pts(t.ppg)}</td><td class="num">${t.best ? `${pts(t.best.pts)} <span class="muted small">wk ${t.best.week}</span>` : ''}</td></tr>`).join('');
+    const byFr = {};
+    d.tenures.forEach(t => { const a = byFr[t.manager] = byFr[t.manager] || { pts: 0, starts: 0, weeks: 0, seasons: [] }; a.pts += t.starter_pts; a.starts += t.starts; a.weeks += t.weeks; a.seasons.push(t.season); });
+    const homes = Object.entries(byFr).sort((a, b) => b[1].pts - a[1].pts);
+    const bySeason = {};
+    d.weekly.filter(w => w.starter).forEach(w => (bySeason[w.season] = bySeason[w.season] || []).push(w));
+    const maxPts = Math.max(1, ...d.weekly.map(w => w.pts || 0));
+    const spark = Object.keys(bySeason).map(Number).sort((a, b) => a - b).map(y => `<div class="spark-season"><div class="small muted">${y}</div><div class="spark">${bySeason[y].sort((a, b) => a.week - b.week).map(w => `<i style="height:${Math.max(2, Math.round(40 * (w.pts || 0) / maxPts))}px" title="${y} wk ${w.week}: ${pts(w.pts)} (${esc(frName(seasonOf(y), w.franchise))})"></i>`).join('')}</div></div>`).join('');
+    $app.innerHTML = `<div class="page-head"><h1>${esc(d.name)}</h1><span class="pill pill-neutral">${esc(d.pos || '')}${d.team ? ' · ' + esc(d.team) : ''}</span><span class="sub">In the league ${c.seasons.length ? `${c.seasons[0]}–${c.seasons[c.seasons.length - 1]}` : ''} · ${c.managers.length} team${c.managers.length === 1 ? '' : 's'}</span></div>
+      <div class="kpis">
+        <div class="kpi"><div class="v">${pts(c.starter_pts)}</div><div class="l">Points as starter</div></div>
+        <div class="kpi"><div class="v">${pts(c.total_pts)}</div><div class="l">Points while rostered</div></div>
+        <div class="kpi"><div class="v">${c.starts}</div><div class="l">Starts</div></div>
+        <div class="kpi"><div class="v">${c.weeks}</div><div class="l">Weeks rostered</div></div>
+        <div class="kpi"><div class="v">${c.starts ? pts(+(c.starter_pts / c.starts).toFixed(2)) : '—'}</div><div class="l">PPG as starter</div></div>
+        <div class="kpi"><div class="v">${c.trades}</div><div class="l">Times traded</div></div>
+        <div class="kpi"><div class="v">${d.best_weeks[0] ? pts(d.best_weeks[0].pts) : '—'}</div><div class="l">Best week</div></div>
+      </div>
+      ${spark ? `<div class="card" style="margin-bottom:18px"><h3>Weekly scoring as a starter</h3><div class="sparks">${spark}</div></div>` : ''}
+      <div class="grid grid-2">
+        <div>
+          <div class="card"><h3>Teams</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Manager</th><th class="num">Pts</th><th class="num">Starts</th><th class="num">Weeks</th><th>Seasons</th></tr></thead><tbody>${homes.map(([m, a]) => `<tr><td>${mgrLink(m)}</td><td class="num">${pts(+a.pts.toFixed(2))}</td><td class="num">${a.starts}</td><td class="num">${a.weeks}</td><td class="small muted nowrap">${yearRanges(a.seasons)}</td></tr>`).join('') || '<tr><td colspan="5" class="muted">Never on a roster during a scored week.</td></tr>'}</tbody></table></div></div>
+          <div class="card" style="margin-top:18px"><h3>Season by season</h3><div class="table-wrap"><table class="tbl"><thead><tr><th>Year</th><th>Team</th><th class="num">Wks</th><th class="num">Starts</th><th class="num">Starter pts</th><th class="num">Total</th><th class="num">PPG</th><th class="num">Best</th></tr></thead><tbody>${tenRows || '<tr><td colspan="8" class="muted">—</td></tr>'}</tbody></table></div></div>
+        </div>
+        <div class="card"><h3>Transaction history</h3>${d.events.length ? d.events.map(evLine).join('') : '<div class="empty">No recorded moves. ESPN did not return move logs for 2016–2017.</div>'}</div>
+      </div>`;
+  }
+
   // ---------------------------------------------------------------- router
   const routes = [
     [/^\/?$/, () => pageHome()],
@@ -465,6 +535,8 @@
     [/^\/records$/, () => pageRecords()],
     [/^\/drafts(?:\/(\d{4}))?$/, y => pageDrafts(y)],
     [/^\/trades$/, () => pageTrades()],
+    [/^\/players$/, () => pagePlayers()],
+    [/^\/player\/([^/]+)$/, id => pagePlayer(decodeURIComponent(id))],
   ];
   async function route() {
     const path = (location.hash.replace(/^#/, '') || '/');
@@ -472,7 +544,7 @@
     try {
       await loadCore();
       const top = path.split('/')[1] || '';
-      document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.route === (top === 'season' ? 'seasons' : top === 'manager' ? 'managers' : top || 'home')));
+      document.querySelectorAll('#nav a').forEach(a => a.classList.toggle('active', a.dataset.route === (top === 'season' ? 'seasons' : top === 'manager' ? 'managers' : top === 'player' ? 'players' : top || 'home')));
       document.getElementById('nav').classList.remove('open');
       for (const [re, fn] of routes) {
         const m = path.match(re);
